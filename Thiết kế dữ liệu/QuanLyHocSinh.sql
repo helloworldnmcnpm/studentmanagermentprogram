@@ -1,4 +1,5 @@
-﻿create database QuanLyHocSinh
+﻿drop database QuanLyHocSinh
+create database QuanLyHocSinh
 go
 use QuanLyHocSinh
 go
@@ -17,7 +18,7 @@ create table HOCSINH
 	NgheNghiepCha nvarchar(100),
 	HoTenMe nvarchar(100),
 	NgheNghiepMe nvarchar(100),
-	MaLop nvarchar(100) not null,
+	MaLop nvarchar(100),
 	primary key(MaHocSinh)
 	
 )
@@ -157,7 +158,7 @@ go
 alter table CHITIETBANGDIEMMON add constraint fk9 foreign key(MaBangDiemMon) references BANGDIEMMON(MaBangDiemMon),
 constraint fk10 foreign key(MaHinhThucKiemTra) references HINHTHUCKIEMTRA(MaHinhThucKiemTra)
 go
-alter table BANGDIEMMON add constraint fk11 foreign key(MaQuaTrinhHoc)references QUATRINHHOC(MaQuaTrinHoc)
+alter table BANGDIEMMON add constraint fk11 foreign key(MaQuaTrinhHoc)references QUATRINHHOC(MaQuaTrinhHoc)
 go
 alter table BAOCAOTONGKETHOCKY add constraint fk12 foreign key (MaHocKy) references HOCKY(MaHocKy),
 constraint fk13 foreign key(MaLop) references LOP(MaLop)
@@ -192,35 +193,10 @@ begin
 end
 go
 
---Trigger kiểm tra học sinh của một lớp
---Khi thêm 1 học sinh vào lớp
-create trigger trg_ins_HOCSINH on HOCSINH
-for insert
-as 
-begin
-	
-end
-go
+
 		
 
-CREATE TABLE LOAIDIEM
-(
-	MaDiem	INT IDENTITY  PRIMARY KEY,
-	TenDiem NVARCHAR(100),
 
-	HeSo INT,
-
-)
-GO
-
-CREATE TABLE NAMHOC
-(
-	MaNamHoc int primary key,
-	NamBatDau INT ,
-	NamKetThuc INT
-	
-)
-GO
 
 
 
