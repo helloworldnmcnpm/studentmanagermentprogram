@@ -1,4 +1,4 @@
-<img src="https://imgur.com/a/abVtS">
+<img src="https://i.imgur.com/0ddQYm3.png">
 
 # QUẢN LÍ HỌC SINH
 *Lớp Nhập môn Công nghệ phần mềm - SE104.I23*
@@ -17,9 +17,9 @@
 Information technology has become an indispensable component of the information and digital explosion. Along with the development of the hardware, the software is becoming more and more suitable, plentiful, diverse, friendly interface and easy to use. Recognizing the problem and contacting reality with Tan Tru high school - Long An, our team found that the school does not have student management software. Management requires many people to spend time to solve small business due to many steps. Therefore, this work is very time-consuming and labor intensive. Especially easy to make mistakes when we working with large data volumes or when synchronizing data. Not to mention the problem of storage, look up information when needed, editing is also very complicated because most of the above steps must be manually. Therefore, our team has decided to implement a student management software in high school to partially solve these difficulties. Student management software will include features such as:
 - Accepting students
 - Listing the class
-- Look up students
-- Enter the score sheet
-- Make final report and change regulations.
+- Looking up students
+- Entering the score sheet
+- Making final report and change regulations.
 It is hoped that with this software, teachers can manage the course easily, simply, quickly and efficiently.
 
 ## Thành viên:
