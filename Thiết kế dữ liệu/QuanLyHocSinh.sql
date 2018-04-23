@@ -173,7 +173,7 @@ go
 
 --Tạo ràng buộc
 --Giới tính chỉ thuộc 2 giá trị là Nam hoặc nữ
-alter table  HOCSINH add constraint  GioiTinh CHECK ( GIOITINH IN ('Nam','Nu'))
+alter table  HOCSINH add constraint  GioiTinh CHECK ( GIOITINH IN ('Nam','Nữ'))
 go
  
 
