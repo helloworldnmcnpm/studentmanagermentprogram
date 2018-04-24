@@ -1,5 +1,4 @@
-﻿drop database QuanLyHocSinh
-create database QuanLyHocSinh
+﻿create database QuanLyHocSinh
 go
 use QuanLyHocSinh
 go
@@ -18,7 +17,7 @@ create table HOCSINH
 	NgheNghiepCha nvarchar(100),
 	HoTenMe nvarchar(100),
 	NgheNghiepMe nvarchar(100),
-	MaLop nvarchar(100),
+	PhanLop nvarchar(100),
 	primary key(MaHocSinh)
 	
 )
@@ -33,7 +32,13 @@ create table LOP
 	MaNamHoc nvarchar(100)not null,
 	primary key(MaLop)
 )
-
+go
+create table CHITIETLOPHOC
+(
+	MaHocSinh int,
+	MaLop nvarchar(100),
+	primary key(MaHocSinh,MaLop)
+)
 go
 create table KHOI
 (
@@ -143,7 +148,8 @@ create table QUYDINH
 )
 go
 --Tạo khóa ngoại
-alter table HOCSINH add constraint  fk1 foreign key (MaLop) references LOP(MaLop)
+alter table CHITIETLOPHOC add constraint  fk1 foreign key (MaHocSinh) references HOCSINH(MaHocSinh),
+constraint f18 foreign key (MaLop) references LOP(MaLop)
 go
 alter table LOP add constraint fk2 foreign key(MaKhoi) references KHOI(MaKhoi)
 go
@@ -188,7 +194,39 @@ begin
 		end
 end
 go
+--Trigger kiểm tra DenNam phải lớn hơn TuNam 1 năm
+create trigger trg_ins_up_TuNam_DenNam_NAMHOC on NAMHOC
+for insert, update
+as
+begin
+	declare @MaNamHoc nvarchar(100), @TuNam int, @DenNam int
+	select @TuNam=TuNam,@DenNam=DenNam
+	from inserted
 
+	if(@DenNam-@TuNam !=1)
+		begin
+			print'Den nam phai lon hon tu nam 1 nam'
+			rollback tran
+	    end
+end
+go
+--Trigger kiểm tra DenNam phải khác tất cả các DenNam có trng bảng
+create  trigger trg_ins_up_NAMHOC on NAMHOC
+for insert, update
+as
+begin
+	declare @MaNamHoc nvarchar(100), @TuNam int, @DenNam int
+	select @TuNam=TuNam,@DenNam=DenNam
+	from inserted
+	if(select count(*)
+	   from NAMHOC
+	   where @TuNam=TuNam and @DenNam=DenNam)>1
+	   begin
+			print'Tu Nam va Den Nam phai doi mot khac nhau'
+			rollback tran
+	    end
+end
+go
 
 		
 
