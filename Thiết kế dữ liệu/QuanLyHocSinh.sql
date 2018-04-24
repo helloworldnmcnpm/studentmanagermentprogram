@@ -178,6 +178,13 @@ go
 
 
 --Tạo ràng buộc
+<<<<<<< HEAD
+--Giới tính chỉ thuộc 2 giá trị là Nam hoặc nữ
+alter table  HOCSINH add constraint  GioiTinh CHECK ( GIOITINH IN ('Nam','Nữ'))
+go
+ 
+=======
+>>>>>>> 51d9e07d4ce430b487403d33d0d11102fd8ec11d
 
 --Trigger Kiểm tra tuổi
 create trigger trg_ins_up_HOCSINH on HOCSINH
