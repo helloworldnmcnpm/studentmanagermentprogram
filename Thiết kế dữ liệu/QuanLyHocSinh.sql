@@ -33,13 +33,6 @@ create table LOP
 	primary key(MaLop)
 )
 go
-create table CHITIETLOPHOC
-(
-	MaHocSinh int,
-	MaLop nvarchar(100),
-	primary key(MaHocSinh,MaLop)
-)
-go
 create table KHOI
 (
 	MaKhoi nvarchar(100)not null,
@@ -137,20 +130,16 @@ create table CHITIETBAOCAOTONGKETMON
 	primary key(MaChiTietBangDiemMon)
 )
 go
+
 create table QUYDINH
 (
 	TuoiToiDa int,
 	TuoiToiThieu int,
 	SoHocSinhToiDa int,
-	DiemDat float,
-	DiemToiDa float,
-	DiemToiThieu float
+	DiemDat float
 )
 go
 --Tạo khóa ngoại
-alter table CHITIETLOPHOC add constraint  fk1 foreign key (MaHocSinh) references HOCSINH(MaHocSinh),
-constraint f18 foreign key (MaLop) references LOP(MaLop)
-go
 alter table LOP add constraint fk2 foreign key(MaKhoi) references KHOI(MaKhoi)
 go
 alter table LOP add constraint fk3 foreign key(MaNamHoc) references NAMHOC(MaNamHoc)
@@ -177,14 +166,8 @@ constraint fk17 foreign key(MaLop) references LOP(MaLop)
 go
 
 
---Tạo ràng buộc
-<<<<<<< HEAD
---Giới tính chỉ thuộc 2 giá trị là Nam hoặc nữ
-alter table  HOCSINH add constraint  GioiTinh CHECK ( GIOITINH IN ('Nam','Nữ'))
-go
- 
-=======
->>>>>>> 51d9e07d4ce430b487403d33d0d11102fd8ec11d
+
+
 
 --Trigger Kiểm tra tuổi
 create trigger trg_ins_up_HOCSINH on HOCSINH
@@ -234,10 +217,5 @@ begin
 	    end
 end
 go
-
-		
-
-
-
-
-
+--Thêm dữ liệu vào bảng quy định
+insert into  QUYDINH(TuoiToiDa, TuoiToiThieu, SoHocSinhToiDa, DiemDat) values (20,15,40,5)
