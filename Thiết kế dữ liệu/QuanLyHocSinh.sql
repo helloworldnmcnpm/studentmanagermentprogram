@@ -19,6 +19,7 @@ create table HOCSINH
 	HoTenMe nvarchar(100),
 	NgheNghiepMe nvarchar(100),
 	MaLop nvarchar(100),
+
 	primary key(MaHocSinh)
 	
 )
@@ -138,8 +139,7 @@ create table QUYDINH
 	TuoiToiThieu int,
 	SoHocSinhToiDa int,
 	DiemDat float,
-	DiemToiDa float,
-	DiemToiThieu float
+	
 )
 go
 --Tạo khóa ngoại
