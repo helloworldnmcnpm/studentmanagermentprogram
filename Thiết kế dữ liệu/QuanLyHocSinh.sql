@@ -1,5 +1,4 @@
-﻿drop database QuanLyHocSinh
-create database QuanLyHocSinh
+﻿create database QuanLyHocSinh
 go
 use QuanLyHocSinh
 go
@@ -18,8 +17,12 @@ create table HOCSINH
 	NgheNghiepCha nvarchar(100),
 	HoTenMe nvarchar(100),
 	NgheNghiepMe nvarchar(100),
+<<<<<<< HEAD
 	MaLop nvarchar(100),
 
+=======
+	PhanLop nvarchar(100),
+>>>>>>> 99268d198309b153a832d70d0c9ef1107f14c966
 	primary key(MaHocSinh)
 	
 )
@@ -34,7 +37,6 @@ create table LOP
 	MaNamHoc nvarchar(100)not null,
 	primary key(MaLop)
 )
-
 go
 create table KHOI
 (
@@ -133,18 +135,21 @@ create table CHITIETBAOCAOTONGKETMON
 	primary key(MaChiTietBangDiemMon)
 )
 go
+
 create table QUYDINH
 (
 	TuoiToiDa int,
 	TuoiToiThieu int,
 	SoHocSinhToiDa int,
+<<<<<<< HEAD
 	DiemDat float,
 	
+=======
+	DiemDat float
+>>>>>>> 99268d198309b153a832d70d0c9ef1107f14c966
 )
 go
 --Tạo khóa ngoại
-alter table HOCSINH add constraint  fk1 foreign key (MaLop) references LOP(MaLop)
-go
 alter table LOP add constraint fk2 foreign key(MaKhoi) references KHOI(MaKhoi)
 go
 alter table LOP add constraint fk3 foreign key(MaNamHoc) references NAMHOC(MaNamHoc)
@@ -171,14 +176,8 @@ constraint fk17 foreign key(MaLop) references LOP(MaLop)
 go
 
 
---Tạo ràng buộc
-<<<<<<< HEAD
---Giới tính chỉ thuộc 2 giá trị là Nam hoặc nữ
-alter table  HOCSINH add constraint  GioiTinh CHECK ( GIOITINH IN ('Nam','Nữ'))
-go
- 
-=======
->>>>>>> 51d9e07d4ce430b487403d33d0d11102fd8ec11d
+
+
 
 --Trigger Kiểm tra tuổi
 create trigger trg_ins_up_HOCSINH on HOCSINH
@@ -195,11 +194,38 @@ begin
 		end
 end
 go
+--Trigger kiểm tra DenNam phải lớn hơn TuNam 1 năm
+create trigger trg_ins_up_TuNam_DenNam_NAMHOC on NAMHOC
+for insert, update
+as
+begin
+	declare @MaNamHoc nvarchar(100), @TuNam int, @DenNam int
+	select @TuNam=TuNam,@DenNam=DenNam
+	from inserted
 
-
-		
-
-
-
-
-
+	if(@DenNam-@TuNam !=1)
+		begin
+			print'Den nam phai lon hon tu nam 1 nam'
+			rollback tran
+	    end
+end
+go
+--Trigger kiểm tra DenNam phải khác tất cả các DenNam có trng bảng
+create  trigger trg_ins_up_NAMHOC on NAMHOC
+for insert, update
+as
+begin
+	declare @MaNamHoc nvarchar(100), @TuNam int, @DenNam int
+	select @TuNam=TuNam,@DenNam=DenNam
+	from inserted
+	if(select count(*)
+	   from NAMHOC
+	   where @TuNam=TuNam and @DenNam=DenNam)>1
+	   begin
+			print'Tu Nam va Den Nam phai doi mot khac nhau'
+			rollback tran
+	    end
+end
+go
+--Thêm dữ liệu vào bảng quy định
+insert into  QUYDINH(TuoiToiDa, TuoiToiThieu, SoHocSinhToiDa, DiemDat) values (20,15,40,5)
