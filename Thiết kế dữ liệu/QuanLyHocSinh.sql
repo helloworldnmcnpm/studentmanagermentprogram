@@ -78,7 +78,7 @@ create table HINHTHUCKIEMTRA
 go
 create table QUATRINHHOC
 (
-	MaQuaTrinhHoc nvarchar(100) not null,
+	MaQuaTrinhHoc int identity  not null,
 	MaLop nvarchar(100) not null,
 	MaHocSinh int not null,
 	MaHocKy nvarchar(100) not null,
@@ -98,7 +98,7 @@ go
 create table BANGDIEMMON
 (
 	MaBangDiemMon nvarchar(100)not null,
-	MaQuaTrinhHoc nvarchar(100)not null,
+	MaQuaTrinhHoc int,
 	DiemTBM float,
 	primary key(MaBangDiemMon)
 )
@@ -149,6 +149,7 @@ go
 alter table QUATRINHHOC add constraint fk5 foreign key (MaLop) references LOP(MaLop),
 constraint fk7 foreign key (MaHocSinh) references HOCSINH(MaHocSinh),
 constraint fk8 foreign key (MaHocKy) references HOCKY(MaHocKy)
+
 go
 alter table CHITIETBANGDIEMMON add constraint fk9 foreign key(MaBangDiemMon) references BANGDIEMMON(MaBangDiemMon),
 constraint fk10 foreign key(MaHinhThucKiemTra) references HINHTHUCKIEMTRA(MaHinhThucKiemTra)
@@ -161,7 +162,7 @@ go
 alter table BAOCAOTONGKETMON add constraint fk14 foreign key (MaHocKy) references HOCKY(MaHocKy),
 constraint fk15 foreign key(MaMon) references MON(MaMon)
 go
-alter table CHITIETBAOCAOTONGKETMON add constraint fk16 foreign key (MaBaoCaoTongKetMon) references BAOCAOTONGKETMoN(MaBaoCaoTongKetMon),
+alter table CHITIETBAOCAOTONGKETMON add constraint fk16 foreign key (MaBaoCaoTongKetMon) references BAOCAOTONGKETMON(MaBaoCaoTongKetMon),
 constraint fk17 foreign key(MaLop) references LOP(MaLop)
 go
 
