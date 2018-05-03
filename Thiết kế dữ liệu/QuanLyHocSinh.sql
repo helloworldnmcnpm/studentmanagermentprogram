@@ -17,12 +17,8 @@ create table HOCSINH
 	NgheNghiepCha nvarchar(100),
 	HoTenMe nvarchar(100),
 	NgheNghiepMe nvarchar(100),
-<<<<<<< HEAD
 	MaLop nvarchar(100),
-
-=======
 	PhanLop nvarchar(100),
->>>>>>> 99268d198309b153a832d70d0c9ef1107f14c966
 	primary key(MaHocSinh)
 	
 )
@@ -141,13 +137,8 @@ create table QUYDINH
 	TuoiToiDa int,
 	TuoiToiThieu int,
 	SoHocSinhToiDa int,
-<<<<<<< HEAD
-	DiemDat float,
-	
-=======
 	DiemDat float
->>>>>>> 99268d198309b153a832d70d0c9ef1107f14c966
-)
+)0
 go
 --Tạo khóa ngoại
 alter table LOP add constraint fk2 foreign key(MaKhoi) references KHOI(MaKhoi)
