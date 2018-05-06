@@ -96,11 +96,13 @@ create table CHITIETBANGDIEMMON
 	primary key(MaChiTietBangDiemMon)
 )
 go
+
 create table BANGDIEMMON
 (
 	MaBangDiemMon nvarchar(100)not null,
 	MaQuaTrinhHoc int,
 	DiemTBM float,
+	MaMon nvarchar (100),
 	primary key(MaBangDiemMon)
 )
 go
@@ -138,7 +140,7 @@ create table QUYDINH
 	TuoiToiThieu int,
 	SoHocSinhToiDa int,
 	DiemDat float
-)0
+)
 go
 --Tạo khóa ngoại
 alter table LOP add constraint fk2 foreign key(MaKhoi) references KHOI(MaKhoi)
@@ -166,8 +168,8 @@ go
 alter table CHITIETBAOCAOTONGKETMON add constraint fk16 foreign key (MaBaoCaoTongKetMon) references BAOCAOTONGKETMON(MaBaoCaoTongKetMon),
 constraint fk17 foreign key(MaLop) references LOP(MaLop)
 go
-
-
+alter table BANGDIEMMON add constraint fk18 foreign key(MaMon) references MON(MaMon)
+go
 
 
 
