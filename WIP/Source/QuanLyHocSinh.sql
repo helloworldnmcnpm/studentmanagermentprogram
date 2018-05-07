@@ -88,7 +88,7 @@ create table QUATRINHHOC
 go
 create table CHITIETBANGDIEMMON
 (
-	MaChiTietBangDiemMon nvarchar(100)not null,
+	MaChiTietBangDiemMon int identity not null,
 	MaBangDiemMon nvarchar(100)not null,
 	MaHinhThucKiemTra nvarchar(100)not null,
 	Diem float,
