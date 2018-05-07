@@ -30,5 +30,6 @@ Nhóm HelloWorld gồm 4 thành viên:
 4. [Bùi Thị Huyền Trân](https://www.facebook.com/huyentran.bui.1) - 16521275 (Lớp HTTT2016)
 
 ## Công nghệ sử dụng:
-
+ADO.NET, Net Framework 4.7.1.
 ## Môi trường chạy:
+Windows 10 32/64 bit.
