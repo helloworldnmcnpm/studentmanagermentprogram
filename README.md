@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/0ddQYm3.png">
+<img src="https://i.imgur.com/0ddQYm3.png" align ="center">
 
 # QUẢN LÍ HỌC SINH
 *Lớp Nhập môn Công nghệ phần mềm - SE104.I23*
