@@ -1,7 +1,7 @@
 <p align="center"><img src="https://i.imgur.com/0ddQYm3.png"></p>
-<p align="center"># QUẢN LÍ HỌC SINH
+# QUẢN LÍ HỌC SINH
 *Lớp Nhập môn Công nghệ phần mềm - SE104.I23*
-</p>
+
 *Giảng viên hướng dẫn: Thầy Nguyễn Công Hoan và thầy Thái Hải Dương*
 ## Giới thiệu
  Hiện nay, công nghệ thông tin trở thành thành phần thiết yếu không thể thiếu và tách rời giữa thời đại bùng nổ về thông tin và kỹ thuật số. Song song với sự phát triển của phần cứng, các phần mềm càng ngày càng trở nên phù hợp, phong phú, đa dạng, giao diện thân thiện và dễ sử dụng. Nhận thấy được vấn đề trên và liên hệ thực tế với trường [THPT Tân Trụ](http://thpttantru.edu.vn/Home.aspx) - Long An, nhóm chúng tôi thấy hiện tại nhà trường chưa có phần mềm quản lí học sinh. Công việc quản lý đòi hỏi nhiều người cùng bỏ thời gian để giải quyết nghiệp vụ nhỏ do chia làm nhiều công đoạn. Vì vậy, công việc này rất tốn thời gian và công sức. Đặc biệt rất dễ xảy ra sai sót khi làm việc với khối lượng dữ liệu lớn hoặc khi đồng bộ dữ liệu. Chưa kể còn các vấn đề về lưu trữ, tra cứu thông tin khi cần, hiệu chỉnh cũng rất phức tạp vì hầu hết các công đoạn trên đều phải làm thủ công. Do đó, nhóm chúng tôi đã quyết định thực hiện một phần mềm quản lý học sinh trong trường trung học phổ thông nhằm phần nào giải quyết các khó khăn trên. Phần mềm quản lí học sinh sẽ bao gồm các tính năng:  
