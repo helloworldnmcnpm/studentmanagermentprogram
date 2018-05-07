@@ -17,7 +17,6 @@ create table HOCSINH
 	NgheNghiepCha nvarchar(100),
 	HoTenMe nvarchar(100),
 	NgheNghiepMe nvarchar(100),
-	MaLop nvarchar(100),
 	PhanLop nvarchar(100),
 	primary key(MaHocSinh)
 	
