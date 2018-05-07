@@ -1,4 +1,5 @@
 <div class="row">
+ <div class="col-xs-4></div>
 <div class="col-xs-4"><img src="https://i.imgur.com/0ddQYm3.png" class="center"></div>
 </div>
 # QUẢN LÍ HỌC SINH
