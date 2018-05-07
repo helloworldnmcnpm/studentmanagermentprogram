@@ -1,6 +1,6 @@
 <div class="row">
- <div class="col-xs-4></div>
-<div class="col-xs-4"><img src="https://i.imgur.com/0ddQYm3.png" class="center"></div>
+ <div class="col-xs-4"></div>
+<div class="col-xs-4"><img src="https://i.imgur.com/0ddQYm3.png"></div>
 </div>
 # QUẢN LÍ HỌC SINH
 *Lớp Nhập môn Công nghệ phần mềm - SE104.I23*
