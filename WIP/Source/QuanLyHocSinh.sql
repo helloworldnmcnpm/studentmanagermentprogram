@@ -17,7 +17,6 @@ create table HOCSINH
 	NgheNghiepCha nvarchar(100),
 	HoTenMe nvarchar(100),
 	NgheNghiepMe nvarchar(100),
-	MaLop nvarchar(100),
 	PhanLop nvarchar(100),
 	primary key(MaHocSinh)
 	
@@ -141,6 +140,7 @@ create table QUYDINH
 	SoHocSinhToiDa int,
 	DiemDat float
 )
+
 go
 --Tạo khóa ngoại
 alter table LOP add constraint fk2 foreign key(MaKhoi) references KHOI(MaKhoi)
