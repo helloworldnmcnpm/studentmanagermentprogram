@@ -1,4 +1,10 @@
-<img src="https://i.imgur.com/0ddQYm3.png" align ="center">
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+<img src="https://i.imgur.com/0ddQYm3.png" class="center">
 
 # QUẢN LÍ HỌC SINH
 *Lớp Nhập môn Công nghệ phần mềm - SE104.I23*
