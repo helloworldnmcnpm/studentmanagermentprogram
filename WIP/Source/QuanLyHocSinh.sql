@@ -140,6 +140,7 @@ create table QUYDINH
 	SoHocSinhToiDa int,
 	DiemDat float
 )
+
 go
 --Tạo khóa ngoại
 alter table LOP add constraint fk2 foreign key(MaKhoi) references KHOI(MaKhoi)
