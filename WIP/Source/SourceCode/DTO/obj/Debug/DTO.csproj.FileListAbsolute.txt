@@ -1,0 +1,5 @@
+D:\Users\tranm\source\repos\DTO\bin\Debug\DTO.dll
+D:\Users\tranm\source\repos\DTO\bin\Debug\DTO.pdb
+D:\Users\tranm\source\repos\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Users\tranm\source\repos\DTO\obj\Debug\DTO.dll
+D:\Users\tranm\source\repos\DTO\obj\Debug\DTO.pdb
