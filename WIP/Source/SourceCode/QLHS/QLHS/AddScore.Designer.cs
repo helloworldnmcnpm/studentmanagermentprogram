@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -63,10 +63,6 @@
             this.Subjecttxt = new System.Windows.Forms.ComboBox();
             this.subjectDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.typeExamIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.scoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sBSIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detailScoreDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.TypeExamtxt = new System.Windows.Forms.ComboBox();
@@ -75,10 +71,13 @@
             this.Scoretxt = new System.Windows.Forms.TextBox();
             this.CheckBoxFinalScoreRightNow = new System.Windows.Forms.CheckBox();
             this.ButtonDelete = new System.Windows.Forms.Button();
-            this.ButtonUpdate = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.SCtxt = new System.Windows.Forms.ComboBox();
             this.schoolYearDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.typeExamIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sBSIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.termDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -104,7 +103,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(445, 95);
+            this.label2.Location = new System.Drawing.Point(405, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 20);
             this.label2.TabIndex = 3;
@@ -135,7 +134,7 @@
             this.Termtxt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Termtxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Termtxt.FormattingEnabled = true;
-            this.Termtxt.Location = new System.Drawing.Point(521, 87);
+            this.Termtxt.Location = new System.Drawing.Point(481, 87);
             this.Termtxt.Name = "Termtxt";
             this.Termtxt.Size = new System.Drawing.Size(121, 28);
             this.Termtxt.TabIndex = 5;
@@ -168,11 +167,11 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -196,23 +195,23 @@
             this.mJobDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.studentDTOBindingSource;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            this.dataGridView1.Location = new System.Drawing.Point(52, 70);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 70);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(335, 340);
             this.dataGridView1.TabIndex = 14;
@@ -336,7 +335,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(466, 129);
+            this.label5.Location = new System.Drawing.Point(426, 129);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 20);
             this.label5.TabIndex = 3;
@@ -349,11 +348,12 @@
             this.Subjecttxt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Subjecttxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Subjecttxt.FormattingEnabled = true;
-            this.Subjecttxt.Location = new System.Drawing.Point(521, 121);
+            this.Subjecttxt.Location = new System.Drawing.Point(481, 121);
             this.Subjecttxt.Name = "Subjecttxt";
             this.Subjecttxt.Size = new System.Drawing.Size(121, 28);
             this.Subjecttxt.TabIndex = 5;
             this.Subjecttxt.ValueMember = "ID";
+            this.Subjecttxt.SelectedIndexChanged += new System.EventHandler(this.Subjecttxt_SelectedIndexChanged);
             // 
             // subjectDTOBindingSource
             // 
@@ -363,11 +363,11 @@
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -381,61 +381,27 @@
             this.iDDataGridViewTextBoxColumn1});
             this.dataGridView2.DataSource = this.detailScoreDTOBindingSource;
             this.dataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            this.dataGridView2.Location = new System.Drawing.Point(797, 70);
+            this.dataGridView2.Location = new System.Drawing.Point(757, 70);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dataGridView2.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle30;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(302, 340);
+            this.dataGridView2.Size = new System.Drawing.Size(400, 340);
             this.dataGridView2.TabIndex = 15;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // typeExamIDDataGridViewTextBoxColumn
-            // 
-            this.typeExamIDDataGridViewTextBoxColumn.DataPropertyName = "TypeExamID";
-            this.typeExamIDDataGridViewTextBoxColumn.HeaderText = "Loại kiểm tra";
-            this.typeExamIDDataGridViewTextBoxColumn.Name = "typeExamIDDataGridViewTextBoxColumn";
-            this.typeExamIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.typeExamIDDataGridViewTextBoxColumn.Width = 140;
-            // 
-            // scoreDataGridViewTextBoxColumn
-            // 
-            this.scoreDataGridViewTextBoxColumn.DataPropertyName = "Score";
-            this.scoreDataGridViewTextBoxColumn.HeaderText = "Điểm";
-            this.scoreDataGridViewTextBoxColumn.Name = "scoreDataGridViewTextBoxColumn";
-            this.scoreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.scoreDataGridViewTextBoxColumn.Width = 159;
-            // 
-            // sBSIDDataGridViewTextBoxColumn
-            // 
-            this.sBSIDDataGridViewTextBoxColumn.DataPropertyName = "SBSID";
-            this.sBSIDDataGridViewTextBoxColumn.HeaderText = "Mã bảng điểm môn";
-            this.sBSIDDataGridViewTextBoxColumn.Name = "sBSIDDataGridViewTextBoxColumn";
-            this.sBSIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sBSIDDataGridViewTextBoxColumn.Visible = false;
-            this.sBSIDDataGridViewTextBoxColumn.Width = 170;
-            // 
-            // iDDataGridViewTextBoxColumn1
-            // 
-            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn1.HeaderText = "Mã chi tiết bảng điểm";
-            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
-            this.iDDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn1.Visible = false;
-            this.iDDataGridViewTextBoxColumn1.Width = 220;
             // 
             // detailScoreDTOBindingSource
             // 
@@ -444,7 +410,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(391, 163);
+            this.label6.Location = new System.Drawing.Point(351, 163);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(124, 20);
             this.label6.TabIndex = 3;
@@ -457,7 +423,7 @@
             this.TypeExamtxt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TypeExamtxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TypeExamtxt.FormattingEnabled = true;
-            this.TypeExamtxt.Location = new System.Drawing.Point(521, 155);
+            this.TypeExamtxt.Location = new System.Drawing.Point(481, 155);
             this.TypeExamtxt.Name = "TypeExamtxt";
             this.TypeExamtxt.Size = new System.Drawing.Size(121, 28);
             this.TypeExamtxt.TabIndex = 5;
@@ -470,7 +436,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(457, 196);
+            this.label7.Location = new System.Drawing.Point(417, 196);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 20);
             this.label7.TabIndex = 3;
@@ -478,7 +444,7 @@
             // 
             // Scoretxt
             // 
-            this.Scoretxt.Location = new System.Drawing.Point(521, 189);
+            this.Scoretxt.Location = new System.Drawing.Point(481, 189);
             this.Scoretxt.Name = "Scoretxt";
             this.Scoretxt.Size = new System.Drawing.Size(121, 27);
             this.Scoretxt.TabIndex = 16;
@@ -486,7 +452,7 @@
             // CheckBoxFinalScoreRightNow
             // 
             this.CheckBoxFinalScoreRightNow.AutoSize = true;
-            this.CheckBoxFinalScoreRightNow.Location = new System.Drawing.Point(436, 222);
+            this.CheckBoxFinalScoreRightNow.Location = new System.Drawing.Point(396, 222);
             this.CheckBoxFinalScoreRightNow.Name = "CheckBoxFinalScoreRightNow";
             this.CheckBoxFinalScoreRightNow.Size = new System.Drawing.Size(338, 24);
             this.CheckBoxFinalScoreRightNow.TabIndex = 17;
@@ -499,25 +465,13 @@
             this.ButtonDelete.FlatAppearance.BorderSize = 0;
             this.ButtonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonDelete.ForeColor = System.Drawing.Color.White;
-            this.ButtonDelete.Location = new System.Drawing.Point(648, 154);
+            this.ButtonDelete.Location = new System.Drawing.Point(608, 121);
             this.ButtonDelete.Name = "ButtonDelete";
             this.ButtonDelete.Size = new System.Drawing.Size(143, 27);
             this.ButtonDelete.TabIndex = 20;
             this.ButtonDelete.Text = "Xóa";
             this.ButtonDelete.UseVisualStyleBackColor = false;
-            // 
-            // ButtonUpdate
-            // 
-            this.ButtonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.ButtonUpdate.FlatAppearance.BorderSize = 0;
-            this.ButtonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonUpdate.ForeColor = System.Drawing.Color.White;
-            this.ButtonUpdate.Location = new System.Drawing.Point(648, 121);
-            this.ButtonUpdate.Name = "ButtonUpdate";
-            this.ButtonUpdate.Size = new System.Drawing.Size(143, 27);
-            this.ButtonUpdate.TabIndex = 19;
-            this.ButtonUpdate.Text = "Cập nhật";
-            this.ButtonUpdate.UseVisualStyleBackColor = false;
+            this.ButtonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
             // 
             // Add
             // 
@@ -525,12 +479,13 @@
             this.Add.FlatAppearance.BorderSize = 0;
             this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Add.ForeColor = System.Drawing.Color.White;
-            this.Add.Location = new System.Drawing.Point(648, 88);
+            this.Add.Location = new System.Drawing.Point(608, 88);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(143, 27);
             this.Add.TabIndex = 18;
             this.Add.Text = "Thêm";
             this.Add.UseVisualStyleBackColor = false;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // SCtxt
             // 
@@ -550,12 +505,44 @@
             // 
             this.schoolYearDTOBindingSource.DataSource = typeof(DTO.SchoolYear_DTO);
             // 
+            // typeExamIDDataGridViewTextBoxColumn
+            // 
+            this.typeExamIDDataGridViewTextBoxColumn.DataPropertyName = "TypeExamID";
+            this.typeExamIDDataGridViewTextBoxColumn.HeaderText = "Loại kiểm tra";
+            this.typeExamIDDataGridViewTextBoxColumn.Name = "typeExamIDDataGridViewTextBoxColumn";
+            this.typeExamIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.typeExamIDDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // scoreDataGridViewTextBoxColumn
+            // 
+            this.scoreDataGridViewTextBoxColumn.DataPropertyName = "Score";
+            this.scoreDataGridViewTextBoxColumn.HeaderText = "Điểm";
+            this.scoreDataGridViewTextBoxColumn.Name = "scoreDataGridViewTextBoxColumn";
+            this.scoreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.scoreDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // sBSIDDataGridViewTextBoxColumn
+            // 
+            this.sBSIDDataGridViewTextBoxColumn.DataPropertyName = "SBSID";
+            this.sBSIDDataGridViewTextBoxColumn.HeaderText = "Mã bảng điểm môn";
+            this.sBSIDDataGridViewTextBoxColumn.Name = "sBSIDDataGridViewTextBoxColumn";
+            this.sBSIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sBSIDDataGridViewTextBoxColumn.Width = 190;
+            // 
+            // iDDataGridViewTextBoxColumn1
+            // 
+            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn1.HeaderText = "Mã chi tiết bảng điểm";
+            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
+            this.iDDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn1.Visible = false;
+            this.iDDataGridViewTextBoxColumn1.Width = 220;
+            // 
             // AddScore
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.Controls.Add(this.ButtonDelete);
-            this.Controls.Add(this.ButtonUpdate);
             this.Controls.Add(this.Add);
             this.Controls.Add(this.CheckBoxFinalScoreRightNow);
             this.Controls.Add(this.Scoretxt);
@@ -615,13 +602,8 @@
         private System.Windows.Forms.TextBox Scoretxt;
         private System.Windows.Forms.CheckBox CheckBoxFinalScoreRightNow;
         private System.Windows.Forms.Button ButtonDelete;
-        private System.Windows.Forms.Button ButtonUpdate;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.BindingSource typeExamDTOBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeExamIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn scoreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sBSIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sexDataGridViewTextBoxColumn;
@@ -639,5 +621,9 @@
         private System.Windows.Forms.ComboBox SCtxt;
         private System.Windows.Forms.BindingSource classDTOBindingSource;
         private System.Windows.Forms.BindingSource schoolYearDTOBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeExamIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn scoreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sBSIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
     }
 }

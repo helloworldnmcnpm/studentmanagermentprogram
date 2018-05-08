@@ -9,13 +9,18 @@ namespace BUL
 {
     public class DetailScore_BUL
     {
-        public List<DetailScore_DTO> LoadBySubject(string ID)
+        public static bool InsertScoreByStudent(string ScoreBySubjectID, string TypeExamID, float Score)
         {
-            return DeTailScore_DAL.LoadBySubject(ID);
+            return DeTailScore_DAL.InsertScoreByStudent(ScoreBySubjectID, TypeExamID, Score);
         }
-        public static List<DetailScore_DTO> LoadByStudent(string StudentID, string TermID)
+        public static List<DetailScore_DTO> LoadBySBSID(string ScoreBySubjectID)
         {
-            return DeTailScore_DAL.LoadByStudent(StudentID, TermID);
+            return DeTailScore_DAL.LoadBySBSID(ScoreBySubjectID);
+        }
+
+        public static bool DeleteScoreByStudent(int ID)
+        {
+            return DeTailScore_DAL.DeleteScoreByStudent(ID);
         }
     }
 }

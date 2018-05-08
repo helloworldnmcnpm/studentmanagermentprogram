@@ -36,6 +36,18 @@ namespace DAL
             }
             return null;
         }
+
+        public static string GetID(int ProcessID,string SubjectID)
+        {
+            List<ScoreBySubject_DTO> scoreBySubject_DTOs = LoadByProcessID(ProcessID);
+            if (scoreBySubject_DTOs==null) return null;
+            for (int i=0;i<scoreBySubject_DTOs.Count;i++)
+            {
+                if (scoreBySubject_DTOs[i].SubjectID == SubjectID) return scoreBySubject_DTOs[i].ID;
+            }
+            return null;
+        }
+
         public static bool Delete(string ID)
         {
             string QueryString = string.Format("Delete From BANGDIEMMON where MaBangDiemMon='{0}'", ID);

@@ -21,5 +21,9 @@ namespace BUL
         {
             return ScoreBySubject_DAL.Delete(ID);
         }
+        public static string GetID(int ProcessID, string SubjectID)
+        {
+            return ScoreBySubject_DAL.GetID(ProcessID, SubjectID);
+        }
     }
 }
