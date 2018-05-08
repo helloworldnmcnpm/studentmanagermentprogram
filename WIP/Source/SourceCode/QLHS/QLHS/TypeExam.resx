@@ -120,4 +120,13 @@
   <metadata name="typeExamDTOBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Quy định:
+
+- Người dùng có thể thêm các loại kiểm tra như : Kiểm tra miệng, kiểm tra 15 phút, kiểm tra 45 phút, kiểm tra cuối kỳ.
+
+- Nếu người dùng muốn thêm loại kiểm tra thì chỉ cần nhập thông tin và nhấn phím "Thêm".
+- Nếu người dùng muốn chỉnh sửa thì chỉ cần chọn loại kiểm tra muốn sửa. Sau khi chỉnh sửa xong. Nhấn phím cập nhật để cập nhật thông tin.
+- Nếu người dùng muốn xóa thì chỉ cần chọn loại kiểm tra muốn xóa và nhấn phím "Xóa".</value>
+  </data>
 </root>

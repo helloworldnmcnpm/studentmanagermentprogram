@@ -110,5 +110,10 @@ namespace QLHS
             }
             else MessageBox.Show("Xóa thất bại! Cần kiểm tra database!", "X<Database>");
         }
+
+        private void Indextxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

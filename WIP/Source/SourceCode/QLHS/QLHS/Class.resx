@@ -129,12 +129,19 @@
   <data name="richTextBox1.Text" xml:space="preserve">
     <value>Quy định thêm/ chỉnh sửa lớp học:
 
--Mã lớp học là duy nhất, không được trùng.
+- Mỗi mã lớp học là duy nhất, đặc trưng cho lớp học đó thuộc khối và năm học đã chọn. (Ví dụ: K17_0_A1).
+- Nếu muốn thêm lớp học:
+B1: Người dùng nhập thông tin lớp học bao gồm mã lớp và tên lớp. (Không được thiếu bất kì phần nào).
+B2: Chọn khối/ năm học.
+B3: Nhấn "Thêm". Dữ liệu của lớp học đó sẽ được hiển thị sang bảng bên cạnh.
+-Nếu muốn chỉnh sửa lớp học:
+B1: Sau khi tìm thấy lớp học có thông tin không chính xác. Người dùng chọn lớp học đó trong danh sách lớp bên cạnh. Dữ liệu sẽ được cập nhật lên phần thêm/ chỉnh sửa lớp học.
+B2: Chỉnh sửa thông tin lớp học đó.
+B3: Nhấn phím cập nhật và kiểm tra xem lớp học đó đã được cập nhật chưa.
+- Nếu muốn xóa lớp học:
+B1: Chọn lớp học muốn xóa. (Lưu ý: Lớp học nào đã thêm học sinh thì không thể xóa được).
+B2: Nhấn "Xóa" và kiểm tra xem lớp đó đã bị xóa hay chưa.
 
--Tên lớp học phải rõ ràng, dễ hiểu.
-
--Sĩ số là số nguyên, không âm và bé hơn số học sinh tối đa.
-
--Phải chọn khối và năm học.</value>
+&lt;Phím Reload&gt;: Có chức năng update lại dữ liệu từ database trong trường hợp người dùng không tìm thấy Khối, Năm học mới được thêm vào.</value>
   </data>
 </root>

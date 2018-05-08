@@ -22,5 +22,9 @@ namespace BUL
         {
             return DeTailScore_DAL.DeleteScoreByStudent(ID);
         }
+        public static bool UpdateScoreByStudent(int ID, float Score)
+        {
+            return DeTailScore_DAL.UpdateScoreByStudent(ID, Score);
+        }
     }
 }

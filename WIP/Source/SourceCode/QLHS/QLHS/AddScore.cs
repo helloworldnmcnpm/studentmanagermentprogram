@@ -143,5 +143,29 @@ namespace QLHS
                 MessageBox.Show("Không thể xóa.", "Thất bại");
             }
         }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            if (Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString()) == null) return;
+            if (Termtxt == null || Subjecttxt == null || TypeExamtxt == null) return;
+            Process_DTO process_DTO = Process_BUL.GetProcess(Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()), Termtxt.SelectedValue.ToString(), Classtxt.SelectedValue.ToString());
+            string ScoreBySubjectID = ScoreBySubject_BUL.GetID(process_DTO.ID, Subjecttxt.SelectedValue.ToString());
+            if (DetailScore_BUL.LoadBySBSID(ScoreBySubjectID) == null) return;
+            if (ScoreBySubjectID == null) return;
+            if (Scoretxt.Text == "") return;
+            if (!IsNumber(Scoretxt.Text)||Convert.ToSingle(Scoretxt.Text)<0||Convert.ToSingle(Scoretxt.Text)>10)
+            {
+                MessageBox.Show("Nhập điểm sai, vui lòng nhập lại!", "Nhập sai!");
+                return;
+            }
+            if (DetailScore_BUL.UpdateScoreByStudent(Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["iDDataGridViewTextBoxColumn1"].Value.ToString()), Convert.ToSingle(Scoretxt.Text)))
+            {
+                dataGridView2.DataSource = DetailScore_BUL.LoadBySBSID(ScoreBySubjectID);
+            }
+            else
+            {
+                MessageBox.Show("Không thể cập nhật", "Thất bại");
+            }
+        }
     }
 }

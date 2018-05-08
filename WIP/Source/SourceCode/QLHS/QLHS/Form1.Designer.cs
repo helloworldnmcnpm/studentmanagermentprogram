@@ -269,7 +269,7 @@
             this.buttonSubject.Name = "buttonSubject";
             this.buttonSubject.Size = new System.Drawing.Size(80, 80);
             this.buttonSubject.TabIndex = 8;
-            this.buttonSubject.Text = "môn";
+            this.buttonSubject.Text = "Môn";
             this.buttonSubject.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonSubject.UseVisualStyleBackColor = false;
             this.buttonSubject.Click += new System.EventHandler(this.buttonSubject_Click);
