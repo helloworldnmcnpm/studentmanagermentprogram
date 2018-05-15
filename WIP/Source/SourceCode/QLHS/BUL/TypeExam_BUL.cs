@@ -25,5 +25,9 @@ namespace BUL
         {
             return TypeExam_DAL.Delete(ID);
         }
+        public static int GetIndex(string NameType)
+        {
+            return TypeExam_DAL.GetIndex(NameType);
+        }
     }
 }

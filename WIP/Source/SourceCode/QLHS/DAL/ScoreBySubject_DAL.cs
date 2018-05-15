@@ -53,5 +53,10 @@ namespace DAL
             string QueryString = string.Format("Delete From BANGDIEMMON where MaBangDiemMon='{0}'", ID);
             return DataProvider.ExecuteNonQueryMethod(QueryString);
         }
+        public static bool UpdateScore(string ID, float score)
+        {
+            string QueryString = string.Format("Update BANGDIEMMON set DiemTBM='{0}' where MaBangDiemMon='{1}'", score, ID);
+            return DataProvider.ExecuteNonQueryMethod(QueryString);
+        }
     }
 }

@@ -64,5 +64,11 @@ namespace DAL
             bool Result = DataProvider.ExecuteNonQueryMethod(QueryString);
             return Result;
         }
+        public static bool ChangeClass(int StudentID, string TermID, string ClassID)
+        {
+            string QueryString = string.Format("exec USP_ChuyenLop '{0}','{1}','{2}'", TermID, ClassID, StudentID);
+            bool Result = DataProvider.ExecuteNonQueryMethod(QueryString);
+            return Result;
+        }
     }
 }

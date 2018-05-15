@@ -110,8 +110,19 @@ namespace QLHS
             string ScoreBySubjectID = ScoreBySubject_BUL.GetID(process_DTO.ID, Subjecttxt.SelectedValue.ToString());
             if (DetailScore_BUL.InsertScoreByStudent(ScoreBySubjectID, TypeExamtxt.SelectedValue.ToString(), Convert.ToSingle(Scoretxt.Text)))
             {
-                MessageBox.Show("Đã thêm điểm!", "Thành công");
                 dataGridView2.DataSource = DetailScore_BUL.LoadBySBSID(ScoreBySubjectID);
+                MessageBox.Show("Đã thêm điểm!", "Thành công");
+                float FinalScore = 0;
+                int index, count = 0 ;
+                for (int i = 0; i < dataGridView2.RowCount; i++)
+                {
+                    index = TypeExam_BUL.GetIndex(dataGridView2.Rows[i].Cells[0].Value.ToString());
+                    FinalScore += float.Parse(dataGridView2.Rows[i].Cells[1].Value.ToString())*index;
+                    count += index;
+                }
+                FinalScore /= count;
+                ScoreBySubject_BUL.UpdateScore(ScoreBySubjectID, FinalScore);
+                label9.Text = FinalScore.ToString();
             }
             else MessageBox.Show("Thêm thất bại.", "Thất bại");
         }
@@ -166,6 +177,34 @@ namespace QLHS
             {
                 MessageBox.Show("Không thể cập nhật", "Thất bại");
             }
+        }
+
+        private void Scoretxt_TextChanged(object sender, EventArgs e)
+        {
+            if (Scoretxt.Text != "")
+            {
+                label8.Visible = true;
+                if (!IsNumber(Scoretxt.Text))
+                {
+                    label8.ForeColor = Color.Red;
+                    label8.Text = "Điểm phải là chữ số!";
+                }
+                else
+                {
+                    if (float.Parse(Scoretxt.Text) < 0 || float.Parse(Scoretxt.Text) > 10)
+                    {
+                        label8.ForeColor = Color.Red;
+                        label8.Text = "0<=Điểm<=10";
+                    }
+                    else
+                    {
+                        label8.Text = "Nhập đúng!";
+                        label8.ForeColor = Color.FromArgb(18, 148, 246);
+                    }
+                }
+               
+            }
+            else label8.Visible = false;
         }
     }
 }

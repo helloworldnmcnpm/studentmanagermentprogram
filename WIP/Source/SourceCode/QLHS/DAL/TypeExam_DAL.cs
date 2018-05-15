@@ -43,5 +43,10 @@ namespace DAL
         {
             return DataProvider.ExecuteNonQueryMethod(string.Format("Delete from HINHTHUCKIEMTRA where MaHinhThucKiemTra='{0}'", ID));
         }
+        public static int GetIndex(string NameType)
+        {
+            string QueryString = string.Format("Select HeSo from HINHTHUCKIEMTRA where MaHinhThucKiemTra=N'{0}'", NameType);
+            return int.Parse(DataProvider.ExecuteScalaMethod(QueryString));
+        }
     }
 }

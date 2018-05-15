@@ -131,6 +131,7 @@
             // buttonClose
             // 
             this.buttonClose.BackColor = System.Drawing.Color.White;
+            this.buttonClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonClose.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(250)))));
@@ -608,9 +609,11 @@
             // 
             // Form1
             // 
+            this.AcceptButton = this.button9;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.buttonClose;
             this.ClientSize = new System.Drawing.Size(1176, 769);
             this.Controls.Add(this.Activities);
             this.Controls.Add(this.PanelRight);

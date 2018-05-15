@@ -25,5 +25,9 @@ namespace BUL
         {
             return ScoreBySubject_DAL.GetID(ProcessID, SubjectID);
         }
+        public static bool UpdateScore(string ID, float score)
+        {
+            return ScoreBySubject_DAL.UpdateScore(ID, score);
+        }
     }
 }

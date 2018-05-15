@@ -33,6 +33,7 @@
             this.buttonInsertToClass = new System.Windows.Forms.Button();
             this.ButtonAddStudent = new System.Windows.Forms.Button();
             this.Activities = new System.Windows.Forms.Panel();
+            this.ButtonUpgrade = new System.Windows.Forms.Button();
             this.PanelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,6 +41,7 @@
             // 
             this.PanelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.PanelTitle.Controls.Add(this.panel1);
+            this.PanelTitle.Controls.Add(this.ButtonUpgrade);
             this.PanelTitle.Controls.Add(this.buttonInsertToClass);
             this.PanelTitle.Controls.Add(this.ButtonAddStudent);
             this.PanelTitle.Dock = System.Windows.Forms.DockStyle.Top;
@@ -52,9 +54,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(302, 33);
+            this.panel1.Location = new System.Drawing.Point(453, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(874, 1);
+            this.panel1.Size = new System.Drawing.Size(723, 1);
             this.panel1.TabIndex = 0;
             // 
             // buttonInsertToClass
@@ -104,6 +106,24 @@
             this.Activities.Size = new System.Drawing.Size(1176, 705);
             this.Activities.TabIndex = 1;
             // 
+            // ButtonUpgrade
+            // 
+            this.ButtonUpgrade.BackColor = System.Drawing.Color.White;
+            this.ButtonUpgrade.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ButtonUpgrade.FlatAppearance.BorderSize = 0;
+            this.ButtonUpgrade.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.ButtonUpgrade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.ButtonUpgrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonUpgrade.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ButtonUpgrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.ButtonUpgrade.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ButtonUpgrade.Location = new System.Drawing.Point(302, 0);
+            this.ButtonUpgrade.Name = "ButtonUpgrade";
+            this.ButtonUpgrade.Size = new System.Drawing.Size(151, 34);
+            this.ButtonUpgrade.TabIndex = 2;
+            this.ButtonUpgrade.Text = "Lên lớp";
+            this.ButtonUpgrade.UseVisualStyleBackColor = false;
+            // 
             // Student
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -127,5 +147,6 @@
         private System.Windows.Forms.Panel Activities;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonInsertToClass;
+        private System.Windows.Forms.Button ButtonUpgrade;
     }
 }
