@@ -13,7 +13,7 @@ namespace DAL
         //Thiết lập kết nối cơ sở dữ liệu qua Chuỗi kết nối
         public static SqlConnection Connect()
         {
-            string ConnectionString = @"Data Source=(local);Initial Catalog=QuanLyHocSinh;Integrated Security=True";
+            string ConnectionString = @"Data Source=DESKTOP-S2F14I7;Initial Catalog=QuanLyHocSinh;Integrated Security=True";
             SqlConnection Conn = new SqlConnection(ConnectionString);
             Conn.Open();
             return Conn;

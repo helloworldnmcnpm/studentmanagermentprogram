@@ -117,20 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value>Quy định thêm/chỉnh sửa thông tin học sinh mới:
-(Chú ý: Quy định này chỉ áp dụng cho những học sinh mới và chưa từng thuộc lớp nào).
-
-- Họ và tên, nơi sinh, địa chỉ, dân tộc, tôn giáo, họ tên cha và mẹ, nghề nghiệp cha và mẹ phải viết bằng chữ.
-
-- Điện thoại phải viết bằng số.
-
-- Sau khi nhập xong dữ liệu, người dùng có thể nhấn "Thêm" để thêm học sinh. Học sinh đó sẽ trong tình trạng "Ready" và sẵn sàng để thêm vào một lớp.
-
-- Nếu phát hiện thông tin học sinh bị sai, người dùng có thể chọn học sinh đó trên bảng danh sách học sinh. Sau khi sửa đổi thông tin, người dùng nhấn "cập nhật" để cập nhật lại thông tin học sinh.
-
-- Nếu muốn xóa bỏ học sinh nào đó ra khỏi danh sách học sinh mới, người dùng có thể chọn học sinh đó trên bảng danh sách học sinh và nhấn "Xóa".</value>
-  </data>
   <metadata name="studentDTOBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

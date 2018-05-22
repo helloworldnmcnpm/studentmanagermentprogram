@@ -9,3 +9,9 @@ D:\Users\tranm\OneDrive\Documents\GitHub\studentmanagermentprogram\WIP\Source\So
 D:\Users\tranm\OneDrive\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\Users\tranm\OneDrive\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.dll
 D:\Users\tranm\OneDrive\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.pdb
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\bin\Debug\DTO.dll
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\bin\Debug\DTO.pdb
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.dll
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.pdb

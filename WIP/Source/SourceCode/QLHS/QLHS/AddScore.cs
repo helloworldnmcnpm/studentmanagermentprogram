@@ -122,7 +122,6 @@ namespace QLHS
                 }
                 FinalScore /= count;
                 ScoreBySubject_BUL.UpdateScore(ScoreBySubjectID, FinalScore);
-                label9.Text = FinalScore.ToString();
             }
             else MessageBox.Show("Thêm thất bại.", "Thất bại");
         }

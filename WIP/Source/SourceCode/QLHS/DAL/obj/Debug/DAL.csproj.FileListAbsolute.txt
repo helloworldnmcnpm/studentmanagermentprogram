@@ -16,3 +16,12 @@ D:\Users\tranm\OneDrive\Documents\GitHub\studentmanagermentprogram\WIP\Source\So
 D:\Users\tranm\OneDrive\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\Users\tranm\OneDrive\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\obj\Debug\DAL.dll
 D:\Users\tranm\OneDrive\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\obj\Debug\DAL.pdb
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\bin\Debug\DAL.dll
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\bin\Debug\DAL.pdb
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\bin\Debug\DTO.dll
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\bin\Debug\DTO.pdb
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\obj\Debug\DAL.dll
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\obj\Debug\DAL.pdb
