@@ -19,8 +19,6 @@ namespace QLHS
         /// </summary>
         List<Student_DTO> ListStudentReady = new List<Student_DTO>();
         List<SchoolYear_DTO> schoolYear_DTOs = new List<SchoolYear_DTO>();
-        List<Class_DTO> class_DTOs = new List<Class_DTO>();
-        List<Term_DTO> term_DTOs = new List<Term_DTO>();
         private static InsertToClass _instance;
         public static InsertToClass Instance
         {
@@ -30,10 +28,6 @@ namespace QLHS
                 return _instance;
             }
         }
-
-
-
-
         private Student_DTO ChangeType(DataGridViewRow dr)
         {
             Student_DTO student_DTO = new Student_DTO();
@@ -53,19 +47,7 @@ namespace QLHS
             student_DTO.MJob = dr.Cells[13].Value.ToString();
             return student_DTO;
         }
-        private void LoadList()
-        {
-            //Load List student
-            if (Student_BUL.Load() == null) return;
-            ListStudentReady = Student_BUL.Load();
-            dataGridView1.DataSource = ListStudentReady;
 
-
-            //Load List school year
-            if (SchoolYear_BUL.Load() == null) return;
-            schoolYear_DTOs = SchoolYear_BUL.Load();
-            SchoolYearComboBox.DataSource = schoolYear_DTOs;
-        }
 
 
 
@@ -79,42 +61,32 @@ namespace QLHS
         }
         private void InsertToClass_Load(object sender, EventArgs e)
         {
-            LoadList();
-            if (Student_BUL.Load()==null)
-            {
-                Add.Enabled = false;
-                SchoolYearComboBox.Enabled = false;
-                ComboBoxClass.Enabled = false;
-                ComboBoxTerm1.Enabled = false;
-            }
-            else
-            {
-                Add.Enabled = true;
-                SchoolYearComboBox.Enabled = true;
-                ComboBoxClass.Enabled = true;
-                ComboBoxTerm1.Enabled = true;
-            }
+            //Load Schoolyear
             if (SchoolYear_BUL.Load() == null)
             {
+                panel2.Visible = false;
                 Add.Enabled = false;
-                SchoolYearComboBox.Enabled = false;
-                ComboBoxClass.Enabled = false;
-                ComboBoxTerm1.Enabled = false;
+                ChangeClass.Visible = false;
+                dataGridView1.Enabled = false;
                 dataGridView2.Enabled = false;
                 dataGridView3.Enabled = false;
-                ChangeClass.Visible = false;
             }
             else
             {
+                SchoolYearComboBox.DataSource = SchoolYear_BUL.Load();
+                panel2.Visible = true;
                 Add.Enabled = true;
-                SchoolYearComboBox.Enabled = true;
-                ComboBoxClass.Enabled = true;
-                ComboBoxTerm1.Enabled = true;
+                ChangeClass.Visible = true;
+                dataGridView1.Enabled = true;
                 dataGridView2.Enabled = true;
                 dataGridView3.Enabled = true;
-                ChangeClass.Visible = true;
+                label3.Text = "Số học sinh tối đa:" + Rule_BUL.Load().MaxStudent;
             }
-            label3.Text = "Số học sinh tối đa: " + Rule_BUL.Load().MaxStudent;
+            if (Student_BUL.Load() == null) dataGridView1.DataSource = null;
+            else
+            {
+                dataGridView1.DataSource = Student_BUL.Load();
+            }
         }
 
 
@@ -130,37 +102,48 @@ namespace QLHS
             if (ChangeClass.Checked)
             {
                 PanelSwitchStudent.Visible = true;
-                Add.Enabled = false;
-                panel2.Visible = false;
-                dataGridView1.Enabled = false;
+                dataGridView3.Enabled = true;
             }
             else
             {
                 PanelSwitchStudent.Visible = false;
-                Add.Enabled = true;
-                panel2.Visible = true;
-                dataGridView1.Enabled = true;
+                dataGridView3.Enabled = false;
             }
         }
         private void Add_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
+            if (dataGridView1.SelectedRows.Count + Process_BUL.CountStudent(ComboBoxClass.SelectedValue.ToString()) >= Rule_BUL.Load().MaxStudent)
             {
-                //Initializing Process of students
-                
-                if(Process_BUL.InitialProcess(ComboBoxClass.SelectedValue.ToString(), int.Parse(dataGridView1.SelectedRows[i].Cells[1].Value.ToString()), ComboBoxTerm1.SelectedValue.ToString()))
+                MessageBox.Show("Số học sinh đã chọn vượt quá số học sinh quy định trong một lớp! Tuy nhiên, một số học sinh có thể thêm vào lớp này!", "Thông báo!");
+                for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
                 {
-                    Student_DTO student_DTO = new Student_DTO();
-                    student_DTO= ChangeType(dataGridView1.SelectedRows[i]);
+                    if (Process_BUL.CountStudent(ComboBoxClass.SelectedValue.ToString()) + i <= Rule_BUL.Load().MaxStudent)
+                    {
+                        Process_BUL.InitialProcess(ComboBoxClass.SelectedValue.ToString(), int.Parse(dataGridView1.SelectedRows[i].Cells[1].Value.ToString()), ComboBoxTerm1.SelectedValue.ToString());
+                        Student_DTO student_DTO = ChangeType(dataGridView1.SelectedRows[i]);
+                        student_DTO.Status = "Inserted";
+                        Student_BUL.Update(student_DTO);
+                    }
+                    else break;
+                }
+                dataGridView1.DataSource = Student_BUL.Load();
+                dataGridView2.DataSource = Process_BUL.LoadByClass(ComboBoxClass.SelectedValue.ToString());
+                label5.Text = "Sĩ số:" + Process_BUL.CountStudent(ComboBoxClass.SelectedValue.ToString());
+                return;
+            }
+            else
+            {
+                for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
+                {
+                    Process_BUL.InitialProcess(ComboBoxClass.SelectedValue.ToString(), int.Parse(dataGridView1.SelectedRows[i].Cells[1].Value.ToString()), ComboBoxTerm1.SelectedValue.ToString());
+                    Student_DTO student_DTO = ChangeType(dataGridView1.SelectedRows[i]);
                     student_DTO.Status = "Inserted";
                     Student_BUL.Update(student_DTO);
-                } else
-                {
-                    MessageBox.Show("Không thể thêm vào!", "Không thể!");
                 }
+                dataGridView1.DataSource = Student_BUL.Load();
+                dataGridView2.DataSource = Process_BUL.LoadByClass(ComboBoxClass.SelectedValue.ToString());
+                label5.Text = "Sĩ số:" + Process_BUL.CountStudent(ComboBoxClass.SelectedValue.ToString());
             }
-            dataGridView1.DataSource = Student_BUL.Load();
-            dataGridView2.DataSource = Process_BUL.LoadByClass(ComboBoxClass.SelectedValue.ToString());
         }
         private void buttonSwitch_Click(object sender, EventArgs e)
         {
@@ -182,98 +165,61 @@ namespace QLHS
         /// 
         private void SchoolYearComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Load Class to combobox
-            if (Class_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString()) == null) return;
-            ComboBoxClass.DataSource = Class_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString());
-            ComboboxChangeClass1.DataSource = Class_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString());
-            ComboboxChangeClass2.DataSource = Class_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString());
-            //Load Term to combobox
-            if (Term_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString()) == null) return;
-            ComboBoxTerm1.DataSource = Term_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString());
-            ComboBoxTerm2.DataSource = Term_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString());
+            if (Class_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString()) == null)
+            {
+                Add.Enabled = false;
+            }
+            else
+            {
+                Add.Enabled = true;
+                ComboBoxClass.DataSource = Class_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString());
+                if (Term_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString()) == null)
+                {
+                    Add.Enabled = false;
+                }
+                else
+                {
+                    Add.Enabled = true;
+                    ComboBoxTerm1.DataSource = Term_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString());
+                }
+            }
         }
         private void comboBoxClass_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Class_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString())==null)
+            label5.Text = "Sĩ số:" + Process_BUL.CountStudent(ComboBoxClass.SelectedValue.ToString());
+            label4.Text = ComboBoxClass.Text;
+            if (Process_BUL.CountStudent(ComboBoxClass.SelectedValue.ToString())>=Rule_BUL.Load().MaxStudent)
             {
                 Add.Enabled = false;
-                return;
-            }
-            else
+            }else
             {
                 Add.Enabled = true;
-                LabelNumberOfStudent1.Text = Process_BUL.CountStudent(ComboBoxClass.SelectedValue.ToString()).ToString();
-                if (Process_BUL.LoadByClass(ComboBoxClass.SelectedValue.ToString()) == null)
-                {
-                    label4.Text = ComboBoxClass.Text;
-                }
-                else
-                {
-                    dataGridView2.DataSource = Process_BUL.LoadByClass(ComboBoxClass.SelectedValue.ToString());
-                    label4.Text = ComboBoxClass.Text;
-                }
-                
             }
-            if (Process_BUL.CountStudent(ComboBoxClass.SelectedValue.ToString()) >= Rule_BUL.Load().MaxStudent)
+            if (Process_BUL.LoadByClass(ComboBoxClass.SelectedValue.ToString()) == null) dataGridView2.DataSource=null;
+            else
             {
-                Add.Enabled = false;
+                dataGridView2.DataSource = Process_BUL.LoadByClass(ComboBoxClass.SelectedValue.ToString());
             }
-            else Add.Enabled = true;
         }
         private void ComboBoxTerm1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Term_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString()) == null)
-            {
-                Add.Enabled = false;
-                return;
-            }
-            else
-            {
-                Add.Enabled = true;
-            }
+           
         }
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (dataGridView2.DataSource == null) return;
         }
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dataGridView3.DataSource== null) return;
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //List Student = null
-            if (Student_BUL.Load() == null) return;
-            //SelectedRows >= Number of students of Selected-class.
-            if (dataGridView1.SelectedRows.Count + Process_BUL.CountStudent(ComboBoxClass.SelectedValue.ToString())>Rule_BUL.Load().MaxStudent)
-            {
-                Add.Enabled = false;
-            }
-            else
-            {
-                Add.Enabled = true;
-            }
+            if (dataGridView1.DataSource == null) return;
         }
         private void ComboboxChangeClass1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ChangeClass.Checked == false) return;
-            if (Class_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString()) == null)
-            {
-                buttonSwitch.Enabled = false;
-                return;
-            }
-            else
-            {
-                buttonSwitch.Enabled = true;
-                if (Process_BUL.LoadByClass(ComboboxChangeClass1.SelectedValue.ToString()) == null)
-                {
-                    label4.Text = ComboboxChangeClass1.Text;
-                }
-                else
-                {
-                    dataGridView2.DataSource = Process_BUL.LoadByClass(ComboboxChangeClass1.SelectedValue.ToString());
-                    label4.Text = ComboboxChangeClass1.Text;
-                }
-            }
+         
         }
         private void ComboboxChangeClass2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -282,6 +228,10 @@ namespace QLHS
         private void ComboBoxTerm2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        private void ButtonRefresh_Click(object sender, EventArgs e)
+        {
+            InsertToClass_Load(sender, e);
         }
     }
 }
