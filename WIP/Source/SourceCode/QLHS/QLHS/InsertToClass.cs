@@ -220,9 +220,6 @@ namespace QLHS
             }
             else Add.Enabled = true;
         }
-        private void ComboboxChangeClass_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
         private void ComboBoxTerm1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (Term_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString()) == null)
@@ -255,6 +252,36 @@ namespace QLHS
             {
                 Add.Enabled = true;
             }
+        }
+        private void ComboboxChangeClass1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ChangeClass.Checked == false) return;
+            if (Class_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString()) == null)
+            {
+                buttonSwitch.Enabled = false;
+                return;
+            }
+            else
+            {
+                buttonSwitch.Enabled = true;
+                if (Process_BUL.LoadByClass(ComboboxChangeClass1.SelectedValue.ToString()) == null)
+                {
+                    label4.Text = ComboboxChangeClass1.Text;
+                }
+                else
+                {
+                    dataGridView2.DataSource = Process_BUL.LoadByClass(ComboboxChangeClass1.SelectedValue.ToString());
+                    label4.Text = ComboboxChangeClass1.Text;
+                }
+            }
+        }
+        private void ComboboxChangeClass2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void ComboBoxTerm2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
