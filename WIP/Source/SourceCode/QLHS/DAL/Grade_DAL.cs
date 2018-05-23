@@ -28,14 +28,12 @@ namespace DAL
             }
             return null;
         }
-
         public static bool Insert(Grade_DTO gradeDTO)
         {
             string QueryString = string.Format("Insert into KHOI(MaKhoi,TenKhoi) values('{0}',N'{1}')", gradeDTO.ID, gradeDTO.Name);
             bool Result = DataProvider.ExecuteNonQueryMethod(QueryString);
             return Result;
         }
-
         public static bool Update(Grade_DTO gradeDTO)
         {
             string QueryString = string.Format("UPDATE KHOI SET TenKhoi=N'{0}' Where MaKhoi='{1}'", gradeDTO.Name, gradeDTO.ID);

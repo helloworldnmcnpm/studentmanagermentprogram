@@ -36,7 +36,6 @@ namespace DAL
             }
             return null;
         }
-
         public static string GetID(int ProcessID,string SubjectID)
         {
             List<ScoreBySubject_DTO> scoreBySubject_DTOs = LoadByProcessID(ProcessID);
@@ -47,7 +46,6 @@ namespace DAL
             }
             return null;
         }
-
         public static bool Delete(string ID)
         {
             string QueryString = string.Format("Delete From BANGDIEMMON where MaBangDiemMon='{0}'", ID);

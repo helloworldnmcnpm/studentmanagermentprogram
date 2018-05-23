@@ -36,6 +36,12 @@ namespace DAL
             string QueryString = string.Format("Select Count(MaHocSinh) from QUATRINHHOC where MaLop='{0}'", ClassID);
             return Convert.ToInt32(DataProvider.ExecuteScalaMethod(QueryString));
         }
+
+        /// <summary>
+        /// INSERT STUDENT INTO A CLASS
+        /// </summary>
+        /// <param name="classID"></param>
+        /// <returns></returns>
         public static List<Student_DTO> LoadByClass(string classID)
         {
             string QueryString = string.Format("Select HOCSINH.PhanLop, HOCSINH.MaHocSinh, HOCSINH.HoTen, HOCSINH.NgaySinh, HOCSINH.NoiSinh, " +

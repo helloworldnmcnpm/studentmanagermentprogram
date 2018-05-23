@@ -41,7 +41,11 @@ namespace QLHS
                 AddStudent.Instance.Dock = DockStyle.Fill;
                 AddStudent.Instance.BringToFront();
             }
-            else AddStudent.Instance.BringToFront();
+            else
+            {
+                AddStudent.Instance.BringToFront();
+                AddStudent.Instance.Refresh();
+            }
         }
 
         private void buttonInsertToClass_Click(object sender, EventArgs e)
@@ -52,7 +56,11 @@ namespace QLHS
                 InsertToClass.Instance.Dock = DockStyle.Fill;
                 InsertToClass.Instance.BringToFront();
             }
-            else InsertToClass.Instance.BringToFront();
+            else
+            {
+                InsertToClass.Instance.BringToFront();
+                InsertToClass.Instance.Refresh();
+            }
         }
     }
 }

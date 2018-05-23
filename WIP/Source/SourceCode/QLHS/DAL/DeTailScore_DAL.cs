@@ -15,20 +15,16 @@ namespace DAL
             string QueryString = string.Format("Insert into CHITIETBANGDIEMMON(MaBangDiemMon,MaHinhThucKiemTra,Diem) values ('{0}','{1}','{2}')", ScoreBySubjectID, TypeExamID, Score);
             return DataProvider.ExecuteNonQueryMethod(QueryString);
         }
-
         public static bool DeleteScoreByStudent(int ID)
         {
             string QueryString = string.Format("Delete from CHITIETBANGDIEMMON where MaChiTietBangDiemMon = '{0}'", ID);
             return DataProvider.ExecuteNonQueryMethod(QueryString);
         }
-
         public static bool UpdateScoreByStudent(int ID,float Score)
         {
             string QueryString = string.Format("Update CHITIETBANGDIEMMON set Diem='{0}' where MaChiTietBangDiemMon='{1}'", Score, ID);
             return DataProvider.ExecuteNonQueryMethod(QueryString);
         }
-
-
         public static List<DetailScore_DTO> LoadBySBSID(string ScoreBySubjectID)
         {
             string QueryString = string.Format("Select * from CHITIETBANGDIEMMON where MaBangDiemMon='{0}'", ScoreBySubjectID);

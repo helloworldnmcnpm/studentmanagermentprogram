@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,25 +85,35 @@
             this.motherDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mJobDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Add = new System.Windows.Forms.Button();
-            this.buttonSwitch = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.classDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ChangeClass = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.ButtonGuide = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.termDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonReload = new System.Windows.Forms.Button();
-            this.ComboboxChangeClass = new System.Windows.Forms.ComboBox();
             this.classDTOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.SchoolYearComboBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.schoolYearDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.PanelSwitchStudent = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ComboboxChangeClass1 = new System.Windows.Forms.ComboBox();
+            this.classDTOBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.ComboboxChangeClass2 = new System.Windows.Forms.ComboBox();
+            this.ComboBoxTerm2 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonSwitch = new System.Windows.Forms.Button();
+            this.termDTOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ComboBoxTerm1 = new System.Windows.Forms.ComboBox();
+            this.LabelNumberOfStudent1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SchoolYearComboBox = new System.Windows.Forms.ComboBox();
+            this.ComboBoxClass = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -112,17 +122,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.termDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classDTOBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schoolYearDTOBindingSource)).BeginInit();
+            this.PanelSwitchStudent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.classDTOBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.termDTOBindingSource1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -149,20 +163,20 @@
             this.dataGridView1.Location = new System.Drawing.Point(13, 14);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(569, 288);
             this.dataGridView1.TabIndex = 1;
@@ -274,11 +288,11 @@
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -305,20 +319,20 @@
             this.dataGridView2.Location = new System.Drawing.Point(13, 337);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView2.RowHeadersVisible = false;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(569, 345);
             this.dataGridView2.TabIndex = 3;
@@ -426,11 +440,11 @@
             // 
             this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView3.AutoGenerateColumns = false;
             this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -457,20 +471,20 @@
             this.dataGridView3.Location = new System.Drawing.Point(588, 337);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView3.RowHeadersVisible = false;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView3.Size = new System.Drawing.Size(570, 345);
             this.dataGridView3.TabIndex = 9;
@@ -580,60 +594,13 @@
             this.Add.FlatAppearance.BorderSize = 0;
             this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Add.ForeColor = System.Drawing.Color.White;
-            this.Add.Location = new System.Drawing.Point(941, 53);
+            this.Add.Location = new System.Drawing.Point(941, 21);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(129, 27);
             this.Add.TabIndex = 2;
             this.Add.Text = "Thêm";
             this.Add.UseVisualStyleBackColor = false;
             this.Add.Click += new System.EventHandler(this.Add_Click);
-            // 
-            // buttonSwitch
-            // 
-            this.buttonSwitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.buttonSwitch.FlatAppearance.BorderSize = 0;
-            this.buttonSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSwitch.ForeColor = System.Drawing.Color.White;
-            this.buttonSwitch.Location = new System.Drawing.Point(806, 254);
-            this.buttonSwitch.Name = "buttonSwitch";
-            this.buttonSwitch.Size = new System.Drawing.Size(129, 27);
-            this.buttonSwitch.TabIndex = 6;
-            this.buttonSwitch.Text = "Chuyển";
-            this.buttonSwitch.UseVisualStyleBackColor = false;
-            this.buttonSwitch.Visible = false;
-            this.buttonSwitch.Click += new System.EventHandler(this.buttonSwitch_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(731, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 20);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Lớp:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(731, 124);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 20);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Số học sinh tối đa:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataSource = this.classDTOBindingSource;
-            this.comboBox1.DisplayMember = "Name";
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(782, 87);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 28);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.ValueMember = "ID";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // classDTOBindingSource
             // 
@@ -642,7 +609,7 @@
             // ChangeClass
             // 
             this.ChangeClass.AutoSize = true;
-            this.ChangeClass.Location = new System.Drawing.Point(676, 157);
+            this.ChangeClass.Location = new System.Drawing.Point(676, 191);
             this.ChangeClass.Name = "ChangeClass";
             this.ChangeClass.Size = new System.Drawing.Size(153, 24);
             this.ChangeClass.TabIndex = 20;
@@ -650,23 +617,13 @@
             this.ChangeClass.UseVisualStyleBackColor = true;
             this.ChangeClass.CheckedChanged += new System.EventHandler(this.ChangeClass_CheckedChanged);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(672, 195);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 20);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Chuyển tới:";
-            this.label6.Visible = false;
-            // 
             // ButtonGuide
             // 
             this.ButtonGuide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
             this.ButtonGuide.FlatAppearance.BorderSize = 0;
             this.ButtonGuide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonGuide.ForeColor = System.Drawing.Color.White;
-            this.ButtonGuide.Location = new System.Drawing.Point(941, 86);
+            this.ButtonGuide.Location = new System.Drawing.Point(941, 54);
             this.ButtonGuide.Name = "ButtonGuide";
             this.ButtonGuide.Size = new System.Drawing.Size(129, 27);
             this.ButtonGuide.TabIndex = 7;
@@ -674,59 +631,9 @@
             this.ButtonGuide.UseVisualStyleBackColor = false;
             this.ButtonGuide.Click += new System.EventHandler(this.ButtonGuide_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(706, 228);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 20);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Học kỳ:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DataSource = this.termDTOBindingSource;
-            this.comboBox2.DisplayMember = "ID";
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(782, 220);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(153, 28);
-            this.comboBox2.TabIndex = 5;
-            this.comboBox2.ValueMember = "ID";
-            // 
             // termDTOBindingSource
             // 
             this.termDTOBindingSource.DataSource = typeof(DTO.Term_DTO);
-            // 
-            // buttonReload
-            // 
-            this.buttonReload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.buttonReload.FlatAppearance.BorderSize = 0;
-            this.buttonReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonReload.ForeColor = System.Drawing.Color.White;
-            this.buttonReload.Location = new System.Drawing.Point(941, 119);
-            this.buttonReload.Name = "buttonReload";
-            this.buttonReload.Size = new System.Drawing.Size(129, 27);
-            this.buttonReload.TabIndex = 8;
-            this.buttonReload.Text = "Reload";
-            this.buttonReload.UseVisualStyleBackColor = false;
-            this.buttonReload.Click += new System.EventHandler(this.buttonReload_Click);
-            // 
-            // ComboboxChangeClass
-            // 
-            this.ComboboxChangeClass.DataSource = this.classDTOBindingSource1;
-            this.ComboboxChangeClass.DisplayMember = "Name";
-            this.ComboboxChangeClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboboxChangeClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ComboboxChangeClass.FormattingEnabled = true;
-            this.ComboboxChangeClass.Location = new System.Drawing.Point(782, 186);
-            this.ComboboxChangeClass.Name = "ComboboxChangeClass";
-            this.ComboboxChangeClass.Size = new System.Drawing.Size(153, 28);
-            this.ComboboxChangeClass.TabIndex = 4;
-            this.ComboboxChangeClass.ValueMember = "ID";
-            this.ComboboxChangeClass.SelectedIndexChanged += new System.EventHandler(this.ComboboxChangeClass_SelectedIndexChanged);
             // 
             // classDTOBindingSource1
             // 
@@ -750,6 +657,189 @@
             this.label8.TabIndex = 23;
             this.label8.Text = "Trạng thái:";
             // 
+            // schoolYearDTOBindingSource
+            // 
+            this.schoolYearDTOBindingSource.DataSource = typeof(DTO.SchoolYear_DTO);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 314);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 20);
+            this.label4.TabIndex = 26;
+            // 
+            // PanelSwitchStudent
+            // 
+            this.PanelSwitchStudent.Controls.Add(this.label10);
+            this.PanelSwitchStudent.Controls.Add(this.ComboboxChangeClass1);
+            this.PanelSwitchStudent.Controls.Add(this.ComboboxChangeClass2);
+            this.PanelSwitchStudent.Controls.Add(this.ComboBoxTerm2);
+            this.PanelSwitchStudent.Controls.Add(this.label7);
+            this.PanelSwitchStudent.Controls.Add(this.label6);
+            this.PanelSwitchStudent.Controls.Add(this.buttonSwitch);
+            this.PanelSwitchStudent.Location = new System.Drawing.Point(588, 221);
+            this.PanelSwitchStudent.Name = "PanelSwitchStudent";
+            this.PanelSwitchStudent.Size = new System.Drawing.Size(570, 81);
+            this.PanelSwitchStudent.TabIndex = 29;
+            this.PanelSwitchStudent.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(28, 12);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(45, 20);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Lớp:";
+            this.label10.Visible = false;
+            // 
+            // ComboboxChangeClass1
+            // 
+            this.ComboboxChangeClass1.DataSource = this.classDTOBindingSource2;
+            this.ComboboxChangeClass1.DisplayMember = "Name";
+            this.ComboboxChangeClass1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboboxChangeClass1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboboxChangeClass1.FormattingEnabled = true;
+            this.ComboboxChangeClass1.Location = new System.Drawing.Point(79, 4);
+            this.ComboboxChangeClass1.Name = "ComboboxChangeClass1";
+            this.ComboboxChangeClass1.Size = new System.Drawing.Size(153, 28);
+            this.ComboboxChangeClass1.TabIndex = 24;
+            this.ComboboxChangeClass1.ValueMember = "ID";
+            // 
+            // classDTOBindingSource2
+            // 
+            this.classDTOBindingSource2.DataSource = typeof(DTO.Class_DTO);
+            // 
+            // ComboboxChangeClass2
+            // 
+            this.ComboboxChangeClass2.DataSource = this.classDTOBindingSource1;
+            this.ComboboxChangeClass2.DisplayMember = "Name";
+            this.ComboboxChangeClass2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboboxChangeClass2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboboxChangeClass2.FormattingEnabled = true;
+            this.ComboboxChangeClass2.Location = new System.Drawing.Point(404, 4);
+            this.ComboboxChangeClass2.Name = "ComboboxChangeClass2";
+            this.ComboboxChangeClass2.Size = new System.Drawing.Size(153, 28);
+            this.ComboboxChangeClass2.TabIndex = 19;
+            this.ComboboxChangeClass2.ValueMember = "ID";
+            // 
+            // ComboBoxTerm2
+            // 
+            this.ComboBoxTerm2.DataSource = this.termDTOBindingSource;
+            this.ComboBoxTerm2.DisplayMember = "ID";
+            this.ComboBoxTerm2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxTerm2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboBoxTerm2.FormattingEnabled = true;
+            this.ComboBoxTerm2.Location = new System.Drawing.Point(79, 38);
+            this.ComboBoxTerm2.Name = "ComboBoxTerm2";
+            this.ComboBoxTerm2.Size = new System.Drawing.Size(153, 28);
+            this.ComboBoxTerm2.TabIndex = 20;
+            this.ComboBoxTerm2.ValueMember = "ID";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 46);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 20);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Học kỳ:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(294, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 20);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Chuyển tới:";
+            this.label6.Visible = false;
+            // 
+            // buttonSwitch
+            // 
+            this.buttonSwitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.buttonSwitch.FlatAppearance.BorderSize = 0;
+            this.buttonSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSwitch.ForeColor = System.Drawing.Color.White;
+            this.buttonSwitch.Location = new System.Drawing.Point(414, 38);
+            this.buttonSwitch.Name = "buttonSwitch";
+            this.buttonSwitch.Size = new System.Drawing.Size(129, 27);
+            this.buttonSwitch.TabIndex = 21;
+            this.buttonSwitch.Text = "Chuyển";
+            this.buttonSwitch.UseVisualStyleBackColor = false;
+            // 
+            // termDTOBindingSource1
+            // 
+            this.termDTOBindingSource1.DataSource = typeof(DTO.Term_DTO);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.ComboBoxTerm1);
+            this.panel2.Controls.Add(this.LabelNumberOfStudent1);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.SchoolYearComboBox);
+            this.panel2.Controls.Add(this.ComboBoxClass);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(632, 14);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(303, 171);
+            this.panel2.TabIndex = 32;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(67, 80);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 20);
+            this.label9.TabIndex = 40;
+            this.label9.Text = "Học kỳ:";
+            // 
+            // ComboBoxTerm1
+            // 
+            this.ComboBoxTerm1.DataSource = this.termDTOBindingSource1;
+            this.ComboBoxTerm1.DisplayMember = "Name";
+            this.ComboBoxTerm1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxTerm1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboBoxTerm1.FormattingEnabled = true;
+            this.ComboBoxTerm1.Location = new System.Drawing.Point(143, 72);
+            this.ComboBoxTerm1.Name = "ComboBoxTerm1";
+            this.ComboBoxTerm1.Size = new System.Drawing.Size(153, 28);
+            this.ComboBoxTerm1.TabIndex = 39;
+            this.ComboBoxTerm1.ValueMember = "ID";
+            this.ComboBoxTerm1.SelectedIndexChanged += new System.EventHandler(this.ComboBoxTerm1_SelectedIndexChanged);
+            // 
+            // LabelNumberOfStudent1
+            // 
+            this.LabelNumberOfStudent1.AutoSize = true;
+            this.LabelNumberOfStudent1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelNumberOfStudent1.Location = new System.Drawing.Point(145, 117);
+            this.LabelNumberOfStudent1.Name = "LabelNumberOfStudent1";
+            this.LabelNumberOfStudent1.Size = new System.Drawing.Size(0, 16);
+            this.LabelNumberOfStudent1.TabIndex = 38;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(93, 117);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 16);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Sĩ số:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(50, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 20);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "Năm học:";
+            // 
             // SchoolYearComboBox
             // 
             this.SchoolYearComboBox.DataSource = this.schoolYearDTOBindingSource;
@@ -757,45 +847,57 @@
             this.SchoolYearComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SchoolYearComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SchoolYearComboBox.FormattingEnabled = true;
-            this.SchoolYearComboBox.Location = new System.Drawing.Point(782, 53);
+            this.SchoolYearComboBox.Location = new System.Drawing.Point(143, 6);
             this.SchoolYearComboBox.Name = "SchoolYearComboBox";
             this.SchoolYearComboBox.Size = new System.Drawing.Size(153, 28);
-            this.SchoolYearComboBox.TabIndex = 24;
+            this.SchoolYearComboBox.TabIndex = 35;
             this.SchoolYearComboBox.ValueMember = "ID";
             this.SchoolYearComboBox.SelectedIndexChanged += new System.EventHandler(this.SchoolYearComboBox_SelectedIndexChanged);
             // 
-            // label2
+            // ComboBoxClass
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(689, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 20);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Năm học:";
+            this.ComboBoxClass.DataSource = this.classDTOBindingSource;
+            this.ComboBoxClass.DisplayMember = "Name";
+            this.ComboBoxClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboBoxClass.FormattingEnabled = true;
+            this.ComboBoxClass.Location = new System.Drawing.Point(143, 40);
+            this.ComboBoxClass.Name = "ComboBoxClass";
+            this.ComboBoxClass.Size = new System.Drawing.Size(153, 28);
+            this.ComboBoxClass.TabIndex = 32;
+            this.ComboBoxClass.ValueMember = "ID";
+            this.ComboBoxClass.SelectedIndexChanged += new System.EventHandler(this.comboBoxClass_SelectedIndexChanged);
             // 
-            // schoolYearDTOBindingSource
+            // label3
             // 
-            this.schoolYearDTOBindingSource.DataSource = typeof(DTO.SchoolYear_DTO);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(93, 149);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(134, 16);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Số học sinh tối đa:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(92, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 20);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Lớp:";
             // 
             // InsertToClass
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.SchoolYearComboBox);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.PanelSwitchStudent);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ButtonGuide);
             this.Controls.Add(this.ChangeClass);
-            this.Controls.Add(this.ComboboxChangeClass);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonReload);
-            this.Controls.Add(this.buttonSwitch);
             this.Controls.Add(this.Add);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
@@ -814,6 +916,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.termDTOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classDTOBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schoolYearDTOBindingSource)).EndInit();
+            this.PanelSwitchStudent.ResumeLayout(false);
+            this.PanelSwitchStudent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.classDTOBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.termDTOBindingSource1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -825,12 +933,7 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Button Add;
-        private System.Windows.Forms.Button buttonSwitch;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.CheckBox ChangeClass;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.BindingSource classDTOBindingSource;
         private System.Windows.Forms.Button ButtonGuide;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
@@ -876,16 +979,31 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fJobDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn motherDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn mJobDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.BindingSource termDTOBindingSource;
-        private System.Windows.Forms.Button buttonReload;
-        private System.Windows.Forms.ComboBox ComboboxChangeClass;
         private System.Windows.Forms.BindingSource classDTOBindingSource1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox SchoolYearComboBox;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource schoolYearDTOBindingSource;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel PanelSwitchStudent;
+        private System.Windows.Forms.ComboBox ComboboxChangeClass2;
+        private System.Windows.Forms.ComboBox ComboBoxTerm2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button buttonSwitch;
+        private System.Windows.Forms.BindingSource termDTOBindingSource1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox ComboboxChangeClass1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox ComboBoxTerm1;
+        private System.Windows.Forms.Label LabelNumberOfStudent1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox SchoolYearComboBox;
+        private System.Windows.Forms.ComboBox ComboBoxClass;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource classDTOBindingSource2;
     }
 }
