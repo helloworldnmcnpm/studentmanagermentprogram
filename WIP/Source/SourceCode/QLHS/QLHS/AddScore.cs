@@ -201,12 +201,8 @@ namespace QLHS
         }
         private void Subjecttxt_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (dataGridView1.DataSource == null) return;
             Process_DTO process_DTO = Process_BUL.GetProcess(int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()), Termtxt.SelectedValue.ToString(), Classtxt.SelectedValue.ToString());
-            if (ScoreBySubject_BUL.GetID(process_DTO.ID, Subjecttxt.SelectedValue.ToString()) == null)
-            {
-                MessageBox.Show("Học sinh này chưa thêm bảng điểm!", "Thông báo!");
-                return;
-            }
             string ScoreBySubjectID = ScoreBySubject_BUL.GetID(process_DTO.ID, Subjecttxt.SelectedValue.ToString());
             dataGridView2.DataSource = DetailScore_BUL.LoadBySBSID(ScoreBySubjectID);
         }
