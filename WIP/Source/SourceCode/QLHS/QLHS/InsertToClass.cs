@@ -103,11 +103,23 @@ namespace QLHS
             {
                 PanelSwitchStudent.Visible = true;
                 dataGridView3.Enabled = true;
+                ComboboxChangeClass1.DataSource = Class_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString());
+                ComboboxChangeClass2.DataSource = Class_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString());
+                ComboBoxTerm2.DataSource = Term_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString());
+                Add.Enabled = false;
+                dataGridView1.Enabled = false;
+                ComboBoxClass.Enabled = false;
+                ComboBoxTerm1.Enabled = false;
             }
             else
             {
                 PanelSwitchStudent.Visible = false;
                 dataGridView3.Enabled = false;
+                Add.Enabled = true;
+                dataGridView1.Enabled = true;
+                ComboBoxClass.Enabled = true;
+                ComboBoxTerm1.Enabled = true;
+                dataGridView3.DataSource = null;
             }
         }
         private void Add_Click(object sender, EventArgs e)
@@ -117,7 +129,7 @@ namespace QLHS
                 MessageBox.Show("Số học sinh đã chọn vượt quá số học sinh quy định trong một lớp! Tuy nhiên, một số học sinh có thể thêm vào lớp này!", "Thông báo!");
                 for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
                 {
-                    if (Process_BUL.CountStudent(ComboBoxClass.SelectedValue.ToString()) + i <= Rule_BUL.Load().MaxStudent)
+                    if (Process_BUL.CountStudent(ComboBoxClass.SelectedValue.ToString()) < Rule_BUL.Load().MaxStudent)
                     {
                         Process_BUL.InitialProcess(ComboBoxClass.SelectedValue.ToString(), int.Parse(dataGridView1.SelectedRows[i].Cells[1].Value.ToString()), ComboBoxTerm1.SelectedValue.ToString());
                         Student_DTO student_DTO = ChangeType(dataGridView1.SelectedRows[i]);
@@ -147,7 +159,29 @@ namespace QLHS
         }
         private void buttonSwitch_Click(object sender, EventArgs e)
         {
-            
+            if (dataGridView2.SelectedRows.Count + Process_BUL.CountStudent(ComboboxChangeClass2.SelectedValue.ToString()) >= Rule_BUL.Load().MaxStudent)
+            {
+                MessageBox.Show("Số học sinh đã chọn và sĩ số lớp hiện tại vượt quá quy định, vì vậy chỉ có thể thêm một số học sinh vào lớp!", "Thông báo");
+                for (int i = 0; i < dataGridView2.SelectedRows.Count; i++)
+                {
+                    if (Process_BUL.CountStudent(ComboboxChangeClass2.SelectedValue.ToString()) < Rule_BUL.Load().MaxStudent)
+                    {
+                        Student_BUL.ChangeClass(int.Parse(dataGridView2.SelectedRows[i].Cells[1].Value.ToString()), ComboBoxTerm2.SelectedValue.ToString(), ComboboxChangeClass2.SelectedValue.ToString());
+                    }
+                    else break;
+                }
+                dataGridView2.DataSource = Process_BUL.LoadByClass(ComboboxChangeClass1.SelectedValue.ToString());
+                dataGridView3.DataSource = Process_BUL.LoadByClass(ComboboxChangeClass2.SelectedValue.ToString());
+            }
+            else
+            {
+                for (int i = 0; i < dataGridView2.SelectedRows.Count; i++)
+                {
+                    Student_BUL.ChangeClass(int.Parse(dataGridView2.SelectedRows[i].Cells[1].Value.ToString()), ComboBoxTerm2.SelectedValue.ToString(), ComboboxChangeClass2.SelectedValue.ToString());
+                }
+                dataGridView2.DataSource = Process_BUL.LoadByClass(ComboboxChangeClass1.SelectedValue.ToString());
+                dataGridView3.DataSource = Process_BUL.LoadByClass(ComboboxChangeClass2.SelectedValue.ToString());
+            }
         }
         private void ButtonGuide_Click(object sender, EventArgs e)
         {
@@ -219,11 +253,64 @@ namespace QLHS
         }
         private void ComboboxChangeClass1_SelectedIndexChanged(object sender, EventArgs e)
         {
-         
+            label4.Text = ComboboxChangeClass1.Text;
+            if (Class_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString()) == null)
+            {
+                buttonSwitch.Enabled = false;
+            }
+            else
+            {
+                if (ComboboxChangeClass1.Text == ComboboxChangeClass2.Text)
+                {
+                    buttonSwitch.Enabled = false;
+                    if (Process_BUL.LoadByClass(ComboboxChangeClass1.SelectedValue.ToString()) == null) dataGridView2.DataSource = null;
+                    else dataGridView2.DataSource = Process_BUL.LoadByClass(ComboboxChangeClass1.SelectedValue.ToString());
+                }
+                else
+                {
+                    buttonSwitch.Enabled = true;
+                    if (Process_BUL.LoadByClass(ComboboxChangeClass1.SelectedValue.ToString()) == null)
+                    {
+                        dataGridView2.DataSource = null;
+                        buttonSwitch.Enabled = false;
+                    }
+                    else
+                    {
+                        buttonSwitch.Enabled = true;
+                        dataGridView2.DataSource = Process_BUL.LoadByClass(ComboboxChangeClass1.SelectedValue.ToString());
+                        if (Term_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString()) == null)
+                        {
+                            buttonSwitch.Enabled = false;
+                        }
+                        else
+                        {
+                            buttonSwitch.Enabled = true;
+                            ComboBoxTerm2.DataSource = Term_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString());
+                        }
+                    }
+                }
+            }
         }
         private void ComboboxChangeClass2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            label12.Text = ComboboxChangeClass2.Text;
+            if (Class_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString()) == null)
+            {
+                buttonSwitch.Enabled = false;
+            }
+            else
+            {
+                buttonSwitch.Enabled = true;
+                dataGridView2.Enabled = true;
+                if (ComboboxChangeClass1.Text == ComboboxChangeClass2.Text) buttonSwitch.Enabled = false;
+                else buttonSwitch.Enabled = true;
+                if (Process_BUL.LoadByClass(ComboboxChangeClass2.SelectedValue.ToString()) == null)
+                    dataGridView3.DataSource = null;
+                else
+                {
+                    dataGridView3.DataSource = Process_BUL.LoadByClass(ComboboxChangeClass2.SelectedValue.ToString());
+                }
+            }
         }
         private void ComboBoxTerm2_SelectedIndexChanged(object sender, EventArgs e)
         {
