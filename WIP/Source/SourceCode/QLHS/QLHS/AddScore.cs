@@ -49,7 +49,7 @@ namespace QLHS
         private void AddScore_Load(object sender, EventArgs e)
         {
             Scoretxt.Text = "";
-            if (SchoolYear_BUL.Load()==null||Subject_BUL.Load()==null||TypeExam_BUL.Load()==null)
+            if (SchoolYear_BUL.Load() == null || Subject_BUL.Load() == null || TypeExam_BUL.Load() == null)
             {
                 SCtxt.Enabled = false;
                 Classtxt.Enabled = false;
@@ -61,6 +61,7 @@ namespace QLHS
                 ButtonDelete.Enabled = false;
                 Subjecttxt.Enabled = false;
                 TypeExamtxt.Enabled = false;
+                CalculateNow.Enabled = false;
             }
             else
             {
@@ -77,6 +78,7 @@ namespace QLHS
                 SCtxt.DataSource = SchoolYear_BUL.Load();
                 Subjecttxt.DataSource = Subject_BUL.Load();
                 TypeExamtxt.DataSource = TypeExam_BUL.Load();
+                CalculateNow.Enabled = true;
             }
 
         }
@@ -115,6 +117,10 @@ namespace QLHS
             {
                 MessageBox.Show("Kiểm tra lại DataAccessLayer hoặc Database!", "Thông báo!");
             }
+            if (CalculateNow.Checked)
+            {
+                CalculateNow_CheckedChanged(sender, e);
+            }
         }
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
@@ -133,6 +139,10 @@ namespace QLHS
             else
             {
                 MessageBox.Show("Kiểm tra lại DataAccessLayer hoặc Database!", "Thông báo!");
+            }
+            if (CalculateNow.Checked)
+            {
+                CalculateNow_CheckedChanged(sender, e);
             }
         }
         private void buttonUpdate_Click(object sender, EventArgs e)
@@ -157,6 +167,10 @@ namespace QLHS
             else
             {
                 MessageBox.Show("Kiểm tra lại DataAccessLayer hoặc Database!", "Thông báo!");
+            }
+            if (CalculateNow.Checked)
+            {
+                CalculateNow_CheckedChanged(sender, e);
             }
         }
         private void ButtonRefresh_Click(object sender, EventArgs e)
@@ -193,7 +207,7 @@ namespace QLHS
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -209,7 +223,7 @@ namespace QLHS
         private void Scoretxt_TextChanged(object sender, EventArgs e)
         {
             label8.Visible = true;
-            if (Scoretxt.Text=="")
+            if (Scoretxt.Text == "")
             {
                 label8.ForeColor = Color.Red;
                 label8.Text = "Hãy nhập điểm!";
@@ -236,7 +250,7 @@ namespace QLHS
                     }
                     else
                     {
-                        label8.ForeColor=Color.FromArgb(18, 148, 246);
+                        label8.ForeColor = Color.FromArgb(18, 148, 246);
                         label8.Text = "Nhập đúng!";
                         Add.Enabled = true;
                         buttonUpdate.Enabled = true;
@@ -247,13 +261,14 @@ namespace QLHS
         }
         private void SCtxt_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Class_BUL.LoadBySC(SCtxt.SelectedValue.ToString()) == null||Term_BUL.LoadBySC(SCtxt.SelectedValue.ToString())==null)
+            if (Class_BUL.LoadBySC(SCtxt.SelectedValue.ToString()) == null || Term_BUL.LoadBySC(SCtxt.SelectedValue.ToString()) == null)
             {
                 dataGridView1.Enabled = false;
                 dataGridView2.Enabled = false;
                 Add.Enabled = false;
                 buttonUpdate.Enabled = false;
                 ButtonDelete.Enabled = false;
+                CalculateNow.Enabled = false;
             }
             else
             {
@@ -264,12 +279,51 @@ namespace QLHS
                 ButtonDelete.Enabled = true;
                 Classtxt.DataSource = Class_BUL.LoadBySC(SCtxt.SelectedValue.ToString());
                 Termtxt.DataSource = Term_BUL.LoadBySC(SCtxt.SelectedValue.ToString());
+                CalculateNow.Enabled = true;
             }
-            
+
         }
         private void Termtxt_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        private void CalculateNow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CalculateNow.Checked)
+            {
+                if (dataGridView2.DataSource == null) return;
+                else
+                {
+                    label9.Visible = true;
+                    double total = 0;
+                    int count = 0;
+                    for (int i = 0; i < dataGridView2.RowCount; i++)
+                    {
+                        int index = 0;
+                        double score = 0;
+                        string typeExam;
+                        typeExam = dataGridView2.Rows[i].Cells[0].Value.ToString();
+                        index = TypeExam_BUL.GetIndex(typeExam);
+                        count += index;
+                        score = Convert.ToDouble(dataGridView2.Rows[i].Cells[1].Value.ToString());
+                        total += score * index;
+                    }
+                    total /= count;
+                    if (ScoreBySubject_BUL.UpdateScore(dataGridView2.Rows[0].Cells[2].Value.ToString(), total))
+                    {
+                        label9.Text = "Điểm trung bình môn:" + total;
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật điểm trung bình môn thất bại!", "Thông báo!");
+                    }
+                }
+            }
+            else
+            {
+                label9.Visible = false;
+            }
         }
     }
 }
