@@ -96,3 +96,4 @@ D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\
 D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\QLHS\bin\Debug\BUL.pdb
 D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\QLHS\bin\Debug\DAL.pdb
 D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\QLHS\obj\Debug\GUI.csproj.CopyComplete
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\QLHS\obj\Debug\QLHS.Dashboard.resources

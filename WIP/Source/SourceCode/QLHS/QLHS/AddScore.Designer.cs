@@ -81,6 +81,8 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.ButtonRefresh = new System.Windows.Forms.Button();
+            this.ImportExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.termDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -216,7 +218,7 @@
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(335, 340);
+            this.dataGridView1.Size = new System.Drawing.Size(330, 340);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -446,7 +448,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(351, 163);
+            this.label6.Location = new System.Drawing.Point(351, 162);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(124, 20);
             this.label6.TabIndex = 3;
@@ -567,10 +569,39 @@
             this.label8.TabIndex = 22;
             this.label8.Visible = false;
             // 
+            // ButtonRefresh
+            // 
+            this.ButtonRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.ButtonRefresh.FlatAppearance.BorderSize = 0;
+            this.ButtonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonRefresh.ForeColor = System.Drawing.Color.White;
+            this.ButtonRefresh.Location = new System.Drawing.Point(608, 188);
+            this.ButtonRefresh.Name = "ButtonRefresh";
+            this.ButtonRefresh.Size = new System.Drawing.Size(143, 27);
+            this.ButtonRefresh.TabIndex = 23;
+            this.ButtonRefresh.Text = "Làm mới";
+            this.ButtonRefresh.UseVisualStyleBackColor = false;
+            this.ButtonRefresh.Click += new System.EventHandler(this.ButtonRefresh_Click);
+            // 
+            // ImportExcel
+            // 
+            this.ImportExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.ImportExcel.FlatAppearance.BorderSize = 0;
+            this.ImportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ImportExcel.ForeColor = System.Drawing.Color.White;
+            this.ImportExcel.Location = new System.Drawing.Point(411, 37);
+            this.ImportExcel.Name = "ImportExcel";
+            this.ImportExcel.Size = new System.Drawing.Size(143, 27);
+            this.ImportExcel.TabIndex = 24;
+            this.ImportExcel.Text = "Nhập từ excel";
+            this.ImportExcel.UseVisualStyleBackColor = false;
+            // 
             // AddScore
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.Controls.Add(this.ImportExcel);
+            this.Controls.Add(this.ButtonRefresh);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.buttonUpdate);
@@ -658,5 +689,7 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button ButtonRefresh;
+        private System.Windows.Forms.Button ImportExcel;
     }
 }

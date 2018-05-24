@@ -10,11 +10,15 @@ using System.Windows.Forms;
 using BUL;
 using DTO;
 using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace QLHS
 {
     public partial class AddScore : UserControl
     {
+        /// <summary>
+        /// INITIAL
+        /// </summary>
         private static AddScore _instance;
         public static AddScore Instance
         {
@@ -24,165 +28,130 @@ namespace QLHS
                 return _instance;
             }
         }
-        public AddScore()
-        {
-            InitializeComponent();
-        }
-        List<SchoolYear_DTO> schoolYear_DTOs = new List<SchoolYear_DTO>();
-        List<Class_DTO> class_DTOs = new List<Class_DTO>();
-        List<Term_DTO> term_DTOs = new List<Term_DTO>();
-        List<Subject_DTO> subject_DTOs = new List<Subject_DTO>();
-        List<Student_DTO> student_DTOs = new List<Student_DTO>();
-        List<TypeExam_DTO> typeExam_DTOs = new List<TypeExam_DTO>();
-        private void LoadSchoolYear_SubjectComboBox()
-        {
-            schoolYear_DTOs = SchoolYear_BUL.Load();
-            SCtxt.DataSource = schoolYear_DTOs;
-            Classtxt.DataSource = class_DTOs;
-            subject_DTOs = Subject_BUL.Load();
-            Subjecttxt.DataSource = subject_DTOs;
-            typeExam_DTOs = TypeExam_BUL.Load();
-            TypeExamtxt.DataSource = typeExam_DTOs;
-        }
-        
-        private void AddScore_Load(object sender, EventArgs e)
-        {
-            LoadSchoolYear_SubjectComboBox();
-            
-            
-        }
-
-        private void SCtxt_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (Class_BUL.Load() == null) return;
-            class_DTOs = Class_BUL.LoadBySC(SCtxt.SelectedValue.ToString());
-            term_DTOs = Term_BUL.LoadBySC(SCtxt.SelectedValue.ToString());
-            Termtxt.DataSource = term_DTOs;
-            Classtxt.DataSource = class_DTOs;
-        }
-
-        private void Termtxt_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Classtxt_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            student_DTOs = Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString());
-            dataGridView1.DataSource = student_DTOs;
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString()) == null) return;
-            if (Termtxt == null || Subjecttxt == null || TypeExamtxt == null) return;
-            Process_DTO process_DTO = Process_BUL.GetProcess(Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()), Termtxt.SelectedValue.ToString(), Classtxt.SelectedValue.ToString());
-            string ScoreBySubjectID = ScoreBySubject_BUL.GetID(process_DTO.ID, Subjecttxt.SelectedValue.ToString());
-            dataGridView2.DataSource = DetailScore_BUL.LoadBySBSID(ScoreBySubjectID);
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString()) == null) return;
-            if (Termtxt == null || Subjecttxt == null || TypeExamtxt == null) return;
-            Process_DTO process_DTO = Process_BUL.GetProcess(Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()), Termtxt.SelectedValue.ToString(), Classtxt.SelectedValue.ToString());
-            string ScoreBySubjectID = ScoreBySubject_BUL.GetID(process_DTO.ID, Subjecttxt.SelectedValue.ToString());
-            if (DetailScore_BUL.LoadBySBSID(ScoreBySubjectID) == null) return;
-            TypeExamtxt.SelectedValue = dataGridView2.SelectedRows[0].Cells[0].Value;
-            Scoretxt.Text = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
-        }
         private bool IsNumber(string UncheckString)
         {
             Regex regex = new Regex(@"^[-+]?[0-9]*\.?[0-9]+$");
             return regex.IsMatch(UncheckString);
         }
 
+
+
+        /// <summary>
+        /// LOAD
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+        public AddScore()
+        {
+            InitializeComponent();
+        }
+        private void AddScore_Load(object sender, EventArgs e)
+        {
+            if (SchoolYear_BUL.Load()==null||Subject_BUL.Load()==null||TypeExam_BUL.Load()==null)
+            {
+                SCtxt.Enabled = false;
+                Classtxt.Enabled = false;
+                Termtxt.Enabled = false;
+                dataGridView1.Enabled = false;
+                dataGridView2.Enabled = false;
+                Add.Enabled = false;
+                buttonUpdate.Enabled = false;
+                ButtonDelete.Enabled = false;
+                Subjecttxt.Enabled = false;
+                TypeExamtxt.Enabled = false;
+            }
+            else
+            {
+                SCtxt.Enabled = true;
+                Classtxt.Enabled = true;
+                Termtxt.Enabled = true;
+                dataGridView1.Enabled = true;
+                dataGridView2.Enabled = true;
+                Add.Enabled = true;
+                buttonUpdate.Enabled = true;
+                ButtonDelete.Enabled = true;
+                Subjecttxt.Enabled = true;
+                TypeExamtxt.Enabled = true;
+                SCtxt.DataSource = SchoolYear_BUL.Load();
+                Subjecttxt.DataSource = Subject_BUL.Load();
+                TypeExamtxt.DataSource = TypeExam_BUL.Load();
+            }
+        }
+
+
+
+
+        /// <summary>
+        /// BUTTON
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
         private void Add_Click(object sender, EventArgs e)
         {
-            if (Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString()) == null) return;
-            if (Termtxt == null || Subjecttxt == null || TypeExamtxt == null) return;
-            if (!IsNumber(Scoretxt.Text) || Convert.ToSingle(Scoretxt.Text) < 0 || Convert.ToSingle(Scoretxt.Text) > 10)
-            {
-                MessageBox.Show("Nhập điểm sai, vui lòng nhập lại!", "Nhập sai!");
-                return;
-            }
-            Process_DTO process_DTO = Process_BUL.GetProcess(Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()), Termtxt.SelectedValue.ToString(), Classtxt.SelectedValue.ToString());
-            string ScoreBySubjectID = ScoreBySubject_BUL.GetID(process_DTO.ID, Subjecttxt.SelectedValue.ToString());
-            if (DetailScore_BUL.InsertScoreByStudent(ScoreBySubjectID, TypeExamtxt.SelectedValue.ToString(), Convert.ToSingle(Scoretxt.Text)))
-            {
-                dataGridView2.DataSource = DetailScore_BUL.LoadBySBSID(ScoreBySubjectID);
-                MessageBox.Show("Đã thêm điểm!", "Thành công");
-                float FinalScore = 0;
-                int index, count = 0 ;
-                for (int i = 0; i < dataGridView2.RowCount; i++)
-                {
-                    index = TypeExam_BUL.GetIndex(dataGridView2.Rows[i].Cells[0].Value.ToString());
-                    FinalScore += float.Parse(dataGridView2.Rows[i].Cells[1].Value.ToString())*index;
-                    count += index;
-                }
-                FinalScore /= count;
-                ScoreBySubject_BUL.UpdateScore(ScoreBySubjectID, FinalScore);
-            }
-            else MessageBox.Show("Thêm thất bại.", "Thất bại");
-        }
 
-        private void Subjecttxt_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString()) == null) return;
-            if (Termtxt == null || Subjecttxt == null || TypeExamtxt == null) return;
-            Process_DTO process_DTO = Process_BUL.GetProcess(Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()), Termtxt.SelectedValue.ToString(), Classtxt.SelectedValue.ToString());
-            string ScoreBySubjectID = ScoreBySubject_BUL.GetID(process_DTO.ID, Subjecttxt.SelectedValue.ToString());
-            if (ScoreBySubjectID == null) return;
-            dataGridView2.DataSource = DetailScore_BUL.LoadBySBSID(ScoreBySubjectID);
         }
-
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
-            if (Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString()) == null) return;
-            if (Termtxt == null || Subjecttxt == null || TypeExamtxt == null) return;
-            Process_DTO process_DTO = Process_BUL.GetProcess(Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()), Termtxt.SelectedValue.ToString(), Classtxt.SelectedValue.ToString());
-            string ScoreBySubjectID = ScoreBySubject_BUL.GetID(process_DTO.ID, Subjecttxt.SelectedValue.ToString());
-            if (DetailScore_BUL.LoadBySBSID(ScoreBySubjectID) == null) return;
-            if (ScoreBySubjectID == null) return;
-            if (DetailScore_BUL.DeleteScoreByStudent(Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["iDDataGridViewTextBoxColumn1"].Value.ToString())))
-            {
-                dataGridView2.DataSource= DetailScore_BUL.LoadBySBSID(ScoreBySubjectID);
-            }
-            else
-            {
-                MessageBox.Show("Không thể xóa.", "Thất bại");
-            }
+           
         }
-
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            if (Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString()) == null) return;
-            if (Termtxt == null || Subjecttxt == null || TypeExamtxt == null) return;
-            Process_DTO process_DTO = Process_BUL.GetProcess(Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()), Termtxt.SelectedValue.ToString(), Classtxt.SelectedValue.ToString());
-            string ScoreBySubjectID = ScoreBySubject_BUL.GetID(process_DTO.ID, Subjecttxt.SelectedValue.ToString());
-            if (DetailScore_BUL.LoadBySBSID(ScoreBySubjectID) == null) return;
-            if (ScoreBySubjectID == null) return;
-            if (Scoretxt.Text == "") return;
-            if (!IsNumber(Scoretxt.Text)||Convert.ToSingle(Scoretxt.Text)<0||Convert.ToSingle(Scoretxt.Text)>10)
+          
+        }
+        private void ButtonRefresh_Click(object sender, EventArgs e)
+        {
+            AddScore_Load(sender, e);
+        }
+
+
+
+
+        /// <summary>
+        /// EVENT
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Classtxt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString()) == null)
             {
-                MessageBox.Show("Nhập điểm sai, vui lòng nhập lại!", "Nhập sai!");
-                return;
-            }
-            if (DetailScore_BUL.UpdateScoreByStudent(Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["iDDataGridViewTextBoxColumn1"].Value.ToString()), Convert.ToSingle(Scoretxt.Text)))
-            {
-                dataGridView2.DataSource = DetailScore_BUL.LoadBySBSID(ScoreBySubjectID);
+                dataGridView1.DataSource = null;
+                dataGridView1.Enabled = false;
+                Add.Enabled = false;
+                buttonUpdate.Enabled = false;
+                ButtonDelete.Enabled = false;
             }
             else
             {
-                MessageBox.Show("Không thể cập nhật", "Thất bại");
+                dataGridView1.Enabled = true;
+                dataGridView1.DataSource = Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString());
+                Add.Enabled = true;
+                buttonUpdate.Enabled = true;
+                ButtonDelete.Enabled = true;
             }
         }
-
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+       }
+        private void Subjecttxt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          }
         private void Scoretxt_TextChanged(object sender, EventArgs e)
         {
-            if (Scoretxt.Text != "")
+            label8.Visible = true;
+            if (Scoretxt.Text=="")
             {
-                label8.Visible = true;
+                label8.ForeColor = Color.Red;
+                label8.Text = "Hãy nhập điểm!";
+            }
+            else
+            {
                 if (!IsNumber(Scoretxt.Text))
                 {
                     label8.ForeColor = Color.Red;
@@ -190,20 +159,44 @@ namespace QLHS
                 }
                 else
                 {
-                    if (float.Parse(Scoretxt.Text) < 0 || float.Parse(Scoretxt.Text) > 10)
+                    if (float.Parse(Scoretxt.Text, CultureInfo.InvariantCulture.NumberFormat) < 0 || float.Parse(Scoretxt.Text, CultureInfo.InvariantCulture.NumberFormat) > 10)
                     {
                         label8.ForeColor = Color.Red;
-                        label8.Text = "0<=Điểm<=10";
+                        label8.Text = "Điểm phải lớn hơn 0 và nhỏ hơn 10!";
                     }
                     else
                     {
+                        label8.ForeColor=Color.FromArgb(18, 148, 246);
                         label8.Text = "Nhập đúng!";
-                        label8.ForeColor = Color.FromArgb(18, 148, 246);
                     }
                 }
-               
             }
-            else label8.Visible = false;
+        }
+        private void SCtxt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Class_BUL.LoadBySC(SCtxt.SelectedValue.ToString()) == null||Term_BUL.LoadBySC(SCtxt.SelectedValue.ToString())==null)
+            {
+                dataGridView1.Enabled = false;
+                dataGridView2.Enabled = false;
+                Add.Enabled = false;
+                buttonUpdate.Enabled = false;
+                ButtonDelete.Enabled = false;
+            }
+            else
+            {
+                dataGridView1.Enabled = true;
+                dataGridView2.Enabled = true;
+                Add.Enabled = true;
+                buttonUpdate.Enabled = true;
+                ButtonDelete.Enabled = true;
+                Classtxt.DataSource = Class_BUL.LoadBySC(SCtxt.SelectedValue.ToString());
+                Termtxt.DataSource = Term_BUL.LoadBySC(SCtxt.SelectedValue.ToString());
+            }
+            
+        }
+        private void Termtxt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
