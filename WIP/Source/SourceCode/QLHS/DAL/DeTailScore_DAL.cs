@@ -10,7 +10,7 @@ namespace DAL
 {
     public class DeTailScore_DAL
     {
-        public static bool InsertScoreByStudent(string ScoreBySubjectID, string TypeExamID, float Score)
+        public static bool InsertScoreByStudent(string ScoreBySubjectID, string TypeExamID, double Score)
         {
             string QueryString = string.Format("Insert into CHITIETBANGDIEMMON(MaBangDiemMon,MaHinhThucKiemTra,Diem) values ('{0}','{1}','{2}')", ScoreBySubjectID, TypeExamID, Score);
             return DataProvider.ExecuteNonQueryMethod(QueryString);
@@ -20,7 +20,7 @@ namespace DAL
             string QueryString = string.Format("Delete from CHITIETBANGDIEMMON where MaChiTietBangDiemMon = '{0}'", ID);
             return DataProvider.ExecuteNonQueryMethod(QueryString);
         }
-        public static bool UpdateScoreByStudent(int ID,float Score)
+        public static bool UpdateScoreByStudent(int ID,double Score)
         {
             string QueryString = string.Format("Update CHITIETBANGDIEMMON set Diem='{0}' where MaChiTietBangDiemMon='{1}'", Score, ID);
             return DataProvider.ExecuteNonQueryMethod(QueryString);

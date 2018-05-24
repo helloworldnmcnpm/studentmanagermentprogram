@@ -11,6 +11,6 @@ namespace DTO
         public int MaxAge { get; set; }
         public int MinAge { get; set; }
         public int MaxStudent { get; set; }
-        public float PassedScore { get; set; }
+        public double PassedScore { get; set; }
     }
 }

@@ -11,6 +11,6 @@ namespace DTO
         public string ID { get; set; }
         public int ProcessID { get; set; }
         public string SubjectID { get; set; }
-        public float FinalScore { get; set; }
+        public double FinalScore { get; set; }
     }
 }

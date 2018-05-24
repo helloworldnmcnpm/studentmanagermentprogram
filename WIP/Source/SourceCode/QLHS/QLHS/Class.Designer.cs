@@ -137,9 +137,10 @@
             // LabelMaxStudent
             // 
             this.LabelMaxStudent.AutoSize = true;
-            this.LabelMaxStudent.Location = new System.Drawing.Point(12, 122);
+            this.LabelMaxStudent.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelMaxStudent.Location = new System.Drawing.Point(20, 121);
             this.LabelMaxStudent.Name = "LabelMaxStudent";
-            this.LabelMaxStudent.Size = new System.Drawing.Size(170, 20);
+            this.LabelMaxStudent.Size = new System.Drawing.Size(139, 16);
             this.LabelMaxStudent.TabIndex = 5;
             this.LabelMaxStudent.Text = "Số học sinh tối đa: ";
             // 

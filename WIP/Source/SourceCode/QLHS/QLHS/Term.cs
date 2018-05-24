@@ -13,6 +13,9 @@ namespace QLHS
 {
     public partial class Term : UserControl
     {
+        /// <summary>
+        /// INITIAL
+        /// </summary>
         private static Term _instance;
         public static Term Instance
         {
@@ -29,6 +32,12 @@ namespace QLHS
         }
         List<Term_DTO> term_DTOs = new List<Term_DTO>();
         List<SchoolYear_DTO> schoolYear_DTOs = new List<SchoolYear_DTO>();
+
+
+
+        /// <summary>
+        /// LOAD
+        /// </summary>
         private void LoadList()
         {
             term_DTOs = Term_BUL.Load();
@@ -40,12 +49,33 @@ namespace QLHS
         {
             InitializeComponent();
         }
-
         private void Term_Load(object sender, EventArgs e)
         {
             LoadList();
+            if (SchoolYear_BUL.Load() == null)
+            {
+                Add.Enabled = false;
+                ButtonUpdate.Enabled = false;
+                ButtonDelete.Enabled = false;
+                dataGridView1.Enabled = false;
+            }
+            else
+            {
+                Add.Enabled = true;
+                ButtonUpdate.Enabled = true;
+                ButtonDelete.Enabled = true;
+                dataGridView1.Enabled = true;
+            }
         }
 
+
+
+
+        /// <summary>
+        /// BUTTON
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Add_Click(object sender, EventArgs e)
         {
             if (!CheckData())
@@ -63,7 +93,6 @@ namespace QLHS
             }
             else MessageBox.Show("Không thể thêm vào database!", "!Database");
         }
-
         private void ButtonUpdate_Click(object sender, EventArgs e)
         {
 
@@ -87,7 +116,6 @@ namespace QLHS
                 return;
             }
         }
-
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
             if (term_DTOs == null) return;
@@ -100,6 +128,14 @@ namespace QLHS
 
         }
 
+
+
+
+        /// <summary>
+        /// EVENT
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (term_DTOs == null) return;

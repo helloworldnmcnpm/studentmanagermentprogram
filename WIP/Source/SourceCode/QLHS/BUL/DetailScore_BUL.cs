@@ -9,7 +9,7 @@ namespace BUL
 {
     public class DetailScore_BUL
     {
-        public static bool InsertScoreByStudent(string ScoreBySubjectID, string TypeExamID, float Score)
+        public static bool InsertScoreByStudent(string ScoreBySubjectID, string TypeExamID, double Score)
         {
             return DeTailScore_DAL.InsertScoreByStudent(ScoreBySubjectID, TypeExamID, Score);
         }
@@ -22,7 +22,7 @@ namespace BUL
         {
             return DeTailScore_DAL.DeleteScoreByStudent(ID);
         }
-        public static bool UpdateScoreByStudent(int ID, float Score)
+        public static bool UpdateScoreByStudent(int ID, double Score)
         {
             return DeTailScore_DAL.UpdateScoreByStudent(ID, Score);
         }

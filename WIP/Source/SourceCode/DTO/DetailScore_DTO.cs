@@ -12,6 +12,6 @@ namespace DTO
         //ID of Score by Subject
         public string SBSID { get; set; }
         public string TypeExamID { get; set; }
-        public float Score { get; set; }
+        public double Score { get; set; }
     }
 }

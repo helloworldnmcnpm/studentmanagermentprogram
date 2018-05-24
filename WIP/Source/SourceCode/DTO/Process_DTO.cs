@@ -12,6 +12,6 @@ namespace DTO
         public string ClassID { get; set; }
         public int StudentID { get; set; }
         public string TermID { get; set; }
-        public float TotalScore { get; set; }
+        public double TotalScore { get; set; }
     }
 }
