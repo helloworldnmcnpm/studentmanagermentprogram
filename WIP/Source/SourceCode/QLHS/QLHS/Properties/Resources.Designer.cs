@@ -63,9 +63,39 @@ namespace QLHS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Approval_75px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Approval_75px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Calendar_50px {
             get {
                 object obj = ResourceManager.GetObject("icons8_Calendar_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Classroom_75px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Classroom_75px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Grades_75px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Grades_75px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +226,16 @@ namespace QLHS.Properties {
         internal static System.Drawing.Bitmap icons8_Time_Span_50px {
             get {
                 object obj = ResourceManager.GetObject("icons8_Time_Span_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_User_Groups_75px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_User_Groups_75px_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

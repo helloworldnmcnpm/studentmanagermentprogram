@@ -29,5 +29,9 @@ namespace BUL
         {
             return Student_DAL.ChangeClass(StudentID, TermID, ClassID);
         }
+        public static int CountStudent()
+        {
+            return Student_DAL.CountStudent();
+        }
     }
 }

@@ -67,7 +67,6 @@ D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\
 D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\QLHS\obj\Debug\QLHS.AddScore.resources
 D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\QLHS\obj\Debug\QLHS.AddStudent.resources
 D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\QLHS\obj\Debug\QLHS.Class.resources
-D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\QLHS\obj\Debug\QLHS.Final.resources
 D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\QLHS\obj\Debug\QLHS.Form1.resources
 D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\QLHS\obj\Debug\QLHS.Grade.resources
 D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\QLHS\obj\Debug\QLHS.InfoLogin.resources
@@ -97,3 +96,4 @@ D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\
 D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\QLHS\bin\Debug\DAL.pdb
 D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\QLHS\obj\Debug\GUI.csproj.CopyComplete
 D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\QLHS\obj\Debug\QLHS.Dashboard.resources
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\QLHS\obj\Debug\QLHS.Final.resources

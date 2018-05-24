@@ -226,6 +226,7 @@
     <None Include="Properties\DataSources\DTO.SchoolYear_DTO.datasource" />
     <None Include="Properties\DataSources\DTO.ScoreBySubject_DTO.datasource" />
     <None Include="Properties\DataSources\DTO.Student_DTO.datasource" />
+    <None Include="Properties\DataSources\DTO.Student_Process_DTO.datasource" />
     <None Include="Properties\DataSources\DTO.Subject_DTO.datasource" />
     <None Include="Properties\DataSources\DTO.Term_DTO.datasource" />
     <None Include="Properties\DataSources\DTO.TypeExam_DTO.datasource" />
@@ -299,6 +300,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_User_Manual_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Classroom_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Classroom_75px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_User_Groups_75px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_User_Groups_75px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Grades_75px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Approval_75px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

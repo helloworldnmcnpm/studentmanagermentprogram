@@ -30,9 +30,9 @@
         {
             this.PanelTitle = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ButtonFinal = new System.Windows.Forms.Button();
             this.ButtonAddScore = new System.Windows.Forms.Button();
             this.Activities = new System.Windows.Forms.Panel();
-            this.ButtonFinal = new System.Windows.Forms.Button();
             this.PanelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(874, 1);
             this.panel1.TabIndex = 0;
+            // 
+            // ButtonFinal
+            // 
+            this.ButtonFinal.BackColor = System.Drawing.Color.White;
+            this.ButtonFinal.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ButtonFinal.FlatAppearance.BorderSize = 0;
+            this.ButtonFinal.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.ButtonFinal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.ButtonFinal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonFinal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ButtonFinal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.ButtonFinal.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ButtonFinal.Location = new System.Drawing.Point(151, 0);
+            this.ButtonFinal.Name = "ButtonFinal";
+            this.ButtonFinal.Size = new System.Drawing.Size(151, 34);
+            this.ButtonFinal.TabIndex = 1;
+            this.ButtonFinal.Text = "Tổng kết học kỳ";
+            this.ButtonFinal.UseVisualStyleBackColor = false;
+            this.ButtonFinal.Click += new System.EventHandler(this.ButtonFinal_Click);
             // 
             // ButtonAddScore
             // 
@@ -84,24 +103,6 @@
             this.Activities.Name = "Activities";
             this.Activities.Size = new System.Drawing.Size(1176, 705);
             this.Activities.TabIndex = 2;
-            // 
-            // ButtonFinal
-            // 
-            this.ButtonFinal.BackColor = System.Drawing.Color.White;
-            this.ButtonFinal.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ButtonFinal.FlatAppearance.BorderSize = 0;
-            this.ButtonFinal.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.ButtonFinal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.ButtonFinal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonFinal.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.ButtonFinal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.ButtonFinal.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.ButtonFinal.Location = new System.Drawing.Point(151, 0);
-            this.ButtonFinal.Name = "ButtonFinal";
-            this.ButtonFinal.Size = new System.Drawing.Size(151, 34);
-            this.ButtonFinal.TabIndex = 1;
-            this.ButtonFinal.Text = "Tổng kết học kỳ";
-            this.ButtonFinal.UseVisualStyleBackColor = false;
             // 
             // Mark
             // 

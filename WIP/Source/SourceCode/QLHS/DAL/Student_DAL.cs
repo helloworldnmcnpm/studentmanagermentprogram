@@ -92,5 +92,11 @@ namespace DAL
             bool Result = DataProvider.ExecuteNonQueryMethod(QueryString);
             return Result;
         }
+
+        public static int CountStudent()
+        {
+            string QueryString = string.Format("Select Count (*) from HOCSINH");
+            return int.Parse(DataProvider.ExecuteScalaMethod(QueryString));
+        }
     }
 }

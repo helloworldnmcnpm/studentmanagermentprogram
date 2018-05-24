@@ -77,5 +77,10 @@ namespace DAL
             }
             return null;
         }
+        public static int Count()
+        {
+            string QueryString = string.Format("select Count (*) from LOP");
+            return int.Parse(DataProvider.ExecuteScalaMethod(QueryString));
+        }
     }
 }

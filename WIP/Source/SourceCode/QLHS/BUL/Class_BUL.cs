@@ -33,5 +33,9 @@ namespace BUL
         {
             return Class_DAL.LoadBySC(ID);
         }
+        public static int Count()
+        {
+            return Class_DAL.Count();
+        }
     }
 }
