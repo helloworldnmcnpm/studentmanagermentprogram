@@ -42,11 +42,11 @@ namespace DAL
         /// </summary>
         /// <param name="classID"></param>
         /// <returns></returns>
-        public static List<Student_DTO> LoadByClass(string classID)
+        public static List<Student_DTO> LoadByClass(string classID,string TermID)
         {
             string QueryString = string.Format("Select HOCSINH.PhanLop, HOCSINH.MaHocSinh, HOCSINH.HoTen, HOCSINH.NgaySinh, HOCSINH.NoiSinh, " +
                 "HOCSINH.GioiTinh,HOCSINH.DanToc,HOCSINH.TonGiao,HOCSINH.DiaChi,HOCSINH.DienThoai,HOCSINH.HoTenCha,HOCSINH.NgheNghiepCha, " +
-                "HOCSINH.NgheNghiepMe,HOCSINH.HoTenMe from QUATRINHHOC,HOCSINH where (QUATRINHHOC.MaLop='{0}' and HOCSINH.PhanLop='Inserted' and HOCSINH.MaHocSinh=QUATRINHHOC.MaHocSinh)", classID);
+                "HOCSINH.NgheNghiepMe,HOCSINH.HoTenMe from QUATRINHHOC,HOCSINH, where (QUATRINHHOC.MaLop='{0}' and HOCSINH.PhanLop='Inserted' and HOCSINH.MaHocSinh=QUATRINHHOC.MaHocSinh and QUATRINHHOC.MaHocKy='{1}')", classID,TermID);
             DataTable Dt = DataProvider.dataTableQuery(QueryString);
             if (Dt!=null&& Dt.Rows.Count > 0)
             {

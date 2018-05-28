@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.TitleBar = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
             this.buttonMinimize = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.PanelRight = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,19 +43,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.Activities = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.PanelSetting = new System.Windows.Forms.Panel();
-            this.Default = new System.Windows.Forms.Button();
-            this.SelectColor = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.buttonSetting = new System.Windows.Forms.Button();
             this.buttonSubject = new System.Windows.Forms.Button();
             this.buttonMark = new System.Windows.Forms.Button();
@@ -66,6 +56,18 @@
             this.buttonTerm = new System.Windows.Forms.Button();
             this.btnClass = new System.Windows.Forms.Button();
             this.buttonNewSchoolYear = new System.Windows.Forms.Button();
+            this.Activities = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.PanelSetting = new System.Windows.Forms.Panel();
+            this.Default = new System.Windows.Forms.Button();
+            this.SelectColor = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.TitleBar.SuspendLayout();
             this.PanelRight.SuspendLayout();
             this.Activities.SuspendLayout();
@@ -77,41 +79,17 @@
             this.TitleBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.TitleBar.Controls.Add(this.panel11);
-            this.TitleBar.Controls.Add(this.panel2);
             this.TitleBar.Controls.Add(this.buttonMinimize);
             this.TitleBar.Controls.Add(this.buttonClose);
             this.TitleBar.Controls.Add(this.button9);
+            this.TitleBar.Controls.Add(this.panel2);
+            this.TitleBar.Controls.Add(this.panel11);
+            this.TitleBar.Controls.Add(this.panel12);
+            this.TitleBar.Controls.Add(this.panel13);
             this.TitleBar.Location = new System.Drawing.Point(0, 0);
             this.TitleBar.Name = "TitleBar";
             this.TitleBar.Size = new System.Drawing.Size(1176, 30);
             this.TitleBar.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(58, 29);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1089, 1);
-            this.panel2.TabIndex = 3;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.White;
-            this.button9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(250)))));
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(250)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.button9.Location = new System.Drawing.Point(1147, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(29, 30);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "M";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // buttonMinimize
             // 
@@ -122,9 +100,9 @@
             this.buttonMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(250)))));
             this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMinimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.buttonMinimize.Location = new System.Drawing.Point(29, 0);
+            this.buttonMinimize.Location = new System.Drawing.Point(30, 1);
             this.buttonMinimize.Name = "buttonMinimize";
-            this.buttonMinimize.Size = new System.Drawing.Size(29, 30);
+            this.buttonMinimize.Size = new System.Drawing.Size(29, 28);
             this.buttonMinimize.TabIndex = 2;
             this.buttonMinimize.Text = "_";
             this.buttonMinimize.UseVisualStyleBackColor = false;
@@ -140,13 +118,66 @@
             this.buttonClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(250)))));
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.buttonClose.Location = new System.Drawing.Point(0, 0);
+            this.buttonClose.Location = new System.Drawing.Point(1, 1);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(29, 30);
+            this.buttonClose.Size = new System.Drawing.Size(29, 28);
             this.buttonClose.TabIndex = 1;
             this.buttonClose.Text = "x";
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.White;
+            this.button9.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(250)))));
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(250)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.button9.Location = new System.Drawing.Point(1146, 1);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(29, 28);
+            this.button9.TabIndex = 3;
+            this.button9.Text = "M";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(1, 29);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1174, 1);
+            this.panel2.TabIndex = 3;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(1, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1174, 1);
+            this.panel11.TabIndex = 4;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(1, 30);
+            this.panel12.TabIndex = 5;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel13.Location = new System.Drawing.Point(1175, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(1, 30);
+            this.panel13.TabIndex = 6;
             // 
             // PanelRight
             // 
@@ -236,128 +267,6 @@
             this.label1.Size = new System.Drawing.Size(148, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "MANAGER PROFILE";
-            // 
-            // Activities
-            // 
-            this.Activities.Controls.Add(this.panel7);
-            this.Activities.Controls.Add(this.panel5);
-            this.Activities.Controls.Add(this.panel4);
-            this.Activities.Location = new System.Drawing.Point(0, 30);
-            this.Activities.Name = "Activities";
-            this.Activities.Size = new System.Drawing.Size(1176, 739);
-            this.Activities.TabIndex = 2;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(1175, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1, 738);
-            this.panel7.TabIndex = 6;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(1, 738);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1175, 1);
-            this.panel5.TabIndex = 5;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 739);
-            this.panel4.TabIndex = 4;
-            // 
-            // PanelSetting
-            // 
-            this.PanelSetting.Controls.Add(this.Default);
-            this.PanelSetting.Controls.Add(this.SelectColor);
-            this.PanelSetting.Controls.Add(this.label4);
-            this.PanelSetting.Controls.Add(this.panel10);
-            this.PanelSetting.Controls.Add(this.panel9);
-            this.PanelSetting.Controls.Add(this.panel8);
-            this.PanelSetting.Location = new System.Drawing.Point(553, 29);
-            this.PanelSetting.Name = "PanelSetting";
-            this.PanelSetting.Size = new System.Drawing.Size(359, 740);
-            this.PanelSetting.TabIndex = 3;
-            // 
-            // Default
-            // 
-            this.Default.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.Default.FlatAppearance.BorderSize = 0;
-            this.Default.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Default.ForeColor = System.Drawing.Color.White;
-            this.Default.Location = new System.Drawing.Point(98, 53);
-            this.Default.Name = "Default";
-            this.Default.Size = new System.Drawing.Size(222, 29);
-            this.Default.TabIndex = 9;
-            this.Default.Text = "Mặc định";
-            this.Default.UseVisualStyleBackColor = false;
-            this.Default.Click += new System.EventHandler(this.Default_Click);
-            // 
-            // SelectColor
-            // 
-            this.SelectColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.SelectColor.FlatAppearance.BorderSize = 0;
-            this.SelectColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SelectColor.Location = new System.Drawing.Point(98, 18);
-            this.SelectColor.Name = "SelectColor";
-            this.SelectColor.Size = new System.Drawing.Size(222, 29);
-            this.SelectColor.TabIndex = 9;
-            this.SelectColor.UseVisualStyleBackColor = false;
-            this.SelectColor.Click += new System.EventHandler(this.SelectColor_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.label4.Location = new System.Drawing.Point(3, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Màu viền:";
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(1, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(358, 1);
-            this.panel10.TabIndex = 7;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(1, 739);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(358, 1);
-            this.panel9.TabIndex = 6;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1, 740);
-            this.panel8.TabIndex = 5;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(58, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1089, 1);
-            this.panel11.TabIndex = 4;
             // 
             // buttonSetting
             // 
@@ -618,6 +527,119 @@
             this.buttonNewSchoolYear.UseVisualStyleBackColor = false;
             this.buttonNewSchoolYear.Click += new System.EventHandler(this.buttonNewSchoolYear_Click);
             // 
+            // Activities
+            // 
+            this.Activities.Controls.Add(this.panel7);
+            this.Activities.Controls.Add(this.panel5);
+            this.Activities.Controls.Add(this.panel4);
+            this.Activities.Location = new System.Drawing.Point(0, 30);
+            this.Activities.Name = "Activities";
+            this.Activities.Size = new System.Drawing.Size(912, 739);
+            this.Activities.TabIndex = 2;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(911, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1, 738);
+            this.panel7.TabIndex = 6;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(1, 738);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(911, 1);
+            this.panel5.TabIndex = 5;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1, 739);
+            this.panel4.TabIndex = 4;
+            // 
+            // PanelSetting
+            // 
+            this.PanelSetting.Controls.Add(this.Default);
+            this.PanelSetting.Controls.Add(this.SelectColor);
+            this.PanelSetting.Controls.Add(this.label4);
+            this.PanelSetting.Controls.Add(this.panel10);
+            this.PanelSetting.Controls.Add(this.panel9);
+            this.PanelSetting.Controls.Add(this.panel8);
+            this.PanelSetting.Location = new System.Drawing.Point(553, 29);
+            this.PanelSetting.Name = "PanelSetting";
+            this.PanelSetting.Size = new System.Drawing.Size(359, 740);
+            this.PanelSetting.TabIndex = 3;
+            // 
+            // Default
+            // 
+            this.Default.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.Default.FlatAppearance.BorderSize = 0;
+            this.Default.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Default.ForeColor = System.Drawing.Color.White;
+            this.Default.Location = new System.Drawing.Point(98, 53);
+            this.Default.Name = "Default";
+            this.Default.Size = new System.Drawing.Size(222, 29);
+            this.Default.TabIndex = 9;
+            this.Default.Text = "Mặc định";
+            this.Default.UseVisualStyleBackColor = false;
+            this.Default.Click += new System.EventHandler(this.Default_Click);
+            // 
+            // SelectColor
+            // 
+            this.SelectColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.SelectColor.FlatAppearance.BorderSize = 0;
+            this.SelectColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SelectColor.Location = new System.Drawing.Point(98, 18);
+            this.SelectColor.Name = "SelectColor";
+            this.SelectColor.Size = new System.Drawing.Size(222, 29);
+            this.SelectColor.TabIndex = 9;
+            this.SelectColor.UseVisualStyleBackColor = false;
+            this.SelectColor.Click += new System.EventHandler(this.SelectColor_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.label4.Location = new System.Drawing.Point(3, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Màu viền:";
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(1, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(358, 1);
+            this.panel10.TabIndex = 7;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(1, 739);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(358, 1);
+            this.panel9.TabIndex = 6;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(148)))), ((int)(((byte)(246)))));
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1, 740);
+            this.panel8.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AcceptButton = this.button9;
@@ -685,6 +707,8 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button Default;
         private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel13;
     }
 }
 

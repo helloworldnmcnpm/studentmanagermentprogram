@@ -17,9 +17,9 @@ namespace BUL
         {
             return Process_DAL.CountStudent(ClassID);
         }
-        public static List<Student_DTO> LoadByClass(string classID)
+        public static List<Student_DTO> LoadByClass(string classID,string TermID)
         {
-            return Process_DAL.LoadByClass(classID);
+            return Process_DAL.LoadByClass(classID,TermID);
         }
         public static Process_DTO GetProcess(int studentID, string TermID, string ClassID)
         {

@@ -51,7 +51,7 @@ namespace QLHS
 
         private void Classtxt_SelectedIndexChanged(object sender, EventArgs e)
         {
-            student_DTOs = Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString());
+            student_DTOs = Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString(),Termtxt.SelectedValue.ToString());
             dataGridView1.DataSource = student_DTOs;
         }
 
@@ -88,7 +88,7 @@ namespace QLHS
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString()) == null) return;
+            if (Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString(),Termtxt.SelectedValue.ToString()) == null) return;
             if (Process_BUL.GetProcess(Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()), Termtxt.SelectedValue.ToString(), Classtxt.SelectedValue.ToString()) == null) return;
                 dataGridView2.DataSource = ScoreBySubject_BUL.LoadByProcessID(Process_BUL.GetProcess(Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()), Termtxt.SelectedValue.ToString(), Classtxt.SelectedValue.ToString()).ID);
         }
@@ -102,7 +102,7 @@ namespace QLHS
         private void Add_Click(object sender, EventArgs e)
         {
             if (SBStxt.Text == "" || Subject_BUL.Load()==null||Term_BUL.Load()==null) return;
-            if (Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString()) == null) return;
+            if (Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString(),Termtxt.SelectedValue.ToString()) == null) return;
             ScoreBySubject_DTO scoreBySubject_DTO = new ScoreBySubject_DTO();
             scoreBySubject_DTO.ID = SBStxt.Text;
             scoreBySubject_DTO.SubjectID = Subjecttxt.SelectedValue.ToString();
@@ -120,7 +120,7 @@ namespace QLHS
 
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
-            if (Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString()) == null) return;
+            if (Process_BUL.LoadByClass(Classtxt.SelectedValue.ToString(),Termtxt.SelectedValue.ToString()) == null) return;
             if (ScoreBySubject_BUL.LoadByProcessID(Process_BUL.GetProcess(Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()), Termtxt.SelectedValue.ToString(), Classtxt.SelectedValue.ToString()).ID) == null) return;
             if (ScoreBySubject_BUL.Delete(dataGridView2.SelectedRows[0].Cells[0].Value.ToString()))
             {
