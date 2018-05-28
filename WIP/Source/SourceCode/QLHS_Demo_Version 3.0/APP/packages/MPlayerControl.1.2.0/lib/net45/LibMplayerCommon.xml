@@ -1,0 +1,423 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LibMplayerCommon</name>
+    </assembly>
+    <members>
+        <member name="T:LibMPlayerCommon.ScreenAspectRatio">
+            <summary>
+            This class is used to hold different video aspect ratio values.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.ScreenAspectRatio.FourThree">
+            <summary>
+            The float value of 4/3 aspect ratio.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.ScreenAspectRatio.SixteenNine">
+            <summary>
+            The float value of 16/9 aspect ratio.
+            </summary>
+        </member>
+        <member name="M:LibMPlayerCommon.BackendPrograms.CurrentAssemblyDirectory">
+            <summary>
+            Return the directory of the current executing assembly
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:LibMPlayerCommon.Discover">
+            <summary>
+            This class is used to discover information about a media file.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.Discover.VideoBitrate">
+            <summary>
+            Is the files video bitrate.  Kilobits per second.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.Discover.AudioBitrate">
+            <summary>
+            Is the files audio bitrate.  Kilobits per second.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.Discover.AudioSampleRate">
+            <summary>
+            Is the files audio rate.  What is the difference between this and AudioBitrate.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.Discover.Width">
+            <summary>
+            Is the videos width.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.Discover.Height">
+            <summary>
+            Is the videos height.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.Discover.FPS">
+            <summary>
+            The videos frames per second.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.Discover.Length">
+            <summary>
+            The length of the video in seconds.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.Discover.AspectRatio">
+            <summary>
+            The aspect ratio of the video. Could be 4/3 or 16/9.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.Discover.AudioList">
+            <summary>
+            List of audio tracks in the video.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.Discover.Video">
+            <summary>
+            Returns true if the file contains video.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.Discover.Audio">
+            <summary>
+            Returns true if the file contains audio.
+            </summary>
+        </member>
+        <member name="M:LibMPlayerCommon.Discover.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="filePath"></param>
+            <param name="mplayerPath">If mplayerPath is left empty it will search for mplayer.exe in 
+            "current directory\backend\mplayer.exe" on windows and mplayer in the path on linux.</param>
+        </member>
+        <member name="T:LibMPlayerCommon.MediaStatus">
+            <summary>
+            Status of the mplayer.exe instance.
+            </summary>
+        </member>
+        <member name="E:LibMPlayerCommon.Mencoder.PercentCompleted">
+            <summary>
+            This event is raised each time mencoder percentage complete changes
+            </summary>
+        </member>
+        <member name="E:LibMPlayerCommon.Mencoder.ConversionComplete">
+            <summary>
+            This event is raised when mencoder is finished converting a video.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.Mencoder.MencoderInstance">
+            <summary>
+            The process that is running mencoder. 
+            </summary>
+        </member>
+        <member name="T:LibMPlayerCommon.Mencoder.RegionType">
+            <summary>
+            The region type used in the video.
+            </summary>
+        </member>
+        <member name="M:LibMPlayerCommon.Mencoder.MencoderInstance_OutputDataReceived(System.Object,System.Diagnostics.DataReceivedEventArgs)">
+            <summary>
+            All mencoder standard output is read through this function.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:LibMPlayerCommon.Mencoder.MencoderInstance_ErrorDataReceived(System.Object,System.Diagnostics.DataReceivedEventArgs)">
+            <summary>
+            All mencoder error output is read through this function.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="E:LibMPlayerCommon.MPlayer.CurrentPosition">
+            <summary>
+            This event is the most accurate way to get the current position of the current playing file.
+            Whenever the postion changes this event will notify that the positon has changed with the value
+            being the new position (seconds into the file).
+            </summary>
+        </member>
+        <member name="F:LibMPlayerCommon.MPlayer._getfileinfofilename">
+            vars for mplayer info
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.#ctor">
+            
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.#ctor(System.Int32,LibMPlayerCommon.MplayerBackends,System.String,System.Boolean,System.TimeSpan,System.String)">
+            <summary>
+            Create a new instance of mplayer class.
+            </summary>
+            <param name="wid">Window ID that mplayer should attach itself</param>
+            <param name="backend">The video output backend that mplayer will use.</param>
+            <param name="mplayerPath">The full filepath to mplayer.exe.  If mplayerPath is left empty it will search for mplayer.exe in 
+            "current directory\backend\mplayer.exe" on windows and mplayer in the path on linux.</param>
+            <param name="loadMplayer">If true mplayer will immediately be loaded and you should not attempt to 
+            play any files until MplayerRunning is true.</param>
+            <param name="positionUpdateInterval">Interval of periodical position updates</param>
+            <param name="consoleArguments">Specify custom console arguments here; default "-slave -quiet -idle -v -ontop" ( do not set -vo and -wid ) </param>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.Finalize">
+            <summary>
+            Cleanup resources.  Currently this means that mplayer is closed if it is still running.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.MPlayer.MplayerRunning">
+            <summary>
+            Is mplayer alreadying running?  True or False.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.MPlayer.CurrentStatus">
+            <summary>
+            The current status of the player.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.MPlayer.MediaPlayer">
+            <summary>
+            The process that is running mplayer.
+            </summary>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.Play(System.String)">
+            <summary>
+            Load and start playing a video.
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.LoadFile(System.String)">
+            <summary>
+            Starts a new video/audio file immediatly.  Requires that Play has been called.
+            </summary>
+            <param name="filePath">string</param>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.PrepareFilePath(System.String)">
+            <summary>
+            Prepare filepaths to be used witht the loadfile command.  
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+            <remarks>
+            For some reason it strips the DirectorySeperatorChar so we double it up here.
+            </remarks>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.MovePosition(System.Int32)">
+            <summary>
+            Move to a new position in the video.
+            </summary>
+            <param name="timePosition">Seconds.  The position to seek move to.</param>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.Seek(System.Int32,LibMPlayerCommon.Seek)">
+            <summary>
+            Seek a new postion.
+            Seek to some place in the movie.
+            Seek.Relative is a relative seek of +/- value seconds (default).
+            Seek.Percentage is a seek to value % in the movie.
+            Seek.Absolute is a seek to an absolute position of value seconds.
+            </summary>
+            <param name="value"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.Pause">
+            <summary>
+            Pause the current video.  If paused it will unpause.
+            </summary>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.Stop">
+            <summary>
+            Stop the current video.
+            </summary>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.Quit">
+            <summary>
+            Close MPlayer instance.
+            </summary>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.SetPercent(System.Int32)">
+            <summary>
+            set percent position of mplayer 
+            </summary>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.CurrentPlayingFileLength">
+            <summary>
+            Retrieves the number of seconds of the current playing video.
+            </summary>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.GetPercentPos">
+            <summary>
+            get percent positiob
+            </summary>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.GetCurrentPosition">
+            <summary>
+            Get the current postion in the file being played.
+            </summary>
+            <remarks>It is highly recommended to use the CurrentPostion event instead.</remarks>
+            <returns></returns>
+        </member>
+        <member name="P:LibMPlayerCommon.MPlayer.FullScreen">
+            <summary>
+            Get if the video is full is screen or not.  Set video to play in fullscreen.
+            </summary>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.ToggleFullScreen">
+            <summary>
+            Toggle Fullscreen.
+            </summary>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.Mute">
+            <summary>
+            Toggle Mute.  
+            </summary>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.Volume(System.Int32)">
+            <summary>
+            Accepts a volume value of 0 - 100.
+            </summary>
+            <param name="volume"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:LibMPlayerCommon.MPlayer.InsertSubtitles(System.String)" -->
+        <member name="M:LibMPlayerCommon.MPlayer.SwitchRatio(System.String)">
+            <summary>
+            Change aspect ratio at runtime. [value] is the new aspect ratio expressed
+            as a float (e.g. 1.77778 for 16/9), or special value -1 to reset to
+            original aspect ratio (ditto if [value] is missing), or special value 0
+            to disable automatic movie aspect ratio compensation.
+            There might be problems with some video filters.
+            </summary>
+            <param name="ratio"></param>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.GetAudioBitrate">
+            <summary>
+            get info about the file 
+            </summary>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.HandleMediaPlayerOutputDataReceived(System.Object,System.Diagnostics.DataReceivedEventArgs)">
+            <summary>
+            All mplayer standard output is read through this function.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:LibMPlayerCommon.MPlayer.HandleMediaPlayerErrorDataReceived(System.Object,System.Diagnostics.DataReceivedEventArgs)">
+            <summary>
+            All mplayer error output is read through this function.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:LibMPlayerCommon.MplayerBackends">
+            <summary>
+            The video output backend that mplayer is using.
+            </summary>
+        </member>
+        <member name="F:LibMPlayerCommon.MplayerBackends.OpenGL">
+            <summary>
+            This may be the recommened backend on Mac OSX.
+            </summary>
+        </member>
+        <member name="F:LibMPlayerCommon.MplayerBackends.GL">
+            <summary>
+            Simple Version
+            </summary>
+        </member>
+        <member name="F:LibMPlayerCommon.MplayerBackends.GL2">
+            <summary>
+            Simple Version.  Variant of the OpenGL  video  output  driver.   
+            Supports  videos larger  than  the maximum texture size but lacks 
+            many of the ad‐vanced features and optimizations of the gl driver  
+            and  is  un‐likely to be extended further.
+            </summary>
+        </member>
+        <member name="F:LibMPlayerCommon.MplayerBackends.Direct3D">
+            <summary>
+            Windows. This is the recommened backend on windows.
+            </summary>
+        </member>
+        <member name="F:LibMPlayerCommon.MplayerBackends.DirectX">
+            <summary>
+            Windows
+            </summary>
+        </member>
+        <member name="F:LibMPlayerCommon.MplayerBackends.X11">
+            <summary>
+            Linux
+            </summary>
+        </member>
+        <member name="F:LibMPlayerCommon.MplayerBackends.Quartz">
+            <summary>
+            Mac OS X
+            </summary>
+        </member>
+        <member name="F:LibMPlayerCommon.MplayerBackends.CoreVideo">
+            <summary>
+            Mac OS X
+            </summary>
+        </member>
+        <member name="F:LibMPlayerCommon.MplayerBackends.SDL">
+            <summary>
+            Cross Platform
+            </summary>
+        </member>
+        <member name="F:LibMPlayerCommon.MplayerBackends.Vdpau">
+            <summary>
+            Linux
+            </summary>
+        </member>
+        <member name="F:LibMPlayerCommon.MplayerBackends.ASCII">
+            <summary>
+            ASCII art video output driver that works on a text console.
+            </summary>
+        </member>
+        <member name="F:LibMPlayerCommon.MplayerBackends.ColorASCII">
+            <summary>
+            Color  ASCII  art  video output driver that works on a text console.
+            </summary>
+        </member>
+        <member name="F:LibMPlayerCommon.MplayerBackends.Directfb">
+            <summary>
+            Linux.  Play video using the DirectFB library.
+            </summary>
+        </member>
+        <member name="F:LibMPlayerCommon.MplayerBackends.Wii">
+            <summary>
+            Linux.  Nintendo Wii/GameCube specific video output driver.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:LibMPlayerCommon.MplayerBackends.V4l2" -->
+        <member name="F:LibMPlayerCommon.MplayerBackends.XV">
+            <summary>
+            Linux
+            </summary>
+        </member>
+        <member name="T:LibMPlayerCommon.MplayerEventHandler">
+            <summary>
+            Delegatefor use with mplayer control events.  Uses MplayerEvent.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:LibMPlayerCommon.MplayerEvent">
+            <summary>
+            Event class that is used with the mplayer control.  Can send String or Integer messages.
+            </summary>
+        </member>
+        <member name="P:LibMPlayerCommon.MplayerEvent.Message">
+            <summary>
+            Event Message.
+            </summary>
+        </member>
+        <member name="T:LibMPlayerCommon.Seek">
+            <summary>
+            The seek type that is used when seeking a new position in the video stream.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:LibMPlayerCommon.SlideShow" -->
+        <member name="M:LibMPlayerCommon.TimeConversion.ConvertTimeHHMMSS(System.Int32)">
+            <summary>
+            return time in Hours:Minutes:Seconds format.
+            </summary>
+            <param name="timeInSeconds"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
