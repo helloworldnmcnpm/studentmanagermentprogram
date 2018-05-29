@@ -8,7 +8,6 @@ D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.AddStudent.resources
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.AddTerm.resources
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.AddTypeExam.resources
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.ConfigRule.resources
-D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.DataVisualizer.resources
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.InsertStudentToAClass.resources
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Main.resources
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Properties.Resources.resources
@@ -44,3 +43,16 @@ D:\Users\tranm\source\repos\APP\APP\bin\Debug\DAL.pdb
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\GUI.csproj.CopyComplete
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.exe
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.pdb
+D:\Users\tranm\source\repos\APP\APP\bin\Debug\LiveCharts.dll
+D:\Users\tranm\source\repos\APP\APP\bin\Debug\LiveCharts.WinForms.dll
+D:\Users\tranm\source\repos\APP\APP\bin\Debug\LiveCharts.Wpf.dll
+D:\Users\tranm\source\repos\APP\APP\bin\Debug\LiveCharts.pdb
+D:\Users\tranm\source\repos\APP\APP\bin\Debug\LiveCharts.xml
+D:\Users\tranm\source\repos\APP\APP\bin\Debug\LiveCharts.WinForms.pdb
+D:\Users\tranm\source\repos\APP\APP\bin\Debug\LiveCharts.WinForms.xml
+D:\Users\tranm\source\repos\APP\APP\bin\Debug\LiveCharts.Wpf.pdb
+D:\Users\tranm\source\repos\APP\APP\bin\Debug\LiveCharts.Wpf.xml
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.DataVisualizer.resources
+D:\Users\tranm\source\repos\APP\APP\bin\Debug\BunifuDataViz 1.0.1.dll
+D:\Users\tranm\source\repos\APP\APP\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Class_Dashboard.resources

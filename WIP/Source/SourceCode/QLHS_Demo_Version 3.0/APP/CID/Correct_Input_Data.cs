@@ -64,10 +64,6 @@ namespace CID
                 return IfNotOnlyNumber(InputString);
             }
         }
-        public string NoSpecialKey
-        {
-            get;
-        }
         public string TrueName
         {
             get
@@ -119,6 +115,13 @@ namespace CID
             get
             {
                 return UpcaseSpaceNumber(UnderAHundered);
+            }
+        }
+        public string NoSecialKey
+        {
+            get
+            {
+                return RemoveSpecialKey(DeleteDoubleSpace(UpcaseFirstLetterOfEachWord(UnderAHundered)));
             }
         }
     }

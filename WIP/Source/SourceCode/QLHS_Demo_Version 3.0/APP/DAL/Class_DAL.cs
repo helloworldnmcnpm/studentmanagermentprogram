@@ -82,5 +82,10 @@ namespace DAL
             string QueryString = string.Format("select Count (*) from LOP");
             return int.Parse(DataProvider.ExecuteScalaMethod(QueryString));
         }
+        public static int CountBySC(string SchoolYearID)
+        {
+            string QueryString = string.Format("select Count (*) from LOP where MaNamHoc='{0}'", SchoolYearID);
+            return int.Parse(DataProvider.ExecuteScalaMethod(QueryString));
+        }
     }
 }

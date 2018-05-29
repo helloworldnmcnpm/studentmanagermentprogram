@@ -37,5 +37,9 @@ namespace BUL
         {
             return Class_DAL.Count();
         }
+        public static int CountBySC(string SchoolYearID)
+        {
+            return Class_DAL.CountBySC(SchoolYearID);
+        }
     }
 }

@@ -98,5 +98,36 @@ namespace DAL
             string QueryString = string.Format("Select Count (*) from HOCSINH");
             return int.Parse(DataProvider.ExecuteScalaMethod(QueryString));
         }
+        public static List<Student_DTO> LoadAll()
+        {
+            string QueryString = string.Format("Select * from HOCSINH");
+            DataTable Dt = DataProvider.dataTableQuery(QueryString);
+            if (Dt != null && Dt.Rows.Count > 0)
+            {
+                List<Student_DTO> ListStudentDTO = new List<Student_DTO>();
+                Student_DTO stdDTO;
+                for (int i = 0; i < Dt.Rows.Count; i++)
+                {
+                    stdDTO = new Student_DTO();
+                    stdDTO.ID = Convert.ToInt32(Dt.Rows[i]["MaHocSinh"].ToString());
+                    stdDTO.Name = Dt.Rows[i]["HoTen"].ToString();
+                    stdDTO.Birthday = Convert.ToDateTime(Dt.Rows[i]["NgaySinh"].ToString());
+                    stdDTO.Birthplace = Dt.Rows[i]["NoiSinh"].ToString();
+                    stdDTO.Sex = Dt.Rows[i]["GioiTinh"].ToString();
+                    stdDTO.Religion = Dt.Rows[i]["TonGiao"].ToString();
+                    stdDTO.National = Dt.Rows[i]["DanToc"].ToString();
+                    stdDTO.Address = Dt.Rows[i]["DiaChi"].ToString();
+                    stdDTO.Phone = Dt.Rows[i]["DienThoai"].ToString();
+                    stdDTO.Father = Dt.Rows[i]["HoTenCha"].ToString();
+                    stdDTO.Mother = Dt.Rows[i]["HoTenMe"].ToString();
+                    stdDTO.FJob = Dt.Rows[i]["NgheNghiepCha"].ToString();
+                    stdDTO.MJob = Dt.Rows[i]["NgheNghiepMe"].ToString();
+                    stdDTO.Status = Dt.Rows[i]["PhanLop"].ToString();
+                    ListStudentDTO.Add(stdDTO);
+                }
+                return ListStudentDTO;
+            }
+            return null;
+        }
     }
 }

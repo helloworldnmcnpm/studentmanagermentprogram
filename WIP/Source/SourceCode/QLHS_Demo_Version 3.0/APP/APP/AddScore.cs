@@ -352,6 +352,7 @@ namespace APP
                     }
                     if (ScoreBySubject_BUL.UpdateScore(scoreBySubject_DTO.ID, (finalmark / count)))
                     {
+
                         MessageBox.Show("Cập nhật bảng điểm thành công!", "Thông báo!");
                     }
                 }

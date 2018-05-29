@@ -266,5 +266,13 @@ namespace APP
                 addScore.BringToFront();
             }
         }
+
+        private void BtnDataVisualizerMode_Click(object sender, EventArgs e)
+        {
+            DataVisualizer dataVisualizer = new DataVisualizer();
+            this.WindowState = FormWindowState.Minimized;
+            dataVisualizer.ShowDialog();
+            this.WindowState = FormWindowState.Normal;
+        }
     }
 }

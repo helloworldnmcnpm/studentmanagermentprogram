@@ -73,5 +73,9 @@ namespace DAL
             }
             return null;
         }
+       /* public static bool InitialFinalScore(string ProcessID)
+        {
+            
+        }*/
     }
 }

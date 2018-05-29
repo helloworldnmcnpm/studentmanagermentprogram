@@ -33,5 +33,9 @@ namespace BUL
         {
             return Student_DAL.CountStudent();
         }
+        public static List<Student_DTO> LoadAll()
+        {
+            return Student_DAL.LoadAll();
+        }
     }
 }

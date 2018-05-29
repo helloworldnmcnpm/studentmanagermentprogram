@@ -51,6 +51,7 @@
             this.Activities = new System.Windows.Forms.FlowLayoutPanel();
             this.ForceExit = new MaterialSkin.Controls.MaterialFlatButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.BtnDataVisualizerMode = new MaterialSkin.Controls.MaterialFlatButton();
             this.Tabcontrol.SuspendLayout();
             this.Profile.SuspendLayout();
             this.Studying.SuspendLayout();
@@ -68,7 +69,7 @@
             this.Tabcontrol.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
             this.Tabcontrol.Location = new System.Drawing.Point(0, 64);
             this.Tabcontrol.Name = "Tabcontrol";
-            this.Tabcontrol.SelectedIndex = 1;
+            this.Tabcontrol.SelectedIndex = 0;
             this.Tabcontrol.Size = new System.Drawing.Size(803, 100);
             this.Tabcontrol.Style = MetroFramework.MetroColorStyle.Blue;
             this.Tabcontrol.TabIndex = 2;
@@ -88,9 +89,9 @@
             this.Profile.HorizontalScrollbarBarColor = true;
             this.Profile.HorizontalScrollbarHighlightOnWheel = false;
             this.Profile.HorizontalScrollbarSize = 10;
-            this.Profile.Location = new System.Drawing.Point(4, 35);
+            this.Profile.Location = new System.Drawing.Point(4, 44);
             this.Profile.Name = "Profile";
-            this.Profile.Size = new System.Drawing.Size(795, 61);
+            this.Profile.Size = new System.Drawing.Size(795, 52);
             this.Profile.TabIndex = 0;
             this.Profile.Text = "Quản lý hồ sơ";
             this.Profile.VerticalScrollbarBarColor = true;
@@ -413,17 +414,36 @@
             this.ForceExit.UseVisualStyleBackColor = false;
             this.ForceExit.Click += new System.EventHandler(this.ForceExit_Click);
             // 
+            // BtnDataVisualizerMode
+            // 
+            this.BtnDataVisualizerMode.AutoSize = true;
+            this.BtnDataVisualizerMode.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BtnDataVisualizerMode.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnDataVisualizerMode.Depth = 0;
+            this.BtnDataVisualizerMode.Location = new System.Drawing.Point(918, 80);
+            this.BtnDataVisualizerMode.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.BtnDataVisualizerMode.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BtnDataVisualizerMode.Name = "BtnDataVisualizerMode";
+            this.BtnDataVisualizerMode.Primary = false;
+            this.BtnDataVisualizerMode.Size = new System.Drawing.Size(168, 36);
+            this.BtnDataVisualizerMode.TabIndex = 6;
+            this.BtnDataVisualizerMode.Text = "Data Visualizer Mode";
+            this.BtnDataVisualizerMode.UseVisualStyleBackColor = false;
+            this.BtnDataVisualizerMode.Click += new System.EventHandler(this.BtnDataVisualizerMode_Click);
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.ClientSize = new System.Drawing.Size(1122, 752);
+            this.Controls.Add(this.BtnDataVisualizerMode);
             this.Controls.Add(this.ForceExit);
             this.Controls.Add(this.Activities);
             this.Controls.Add(this.Tabcontrol);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý học sinh";
             this.Load += new System.EventHandler(this.Main_Load);
             this.Tabcontrol.ResumeLayout(false);
@@ -464,6 +484,7 @@
         private MaterialSkin.Controls.MaterialFlatButton ChangeClass;
         private MaterialSkin.Controls.MaterialFlatButton InsertStudent;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private MaterialSkin.Controls.MaterialFlatButton BtnDataVisualizerMode;
     }
 }
 
