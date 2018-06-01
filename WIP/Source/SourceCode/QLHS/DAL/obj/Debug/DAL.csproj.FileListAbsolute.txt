@@ -7,3 +7,12 @@ D:\Users\tranm\source\repos\QLHS\DAL\obj\Debug\DAL.pdb
 D:\Users\tranm\source\repos\QLHS\DAL\bin\Debug\DTO.dll
 D:\Users\tranm\source\repos\QLHS\DAL\bin\Debug\DTO.pdb
 D:\Users\tranm\source\repos\QLHS\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\bin\Debug\DAL.dll
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\bin\Debug\DAL.pdb
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\bin\Debug\DTO.dll
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\bin\Debug\DTO.pdb
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\obj\Debug\DAL.dll
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\QLHS\DAL\obj\Debug\DAL.pdb

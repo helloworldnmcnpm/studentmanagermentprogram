@@ -3,3 +3,8 @@ D:\Users\tranm\source\repos\DTO\bin\Debug\DTO.pdb
 D:\Users\tranm\source\repos\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\Users\tranm\source\repos\DTO\obj\Debug\DTO.dll
 D:\Users\tranm\source\repos\DTO\obj\Debug\DTO.pdb
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\DTO\bin\Debug\DTO.dll
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\DTO\bin\Debug\DTO.pdb
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.dll
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.pdb
