@@ -55,7 +55,6 @@ namespace DAL
             string QueryString = string.Format("Update LOP set SiSo='{0}' where MaLop='{1}'", i, classID);
             return DataProvider.ExecuteNonQueryMethod(QueryString);
         }
-
         public static List<Class_DTO> LoadBySC(string ID)
         {
             string QueryString = string.Format("select * from LOP where MaNamHoc='{0}'", ID);
@@ -77,6 +76,11 @@ namespace DAL
                 return class_DTOs;
             }
             return null;
+        }
+        public static int Count()
+        {
+            string QueryString = string.Format("select Count (*) from LOP");
+            return int.Parse(DataProvider.ExecuteScalaMethod(QueryString));
         }
     }
 }

@@ -1,0 +1,11 @@
+D:\Users\tranm\source\repos\APP\BUL\bin\Debug\BUL.dll
+D:\Users\tranm\source\repos\APP\BUL\bin\Debug\BUL.pdb
+D:\Users\tranm\source\repos\APP\BUL\bin\Debug\DAL.dll
+D:\Users\tranm\source\repos\APP\BUL\bin\Debug\DTO.dll
+D:\Users\tranm\source\repos\APP\BUL\bin\Debug\DAL.pdb
+D:\Users\tranm\source\repos\APP\BUL\bin\Debug\DTO.pdb
+D:\Users\tranm\source\repos\APP\BUL\obj\Debug\BUL.csprojAssemblyReference.cache
+D:\Users\tranm\source\repos\APP\BUL\obj\Debug\BUL.csproj.CoreCompileInputs.cache
+D:\Users\tranm\source\repos\APP\BUL\obj\Debug\BUL.csproj.CopyComplete
+D:\Users\tranm\source\repos\APP\BUL\obj\Debug\BUL.dll
+D:\Users\tranm\source\repos\APP\BUL\obj\Debug\BUL.pdb

@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,6 +63,18 @@
     </Compile>
     <Compile Include="Class.Designer.cs">
       <DependentUpon>Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Final.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Final.Designer.cs">
+      <DependentUpon>Final.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -152,6 +165,12 @@
     <EmbeddedResource Include="Class.resx">
       <DependentUpon>Class.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Final.resx">
+      <DependentUpon>Final.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +226,7 @@
     <None Include="Properties\DataSources\DTO.SchoolYear_DTO.datasource" />
     <None Include="Properties\DataSources\DTO.ScoreBySubject_DTO.datasource" />
     <None Include="Properties\DataSources\DTO.Student_DTO.datasource" />
+    <None Include="Properties\DataSources\DTO.Student_Process_DTO.datasource" />
     <None Include="Properties\DataSources\DTO.Subject_DTO.datasource" />
     <None Include="Properties\DataSources\DTO.Term_DTO.datasource" />
     <None Include="Properties\DataSources\DTO.TypeExam_DTO.datasource" />
@@ -280,6 +300,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_User_Manual_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Classroom_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Classroom_75px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_User_Groups_75px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_User_Groups_75px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Grades_75px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Approval_75px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

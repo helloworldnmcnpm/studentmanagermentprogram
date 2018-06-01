@@ -25,5 +25,13 @@ namespace BUL
         {
             return Student_DAL.Delete(ID);
         }
+        public static bool ChangeClass(int StudentID, string TermID, string ClassID)
+        {
+            return Student_DAL.ChangeClass(StudentID, TermID, ClassID);
+        }
+        public static int CountStudent()
+        {
+            return Student_DAL.CountStudent();
+        }
     }
 }

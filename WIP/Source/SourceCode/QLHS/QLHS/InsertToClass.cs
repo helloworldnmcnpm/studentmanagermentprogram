@@ -14,6 +14,9 @@ namespace QLHS
 {
     public partial class InsertToClass : UserControl
     {
+        /// <summary>
+        /// INITIAL DATA
+        /// </summary>
         private static InsertToClass _instance;
         public static InsertToClass Instance
         {
@@ -23,64 +26,14 @@ namespace QLHS
                 return _instance;
             }
         }
-        List<Student_DTO> ListReady = new List<Student_DTO>();
-        List<Class_DTO> ListClass = new List<Class_DTO>();
-        List<Term_DTO> ListTerm = new List<Term_DTO>();
-        private void LoadList()
+        public static void Refresh(object sender,EventArgs e)
         {
-            ListReady = Student_BUL.Load();
-            ListClass = Class_BUL.Load();
-            ListTerm = Term_BUL.Load();
-            dataGridView1.DataSource = ListReady;
-            comboBox1.DataSource = ListClass;
-            ComboboxChangeClass.DataSource = ListClass;
-            comboBox2.DataSource = ListTerm;
-            if (Class_BUL.Load() != null)
-            {
-                if (label2.Text == "Sĩ số hiện tại:")
-                    label2.Text += " " + Process_BUL.CountStudent(comboBox1.SelectedValue.ToString());
-                else
-                {
-                    label2.Text = "Sĩ số hiện tại:" + " " + Process_BUL.CountStudent(comboBox1.SelectedValue.ToString());
-                }
-            }
+            ButtonRefresh_Click(sender,e);
         }
-
-        public InsertToClass()
-        {
-            InitializeComponent();
-        }
-
-        private void ChangeClass_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ChangeClass.Checked == true)
-            {
-                label6.Visible = true;
-                ComboboxChangeClass.Visible = true;
-            }
-            else
-            {
-                label6.Visible = false;
-                ComboboxChangeClass.Visible = false;
-            }
-        }
-
-        private void InsertToClass_Load(object sender, EventArgs e)
-        {
-            
-            LoadList();
-            if (label3.Text == "Số học sinh tối đa:")
-                label3.Text += " " + Rule_BUL.Load().MaxStudent.ToString();
-            else
-            {
-                label3.Text = "Số học sinh tối đa:" + " " + Rule_BUL.Load().MaxStudent.ToString();
-            }
-        }
-
-        private Student_DTO ChangeType (DataGridViewRow dr)
+        private Student_DTO ChangeType(DataGridViewRow dr)
         {
             Student_DTO student_DTO = new Student_DTO();
-            student_DTO.ID =Convert.ToInt32(dr.Cells[1].Value.ToString());
+            student_DTO.ID = Convert.ToInt32(dr.Cells[1].Value.ToString());
             student_DTO.Status = dr.Cells[0].Value.ToString();
             student_DTO.Name = dr.Cells[2].Value.ToString();
             student_DTO.Sex = dr.Cells[3].Value.ToString();
@@ -97,61 +50,142 @@ namespace QLHS
             return student_DTO;
         }
 
-        private void Add_Click(object sender, EventArgs e)
+
+
+
+
+        /// <summary>
+        /// LOAD
+        /// </summary>
+        public InsertToClass()
         {
-            if (ListReady == null) return;
-            if (ListClass == null) return;
-            if (ListTerm == null) return;
-            if (Process_BUL.CountStudent(comboBox1.SelectedValue.ToString())==Rule_BUL.Load().MaxStudent)
-            {
-                MessageBox.Show("Lớp đã đầy. Hãy chọn lớp khác!", "Lớp đầy!");
-                return;
-            }
-            Class_BUL.UpdateNumberStudent(Process_BUL.CountStudent(comboBox1.SelectedValue.ToString()) + 1, comboBox1.SelectedValue.ToString());
-            Student_DTO student_DTO = ChangeType(dataGridView1.SelectedRows[0]);
-            student_DTO.Status = "Inserted";
-            if (Process_BUL.InitialProcess(comboBox1.SelectedValue.ToString(), student_DTO.ID, comboBox2.SelectedValue.ToString()) &&
-            Student_BUL.Update(student_DTO))
-            {
-                LoadList();
-                dataGridView2.DataSource = Process_BUL.LoadByClass(comboBox1.SelectedValue.ToString());
-            }
-            else MessageBox.Show("Thất bại!", "Thất bại!");
+            InitializeComponent();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void InsertToClass_Load(object sender, EventArgs e)
         {
-            if (ListReady == null) return;
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            if (label2.Text== "Sĩ số hiện tại:")
-            label2.Text +=" "+ Process_BUL.CountStudent(comboBox1.SelectedValue.ToString());
+            //(1)&(2)
+            if (Student_BUL.Load() == null)
+            {
+                dataGridView1.Enabled = false;
+                ComboBoxClass.Enabled = false;
+                ComboBoxTerm1.Enabled = false;
+                Add.Enabled = false;
+            }
             else
             {
-                label2.Text= "Sĩ số hiện tại:"+ " " + Process_BUL.CountStudent(comboBox1.SelectedValue.ToString());
+                dataGridView1.Enabled = true;
+                ComboBoxClass.Enabled = true; 
+                ComboBoxTerm1.Enabled = true;
+                Add.Enabled = true;
+                dataGridView1.DataSource = Student_BUL.Load();
             }
-            dataGridView2.DataSource = Process_BUL.LoadByClass(comboBox1.SelectedValue.ToString());
-            label4.Text = comboBox1.Text;
+            if (SchoolYear_BUL.Load() == null)
+            {
+                ChangeClass.Enabled = false;
+                ComboBoxClass.Enabled = false;
+                ComboBoxTerm1.Enabled = false;
+                dataGridView1.Enabled = false;
+                dataGridView2.Enabled = false;
+                dataGridView3.Enabled = false;
+                Add.Enabled = false;
+            }
+            else
+            {
+                ChangeClass.Enabled = true;
+                ComboBoxClass.Enabled = true;
+                ComboBoxTerm1.Enabled = true;
+                dataGridView1.Enabled = true;
+                dataGridView2.Enabled = true;
+                dataGridView3.Enabled = true;
+                Add.Enabled = true;
+                SchoolYearComboBox.DataSource = SchoolYear_BUL.Load();
+            }
         }
 
-        private void ComboboxChangeClass_SelectedIndexChanged(object sender, EventArgs e)
+
+
+
+        /// <summary>
+        /// BUTTON
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ChangeClass_CheckedChanged(object sender, EventArgs e)
         {
-            if (ListReady == null) return;
-            if (ListClass == null) return;
-            if (ListTerm == null) return;
-            if (Process_BUL.LoadByClass(comboBox1.SelectedValue.ToString()) == null) return;
-            if (Process_BUL.CountStudent(ComboboxChangeClass.SelectedValue.ToString()) == Rule_BUL.Load().MaxStudent)
-            {
-                MessageBox.Show("Lớp đã đầy, không thể chuyển. Hãy chọn lớp khác!", "Lớp đầy!");
-                return;
-            }
+        
+        }
+        private void Add_Click(object sender, EventArgs e)
+        {
             
         }
+        private void buttonSwitch_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private void ButtonGuide_Click(object sender, EventArgs e)
+        {
 
-        private void buttonReload_Click(object sender, EventArgs e)
+        }
+
+
+
+
+        /// <summary>
+        /// EVENT
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+        private void SchoolYearComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Class_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString()) == null || Term_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString()) == null)
+            {
+                Add.Enabled = false;
+                ComboBoxTerm1.Enabled = false;
+                ComboBoxClass.Enabled = false;
+            }
+            else
+            {
+                Add.Enabled = true;
+                ComboBoxTerm1.Enabled = true;
+                ComboBoxClass.Enabled = true;
+                ComboBoxClass.DataSource = Class_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString());
+                ComboBoxTerm1.DataSource = Term_BUL.LoadBySC(SchoolYearComboBox.SelectedValue.ToString());
+            }
+        }
+        private void comboBoxClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+        private void ComboBoxTerm1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView2.DataSource == null) return;
+        }
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView3.DataSource == null) return;
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.DataSource == null) return;
+        }
+        private void ComboboxChangeClass1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+         
+        }
+        private void ComboboxChangeClass2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+        }
+        private void ComboBoxTerm2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private static void ButtonRefresh_Click(object sender, EventArgs e)
         {
             InsertToClass_Load(sender, e);
         }

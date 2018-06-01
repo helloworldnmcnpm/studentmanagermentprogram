@@ -50,6 +50,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScoreBySubject_DTO.cs" />
     <Compile Include="Student_DTO.cs" />
+    <Compile Include="Student_Process_DTO.cs" />
     <Compile Include="Subject_DTO.cs" />
     <Compile Include="Term_DTO.cs" />
     <Compile Include="TypeExam_DTO.cs" />

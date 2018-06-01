@@ -153,4 +153,20 @@
   <metadata name="schoolYearDTOBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>25, 18</value>
   </metadata>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Quy định, hướng dẫn thêm/ chỉnh sửa điểm:
+
+- Sau khi chọn năm học và lớp xong, danh sách học sinh sẽ được tự động load lên.
+
+- Điểm phải là số thực không âm và bé hơn hoặc bằng 10.
+
+- Nếu người dùng muốn thêm điểm cho một học sinh:
+B1: Chọn học sinh trong danh sách học sinh. Sau đó chọn học kỳ, chọn môn, chọn loại kiểm tra.
+B2: Nhập đúng số điểm của học sinh đó.
+B3: Nhấn thêm để thêm điểm cho học sinh đó ở môn đã chọn.
+- Nếu người dùng muốn xóa điểm cho một học sinh:
+B1: Chọn học sinh trong danh sách học sinh. Sau đó chọn học kỳ, chọn môn. Danh sách điểm thuộc môn đã chọn của học sinh này sẽ được load lên trên bảng bên cạnh.
+B2: Chọn điểm muốn xóa trong danh sách điểm.
+B3: Nhấn "Xóa".</value>
+  </data>
 </root>

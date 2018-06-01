@@ -132,6 +132,8 @@
 
 -Độ tuổi tối đa/ độ tuổi tối thiểu/ số học sinh tối đa phải là số nguyên.
 
--Điểm qua môn phải là số thực. (dấu '.' tương đương với phẩy trong toán học. Vd: 4.5)</value>
+-Điểm qua môn phải là số thực. (dấu '.' tương đương với phẩy trong toán học. Vd: 4.5)
+
+-Sau khi người dùng cập nhật xong dữ liệu. Nhấn "Cập nhật" để lưu lại quy định. Lưu ý: Quy định sẽ có hiệu lực từ thời điểm nhấn cập nhật trở đi. Vì vậy phải cẩn thận với dữ liệu nhập vào.</value>
   </data>
 </root>

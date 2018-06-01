@@ -41,5 +41,16 @@ namespace QLHS
         {
 
         }
+
+        private void ButtonFinal_Click(object sender, EventArgs e)
+        {
+            if (!Activities.Controls.Contains(Final.Instance))
+            {
+                Activities.Controls.Add(Final.Instance);
+                Final.Instance.Dock = DockStyle.Fill;
+                Final.Instance.BringToFront();
+            }
+            else Final.Instance.BringToFront();
+        }
     }
 }
