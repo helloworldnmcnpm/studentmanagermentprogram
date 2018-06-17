@@ -10,10 +10,13 @@ using System.Windows.Forms;
 using MaterialSkin;
 using DTO;
 using BUL;
+using CID;
+
 namespace APP
 {
     public partial class AddTerm : MaterialSkin.Controls.MaterialForm
     {
+        Correct_Input_Data cid = new Correct_Input_Data();
         public AddTerm()
         {
             InitializeComponent();
@@ -51,6 +54,11 @@ namespace APP
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
+            if (IDtxt.Text == "" || Nametxt.Text == "")
+            {
+                BtnAdd.Enabled = false;
+                return;
+            }
             if (SchoolYear_BUL.Load() == null) return;
             Term_DTO term_DTO = new Term_DTO();
             term_DTO.ID = IDtxt.Text;
@@ -107,6 +115,41 @@ namespace APP
             {
                 MessageBox.Show("Kiểm tra lại cơ sở dữ liệu!", "Thông báo!");
             }
+        }
+
+        private void IDtxt_TextChanged(object sender, EventArgs e)
+        {
+            if (IDtxt.Text == "")
+            {
+                BtnAdd.Enabled = BtnDelete.Enabled = false;
+            }
+            else
+            {
+                BtnAdd.Enabled = BtnDelete.Enabled = true;
+                cid.InputString = IDtxt.Text;
+                IDtxt.Text = cid.TrueID;
+                IDtxt.SelectionStart = IDtxt.Text.Length;
+            }
+        }
+
+        private void Nametxt_TextChanged(object sender, EventArgs e)
+        {
+            if (Nametxt.Text == "")
+            {
+                BtnAdd.Enabled = BtnUpdate.Enabled = false;
+            }
+            else
+            {
+                BtnAdd.Enabled = BtnUpdate.Enabled = true;
+                cid.InputString = Nametxt.Text;
+                Nametxt.Text = cid.UpcaseSpaceAndNumber;
+                Nametxt.SelectionStart = Nametxt.Text.Length;
+            }
+        }
+
+        private void Nametxt_Leave(object sender, EventArgs e)
+        {
+            Nametxt.Text = Nametxt.Text.Trim();
         }
     }
 }

@@ -41,6 +41,7 @@ namespace APP
             schoolYear_DTO.ID = IDtxt.Text;
             schoolYear_DTO.Begin =Convert.ToInt32(ComboBoxListYear.SelectedValue.ToString());
             schoolYear_DTO.End = schoolYear_DTO.Begin + 1;
+            if (SchoolYear_BUL.Load()!=null)
             for (int i = 0; i < SchoolYear_BUL.Load().Count; i++)
             {
                 if (SchoolYear_BUL.Load()[i].Begin == schoolYear_DTO.Begin)

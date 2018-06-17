@@ -17,17 +17,21 @@ namespace BUL
         {
             return TypeExam_DAL.Insert(typeExam_DTO);
         }
-        public static bool Update (TypeExam_DTO typeExam_DTO)
+        public static bool Update(TypeExam_DTO typeExam_DTO)
         {
             return TypeExam_DAL.Update(typeExam_DTO);
         }
-        public static bool Delete (string ID)
+        public static bool Delete(string ID)
         {
             return TypeExam_DAL.Delete(ID);
         }
         public static int GetIndex(string NameType)
         {
             return TypeExam_DAL.GetIndex(NameType);
+        }
+        public static string GetName(string ID)
+        {
+            return TypeExam_DAL.GetName(ID);
         }
     }
 }

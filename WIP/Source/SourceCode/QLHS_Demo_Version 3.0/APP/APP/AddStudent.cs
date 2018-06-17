@@ -46,69 +46,72 @@ namespace APP
         private void AddStudent_Load(object sender, EventArgs e)
         {
             Rule_DTO rule_DTO = Rule_BUL.Load();
-            Birthday.MaxDate = Convert.ToDateTime(("12/31/" + Convert.ToString(DateTime.Now.Year - rule_DTO.MinAge)));
-            Birthday.MinDate = Convert.ToDateTime(("01/01/" + Convert.ToString(DateTime.Now.Year - rule_DTO.MaxAge)));
-            List<string> ethnics = new List<string>();
-            ethnics.Add("Kinh");
-            ethnics.Add("Tày");
-            ethnics.Add("Thái");
-            ethnics.Add("Mường");
-            ethnics.Add("Khơ Me");
-            ethnics.Add("H'Mông");
-            ethnics.Add("Nùng");
-            ethnics.Add("Hoa");
-            ethnics.Add("Dao");
-            ethnics.Add("Gia Rai");
-            ethnics.Add("Ê Đê");
-            ethnics.Add("Ba Na");
-            ethnics.Add("Xơ Đăng");
-            ethnics.Add("Sán Chay");
-            ethnics.Add("Cơ Ho");
-            ethnics.Add("Chăm");
-            ethnics.Add("Sán Dìu");
-            ethnics.Add("HRê");
-            ethnics.Add("Ra Glai");
-            ethnics.Add("M'Nông");
-            ethnics.Add("X'Tiêng");
-            ethnics.Add("Bru-Vân Kiều");
-            ethnics.Add("Thổ");
-            ethnics.Add("Khơ Mú");
-            ethnics.Add("Cơ Tu");
-            ethnics.Add("Giáy");
-            ethnics.Add("Giẻ Triêng");
-            ethnics.Add("Tà Ôi");
-            ethnics.Add("Mạ");
-            ethnics.Add("Co");
-            ethnics.Add("Chơ Ro");
-            ethnics.Add("Xinh Mun");
-            ethnics.Add("Hà Nhì");
-            ethnics.Add("Chu Ru");
-            ethnics.Add("Lào");
-            ethnics.Add("Kháng");
-            ethnics.Add("La Chí");
-            ethnics.Add("Phù Lá");
-            ethnics.Add("La Hủ");
-            ethnics.Add("La Ha");
-            ethnics.Add("Pà Thẻn");
-            ethnics.Add("Chứt");
-            ethnics.Add("Lự");
-            ethnics.Add("Lô Lô");
-            ethnics.Add("Mảng");
-            ethnics.Add("Cờ Lao");
-            ethnics.Add("Bố Y");
-            ethnics.Add("Cống");
-            ethnics.Add("Ngái");
-            ethnics.Add("Si La");
-            ethnics.Add("Pu Péo");
-            ethnics.Add("Rơ Măm");
-            ethnics.Add("Brâu");
-            ethnics.Add("Ơ Đu");
-            ethnics.Sort();
-            ComboBoxListEthnic.DataSource = ethnics;
-            ComboBoxListEthnic.SelectedItem = "Kinh";
+            Birthday.MaxDate = new DateTime(DateTime.Now.Year - rule_DTO.MinAge, 12, 31);
+            Birthday.MinDate = new DateTime(DateTime.Now.Year - rule_DTO.MaxAge, 1, 1);
+            {
+                {
+                    List<string> ethnics = new List<string>();
+                    ethnics.Add("Kinh");
+                    ethnics.Add("Tày");
+                    ethnics.Add("Thái");
+                    ethnics.Add("Mường");
+                    ethnics.Add("Khơ Me");
+                    ethnics.Add("H'Mông");
+                    ethnics.Add("Nùng");
+                    ethnics.Add("Hoa");
+                    ethnics.Add("Dao");
+                    ethnics.Add("Gia Rai");
+                    ethnics.Add("Ê Đê");
+                    ethnics.Add("Ba Na");
+                    ethnics.Add("Xơ Đăng");
+                    ethnics.Add("Sán Chay");
+                    ethnics.Add("Cơ Ho");
+                    ethnics.Add("Chăm");
+                    ethnics.Add("Sán Dìu");
+                    ethnics.Add("HRê");
+                    ethnics.Add("Ra Glai");
+                    ethnics.Add("M'Nông");
+                    ethnics.Add("X'Tiêng");
+                    ethnics.Add("Bru-Vân Kiều");
+                    ethnics.Add("Thổ");
+                    ethnics.Add("Khơ Mú");
+                    ethnics.Add("Cơ Tu");
+                    ethnics.Add("Giáy");
+                    ethnics.Add("Giẻ Triêng");
+                    ethnics.Add("Tà Ôi");
+                    ethnics.Add("Mạ");
+                    ethnics.Add("Co");
+                    ethnics.Add("Chơ Ro");
+                    ethnics.Add("Xinh Mun");
+                    ethnics.Add("Hà Nhì");
+                    ethnics.Add("Chu Ru");
+                    ethnics.Add("Lào");
+                    ethnics.Add("Kháng");
+                    ethnics.Add("La Chí");
+                    ethnics.Add("Phù Lá");
+                    ethnics.Add("La Hủ");
+                    ethnics.Add("La Ha");
+                    ethnics.Add("Pà Thẻn");
+                    ethnics.Add("Chứt");
+                    ethnics.Add("Lự");
+                    ethnics.Add("Lô Lô");
+                    ethnics.Add("Mảng");
+                    ethnics.Add("Cờ Lao");
+                    ethnics.Add("Bố Y");
+                    ethnics.Add("Cống");
+                    ethnics.Add("Ngái");
+                    ethnics.Add("Si La");
+                    ethnics.Add("Pu Péo");
+                    ethnics.Add("Rơ Măm");
+                    ethnics.Add("Brâu");
+                    ethnics.Add("Ơ Đu");
+                    ethnics.Sort();
+                    ComboBoxListEthnic.DataSource = ethnics;
+                    ComboBoxListEthnic.SelectedItem = "Kinh";
+                }
+            }
+
         }
-
-
 
 
         /// <summary>
@@ -143,6 +146,7 @@ namespace APP
             if (Student_BUL.Insert(student_DTO))
             {
                 metroGrid1.DataSource = Student_BUL.Load();
+                Btndeletespace_Click(sender, e);
             }
             else
             {
@@ -181,6 +185,9 @@ namespace APP
                 metroGrid1.DataSource = Student_BUL.Load();
                 metroGrid1.Rows[0].Selected = false;
                 metroGrid1.Rows[index].Selected = true;
+                Btndeletespace_Click(sender, e);
+                BtnUpdate.Enabled = false;
+                MessageBox.Show("Đã cập nhật!", "Thông báo!");
             }
             else
             {
@@ -239,12 +246,8 @@ namespace APP
                 cid.InputString = Religiontxt.Text;
                 Religiontxt.Text = cid.OnlyText;
                 Religiontxt.SelectionStart = Religiontxt.Text.Length;
-                BtnAdd.Enabled = BtnUpdate.Enabled = true;
             }
-            else
-            {
-                BtnAdd.Enabled = BtnUpdate.Enabled = false;
-            }
+
         }
         private void Phonetxt_TextChanged(object sender, EventArgs e)
         {
@@ -278,10 +281,6 @@ namespace APP
                 Fathernametxt.Text = cid.TrueName;
                 Fathernametxt.SelectionStart = Fathernametxt.Text.Length;
             }
-            else
-            {
-                BtnAdd.Enabled = BtnUpdate.Enabled = false;
-            }
         }
         private void FatherJobtxt_TextChanged(object sender, EventArgs e)
         {
@@ -291,11 +290,6 @@ namespace APP
                 cid.InputString = FatherJobtxt.Text;
                 FatherJobtxt.Text = cid.OnlyText;
                 FatherJobtxt.SelectionStart = FatherJobtxt.Text.Length;
-                BtnAdd.Enabled = BtnUpdate.Enabled = true;
-            }
-            else
-            {
-                BtnAdd.Enabled = BtnUpdate.Enabled = false;
             }
         }
         private void Mothernametxt_TextChanged(object sender, EventArgs e)
@@ -307,10 +301,6 @@ namespace APP
                 Mothernametxt.Text = cid.TrueName;
                 Mothernametxt.SelectionStart = Mothernametxt.Text.Length;
             }
-            else
-            {
-                BtnAdd.Enabled = BtnUpdate.Enabled = false;
-            }
         }
         private void MotherJobtxt_TextChanged(object sender, EventArgs e)
         {
@@ -320,11 +310,6 @@ namespace APP
                 cid.InputString = MotherJobtxt.Text;
                 MotherJobtxt.Text = cid.OnlyText;
                 MotherJobtxt.SelectionStart = MotherJobtxt.Text.Length;
-                BtnAdd.Enabled = BtnUpdate.Enabled = true;
-            }
-            else
-            {
-                BtnAdd.Enabled = BtnUpdate.Enabled = false;
             }
         }
         private void Birthday_ValueChanged(object sender, EventArgs e)
@@ -354,31 +339,12 @@ namespace APP
                 cid.InputString = BirthPlacetxt.Text;
                 BirthPlacetxt.Text = cid.ValidAddress;
                 BirthPlacetxt.SelectionStart = BirthPlacetxt.Text.Length;
-                BtnAdd.Enabled = BtnUpdate.Enabled = true;
-            }
-            else
-            {
-                BtnAdd.Enabled = BtnUpdate.Enabled = false;
-
             }
         }
+
         private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (Student_BUL.Load() == null) return;
-            DataGridViewRow dr = metroGrid1.SelectedRows[0];
-            Nametxt.Text = dr.Cells[2].Value.ToString();
-            if (dr.Cells[3].Value.ToString() == "Nam") Male.Checked = true;
-            else Female.Checked = true;
-            Birthday.Value = Convert.ToDateTime(dr.Cells[4].Value.ToString());
-            BirthPlacetxt.Text = dr.Cells[5].Value.ToString();
-            Addresstxt.Text = dr.Cells[6].Value.ToString();
-            Religiontxt.Text = dr.Cells[7].Value.ToString();
-            ComboBoxListEthnic.SelectedItem = dr.Cells[8].Value.ToString();
-            Phonetxt.Text = dr.Cells[9].Value.ToString();
-            Fathernametxt.Text = dr.Cells[10].Value.ToString();
-            FatherJobtxt.Text = dr.Cells[11].Value.ToString();
-            Mothernametxt.Text = dr.Cells[12].Value.ToString();
-            MotherJobtxt.Text = dr.Cells[13].Value.ToString();
+           
         }
 
         private void Nametxt_Leave(object sender, EventArgs e)
@@ -389,7 +355,8 @@ namespace APP
         private void Addresstxt_Leave(object sender, EventArgs e)
         {
             Addresstxt.Text = Addresstxt.Text.Trim();
-            if (Addresstxt.Text[Addresstxt.Text.Length - 1] == ',')
+            if (Addresstxt.Text != "")
+                if (Addresstxt.Text[Addresstxt.Text.Length - 1] == ',')
                 Addresstxt.Text = Addresstxt.Text.Remove(Addresstxt.Text.Length-1);
         }
 
@@ -401,7 +368,8 @@ namespace APP
         private void BirthPlacetxt_Leave(object sender, EventArgs e)
         {
             BirthPlacetxt.Text = BirthPlacetxt.Text.Trim();
-            if (BirthPlacetxt.Text[BirthPlacetxt.Text.Length - 1] == ',')
+            if (BirthPlacetxt.Text != "")
+                if (BirthPlacetxt.Text[BirthPlacetxt.Text.Length - 1] == ',')
                 BirthPlacetxt.Text = BirthPlacetxt.Text.Remove(BirthPlacetxt.Text.Length - 1);
 
         }
@@ -428,6 +396,32 @@ namespace APP
         {
             Mothernametxt.Text = Mothernametxt.Text.Trim();
 
+        }
+
+        private void metroGrid1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Student_BUL.Load() == null) return;
+            if (metroGrid1.SelectedRows.Count == 0) return;
+            DataGridViewRow dr = metroGrid1.SelectedRows[0];
+            Nametxt.Text = dr.Cells[2].Value.ToString();
+            if (dr.Cells[3].Value.ToString() == "Nam") Male.Checked = true;
+            else Female.Checked = true;
+            Birthday.Value = Convert.ToDateTime(dr.Cells[4].Value.ToString());
+            BirthPlacetxt.Text = dr.Cells[5].Value.ToString();
+            Addresstxt.Text = dr.Cells[6].Value.ToString();
+            Religiontxt.Text = dr.Cells[7].Value.ToString();
+            ComboBoxListEthnic.SelectedItem = dr.Cells[8].Value.ToString();
+            Phonetxt.Text = dr.Cells[9].Value.ToString();
+            Fathernametxt.Text = dr.Cells[10].Value.ToString();
+            FatherJobtxt.Text = dr.Cells[11].Value.ToString();
+            Mothernametxt.Text = dr.Cells[12].Value.ToString();
+            MotherJobtxt.Text = dr.Cells[13].Value.ToString();
+        }
+
+        private void Btndeletespace_Click(object sender, EventArgs e)
+        {
+            Nametxt.Text = Addresstxt.Text = Phonetxt.Text = Religiontxt.Text = FatherJobtxt.Text = Fathernametxt.Text = MotherJobtxt.Text = Mothernametxt.Text
+                = BirthPlacetxt.Text = "";
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

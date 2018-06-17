@@ -29,25 +29,11 @@
         {
             this.BtnSearch = new MaterialSkin.Controls.MaterialFlatButton();
             this.Activities = new System.Windows.Forms.Panel();
-            this.BtnPassed = new MetroFramework.Controls.MetroButton();
-            this.metroPanel8 = new MetroFramework.Controls.MetroPanel();
-            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.BtnRe = new MetroFramework.Controls.MetroButton();
-            this.metroPanel7 = new MetroFramework.Controls.MetroPanel();
-            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
+            this.BtnUpdate = new MetroFramework.Controls.MetroButton();
             this.BtnWeak = new MetroFramework.Controls.MetroButton();
             this.metroPanel6 = new MetroFramework.Controls.MetroPanel();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,6 +42,7 @@
             this.BtnNormal = new MetroFramework.Controls.MetroButton();
             this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -68,6 +55,7 @@
             this.BtnIme = new MetroFramework.Controls.MetroButton();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.LabelImmediate = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.labelPercentIme = new System.Windows.Forms.Label();
@@ -76,6 +64,7 @@
             this.BtnEx = new MetroFramework.Controls.MetroButton();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelExcellence = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.labelPercentEx = new System.Windows.Forms.Label();
@@ -84,6 +73,7 @@
             this.BtnClass = new MetroFramework.Controls.MetroButton();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.LabelNumberOfClass = new System.Windows.Forms.Label();
@@ -92,6 +82,7 @@
             this.BtnStudent = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.LabelStudent = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelNumberOfStudent = new System.Windows.Forms.Label();
@@ -100,48 +91,32 @@
             this.BtnDashBoard = new MetroFramework.Controls.MetroButton();
             this.SearchStudent = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Activities.SuspendLayout();
-            this.metroPanel8.SuspendLayout();
-            this.flowLayoutPanel8.SuspendLayout();
-            this.panel22.SuspendLayout();
-            this.metroPanel7.SuspendLayout();
-            this.flowLayoutPanel7.SuspendLayout();
-            this.panel19.SuspendLayout();
             this.metroPanel6.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel16.SuspendLayout();
             this.metroPanel5.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel13.SuspendLayout();
             this.metroPanel4.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel10.SuspendLayout();
             this.metroPanel3.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel7.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnSearch
@@ -166,10 +141,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Activities.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.Activities.Controls.Add(this.BtnPassed);
-            this.Activities.Controls.Add(this.metroPanel8);
-            this.Activities.Controls.Add(this.BtnRe);
-            this.Activities.Controls.Add(this.metroPanel7);
+            this.Activities.Controls.Add(this.BtnUpdate);
             this.Activities.Controls.Add(this.BtnWeak);
             this.Activities.Controls.Add(this.metroPanel6);
             this.Activities.Controls.Add(this.BtnNormal);
@@ -189,193 +161,26 @@
             this.Activities.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Activities.Location = new System.Drawing.Point(0, 63);
             this.Activities.Name = "Activities";
-            this.Activities.Size = new System.Drawing.Size(1235, 681);
+            this.Activities.Size = new System.Drawing.Size(1235, 578);
             this.Activities.TabIndex = 1;
             this.Activities.Paint += new System.Windows.Forms.PaintEventHandler(this.Activities_Paint);
             // 
-            // BtnPassed
+            // BtnUpdate
             // 
-            this.BtnPassed.BackColor = System.Drawing.Color.White;
-            this.BtnPassed.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.BtnPassed.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.BtnPassed.Location = new System.Drawing.Point(941, 499);
-            this.BtnPassed.Name = "BtnPassed";
-            this.BtnPassed.Size = new System.Drawing.Size(260, 47);
-            this.BtnPassed.Style = MetroFramework.MetroColorStyle.Black;
-            this.BtnPassed.TabIndex = 24;
-            this.BtnPassed.Text = "Show";
-            this.BtnPassed.UseCustomBackColor = true;
-            this.BtnPassed.UseSelectable = true;
-            this.BtnPassed.UseStyleColors = true;
-            // 
-            // metroPanel8
-            // 
-            this.metroPanel8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.metroPanel8.Controls.Add(this.flowLayoutPanel8);
-            this.metroPanel8.Controls.Add(this.panel22);
-            this.metroPanel8.HorizontalScrollbarBarColor = true;
-            this.metroPanel8.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel8.HorizontalScrollbarSize = 10;
-            this.metroPanel8.Location = new System.Drawing.Point(956, 335);
-            this.metroPanel8.Name = "metroPanel8";
-            this.metroPanel8.Size = new System.Drawing.Size(230, 211);
-            this.metroPanel8.TabIndex = 23;
-            this.metroPanel8.VerticalScrollbarBarColor = true;
-            this.metroPanel8.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel8.VerticalScrollbarSize = 10;
-            // 
-            // flowLayoutPanel8
-            // 
-            this.flowLayoutPanel8.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel8.Controls.Add(this.pictureBox9);
-            this.flowLayoutPanel8.Controls.Add(this.label10);
-            this.flowLayoutPanel8.Location = new System.Drawing.Point(0, 3);
-            this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(230, 54);
-            this.flowLayoutPanel8.TabIndex = 9;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(59, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(136, 21);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Đạt chuẩn lên lớp";
-            // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.White;
-            this.panel22.Controls.Add(this.label11);
-            this.panel22.Controls.Add(this.panel23);
-            this.panel22.Controls.Add(this.panel24);
-            this.panel22.Location = new System.Drawing.Point(0, 63);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(230, 102);
-            this.panel22.TabIndex = 8;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(74)))), ((int)(((byte)(94)))));
-            this.label11.Location = new System.Drawing.Point(0, 5);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(230, 80);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "0%";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel23
-            // 
-            this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel23.Location = new System.Drawing.Point(14, 98);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(200, 1);
-            this.panel23.TabIndex = 1;
-            // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel24.Location = new System.Drawing.Point(14, 1);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(200, 1);
-            this.panel24.TabIndex = 0;
-            // 
-            // BtnRe
-            // 
-            this.BtnRe.BackColor = System.Drawing.Color.White;
-            this.BtnRe.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.BtnRe.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.BtnRe.Location = new System.Drawing.Point(640, 499);
-            this.BtnRe.Name = "BtnRe";
-            this.BtnRe.Size = new System.Drawing.Size(260, 47);
-            this.BtnRe.Style = MetroFramework.MetroColorStyle.Black;
-            this.BtnRe.TabIndex = 22;
-            this.BtnRe.Text = "Show";
-            this.BtnRe.UseCustomBackColor = true;
-            this.BtnRe.UseSelectable = true;
-            this.BtnRe.UseStyleColors = true;
-            // 
-            // metroPanel7
-            // 
-            this.metroPanel7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.metroPanel7.Controls.Add(this.flowLayoutPanel7);
-            this.metroPanel7.Controls.Add(this.panel19);
-            this.metroPanel7.HorizontalScrollbarBarColor = true;
-            this.metroPanel7.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel7.HorizontalScrollbarSize = 10;
-            this.metroPanel7.Location = new System.Drawing.Point(655, 335);
-            this.metroPanel7.Name = "metroPanel7";
-            this.metroPanel7.Size = new System.Drawing.Size(230, 211);
-            this.metroPanel7.TabIndex = 21;
-            this.metroPanel7.VerticalScrollbarBarColor = true;
-            this.metroPanel7.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel7.VerticalScrollbarSize = 10;
-            // 
-            // flowLayoutPanel7
-            // 
-            this.flowLayoutPanel7.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel7.Controls.Add(this.pictureBox8);
-            this.flowLayoutPanel7.Controls.Add(this.label8);
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(0, 3);
-            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(230, 54);
-            this.flowLayoutPanel7.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(59, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 21);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Thi lại";
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.White;
-            this.panel19.Controls.Add(this.label9);
-            this.panel19.Controls.Add(this.panel20);
-            this.panel19.Controls.Add(this.panel21);
-            this.panel19.Location = new System.Drawing.Point(0, 63);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(230, 102);
-            this.panel19.TabIndex = 8;
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(74)))), ((int)(((byte)(94)))));
-            this.label9.Location = new System.Drawing.Point(0, 5);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(230, 80);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "0%";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel20.Location = new System.Drawing.Point(14, 98);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(200, 1);
-            this.panel20.TabIndex = 1;
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel21.Location = new System.Drawing.Point(14, 1);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(200, 1);
-            this.panel21.TabIndex = 0;
+            this.BtnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnUpdate.BackColor = System.Drawing.Color.White;
+            this.BtnUpdate.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.BtnUpdate.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.BtnUpdate.Location = new System.Drawing.Point(586, 3);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(112, 33);
+            this.BtnUpdate.Style = MetroFramework.MetroColorStyle.Teal;
+            this.BtnUpdate.TabIndex = 4;
+            this.BtnUpdate.Text = "Cập nhật báo cáo";
+            this.BtnUpdate.UseCustomBackColor = true;
+            this.BtnUpdate.UseSelectable = true;
+            this.BtnUpdate.UseStyleColors = true;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // BtnWeak
             // 
@@ -418,6 +223,17 @@
             this.flowLayoutPanel6.Size = new System.Drawing.Size(230, 54);
             this.flowLayoutPanel6.TabIndex = 9;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.White;
+            this.pictureBox7.Image = global::APP.Properties.Resources.law;
+            this.pictureBox7.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 8;
+            this.pictureBox7.TabStop = false;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -425,9 +241,9 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(59, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 21);
+            this.label6.Size = new System.Drawing.Size(68, 21);
             this.label6.TabIndex = 9;
-            this.label6.Text = "Yếu";
+            this.label6.Text = "Tỉ lệ đạt";
             // 
             // panel16
             // 
@@ -450,7 +266,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(230, 80);
             this.label7.TabIndex = 8;
-            this.label7.Text = "0%";
+            this.label7.Text = "0-0%";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel17
@@ -510,6 +326,17 @@
             this.flowLayoutPanel5.Size = new System.Drawing.Size(230, 54);
             this.flowLayoutPanel5.TabIndex = 9;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.White;
+            this.pictureBox6.Image = global::APP.Properties.Resources.calculation;
+            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 8;
+            this.pictureBox6.TabStop = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -517,9 +344,9 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(59, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 21);
+            this.label4.Size = new System.Drawing.Size(104, 21);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Trung bình";
+            this.label4.Text = "Số lượng đạt";
             // 
             // panel13
             // 
@@ -542,7 +369,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(230, 80);
             this.label5.TabIndex = 8;
-            this.label5.Text = "0%";
+            this.label5.Text = "0-0%";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel14
@@ -647,6 +474,17 @@
             this.flowLayoutPanel4.Size = new System.Drawing.Size(230, 54);
             this.flowLayoutPanel4.TabIndex = 9;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
+            this.pictureBox5.Image = global::APP.Properties.Resources.exam;
+            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
+            // 
             // LabelImmediate
             // 
             this.LabelImmediate.AutoSize = true;
@@ -679,7 +517,7 @@
             this.labelPercentIme.Name = "labelPercentIme";
             this.labelPercentIme.Size = new System.Drawing.Size(230, 80);
             this.labelPercentIme.TabIndex = 8;
-            this.labelPercentIme.Text = "0%";
+            this.labelPercentIme.Text = "0-0%";
             this.labelPercentIme.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel11
@@ -739,6 +577,17 @@
             this.flowLayoutPanel3.Size = new System.Drawing.Size(230, 54);
             this.flowLayoutPanel3.TabIndex = 9;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.Image = global::APP.Properties.Resources.medal_1;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 8;
+            this.pictureBox4.TabStop = false;
+            // 
             // labelExcellence
             // 
             this.labelExcellence.AutoSize = true;
@@ -771,7 +620,7 @@
             this.labelPercentEx.Name = "labelPercentEx";
             this.labelPercentEx.Size = new System.Drawing.Size(230, 80);
             this.labelPercentEx.TabIndex = 8;
-            this.labelPercentEx.Text = "0%";
+            this.labelPercentEx.Text = "0-0%";
             this.labelPercentEx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel8
@@ -831,6 +680,17 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(230, 54);
             this.flowLayoutPanel2.TabIndex = 9;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = global::APP.Properties.Resources.whiteboard;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
             // 
             // label1
             // 
@@ -924,6 +784,17 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(230, 54);
             this.flowLayoutPanel1.TabIndex = 9;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::APP.Properties.Resources.learning;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
             // 
             // LabelStudent
             // 
@@ -1025,101 +896,12 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.White;
-            this.pictureBox9.Image = global::APP.Properties.Resources.certificate;
-            this.pictureBox9.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 8;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.White;
-            this.pictureBox8.Image = global::APP.Properties.Resources.pencil_1;
-            this.pictureBox8.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 8;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.White;
-            this.pictureBox7.Image = global::APP.Properties.Resources.law;
-            this.pictureBox7.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 8;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.White;
-            this.pictureBox6.Image = global::APP.Properties.Resources.calculation;
-            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 8;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.Image = global::APP.Properties.Resources.exam;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Image = global::APP.Properties.Resources.medal_1;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = global::APP.Properties.Resources.whiteboard;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = global::APP.Properties.Resources.learning;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
             // DataVisualizer
             // 
             this.AcceptButton = this.BtnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1235, 767);
+            this.ClientSize = new System.Drawing.Size(1235, 664);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SearchStudent);
             this.Controls.Add(this.Activities);
@@ -1130,47 +912,37 @@
             this.Load += new System.EventHandler(this.DataVisualizer_Load);
             this.Activities.ResumeLayout(false);
             this.Activities.PerformLayout();
-            this.metroPanel8.ResumeLayout(false);
-            this.flowLayoutPanel8.ResumeLayout(false);
-            this.flowLayoutPanel8.PerformLayout();
-            this.panel22.ResumeLayout(false);
-            this.metroPanel7.ResumeLayout(false);
-            this.flowLayoutPanel7.ResumeLayout(false);
-            this.flowLayoutPanel7.PerformLayout();
-            this.panel19.ResumeLayout(false);
             this.metroPanel6.ResumeLayout(false);
             this.flowLayoutPanel6.ResumeLayout(false);
             this.flowLayoutPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel16.ResumeLayout(false);
             this.metroPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel13.ResumeLayout(false);
             this.metroPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel10.ResumeLayout(false);
             this.metroPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel7.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1223,15 +995,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox2;
-        private MetroFramework.Controls.MetroButton BtnRe;
-        private MetroFramework.Controls.MetroPanel metroPanel7;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Panel panel21;
         private MetroFramework.Controls.MetroButton BtnWeak;
         private MetroFramework.Controls.MetroPanel metroPanel6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
@@ -1250,14 +1013,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel15;
-        private MetroFramework.Controls.MetroButton BtnPassed;
-        private MetroFramework.Controls.MetroPanel metroPanel8;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Panel panel24;
+        private MetroFramework.Controls.MetroButton BtnUpdate;
     }
 }

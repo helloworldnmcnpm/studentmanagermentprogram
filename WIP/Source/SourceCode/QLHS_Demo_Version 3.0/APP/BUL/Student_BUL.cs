@@ -37,5 +37,9 @@ namespace BUL
         {
             return Student_DAL.LoadAll();
         }
+        public static Student_DTO LoadAStudent(int ID)
+        {
+            return Student_DAL.LoadAStudent(ID);
+        }
     }
 }

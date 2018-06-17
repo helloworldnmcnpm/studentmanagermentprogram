@@ -74,6 +74,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Scoretxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.InsertScoreByExcel = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
@@ -137,7 +138,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.metroGrid1.AutoGenerateColumns = false;
-            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.metroGrid1.BackgroundColor = System.Drawing.Color.White;
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -194,7 +195,7 @@
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(594, 333);
+            this.metroGrid1.Size = new System.Drawing.Size(548, 333);
             this.metroGrid1.TabIndex = 45;
             this.metroGrid1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_RowEnter);
             // 
@@ -313,10 +314,9 @@
             // 
             // BtnAdd
             // 
-            this.BtnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAdd.Depth = 0;
             this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAdd.Location = new System.Drawing.Point(870, 179);
+            this.BtnAdd.Location = new System.Drawing.Point(822, 208);
             this.BtnAdd.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Primary = true;
@@ -352,10 +352,9 @@
             // 
             // BtnGuide
             // 
-            this.BtnGuide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnGuide.Depth = 0;
             this.BtnGuide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuide.Location = new System.Drawing.Point(870, 219);
+            this.BtnGuide.Location = new System.Drawing.Point(822, 248);
             this.BtnGuide.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnGuide.Name = "BtnGuide";
             this.BtnGuide.Primary = true;
@@ -366,10 +365,9 @@
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnDelete.Depth = 0;
             this.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDelete.Location = new System.Drawing.Point(1020, 219);
+            this.BtnDelete.Location = new System.Drawing.Point(972, 248);
             this.BtnDelete.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Primary = true;
@@ -381,10 +379,9 @@
             // 
             // BtnUpdate
             // 
-            this.BtnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnUpdate.Depth = 0;
             this.BtnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnUpdate.Location = new System.Drawing.Point(1020, 179);
+            this.BtnUpdate.Location = new System.Drawing.Point(972, 208);
             this.BtnUpdate.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Primary = true;
@@ -400,9 +397,9 @@
             this.metroGrid2.AllowUserToDeleteRows = false;
             this.metroGrid2.AllowUserToResizeRows = false;
             this.metroGrid2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.metroGrid2.AutoGenerateColumns = false;
-            this.metroGrid2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.metroGrid2.BackgroundColor = System.Drawing.Color.White;
             this.metroGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -432,7 +429,7 @@
             this.metroGrid2.EnableHeadersVisualStyles = false;
             this.metroGrid2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid2.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.metroGrid2.Location = new System.Drawing.Point(612, 109);
+            this.metroGrid2.Location = new System.Drawing.Point(566, 109);
             this.metroGrid2.Name = "metroGrid2";
             this.metroGrid2.ReadOnly = true;
             this.metroGrid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -448,7 +445,7 @@
             this.metroGrid2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid2.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid2.Size = new System.Drawing.Size(252, 333);
+            this.metroGrid2.Size = new System.Drawing.Size(249, 333);
             this.metroGrid2.TabIndex = 54;
             // 
             // typeExamIDDataGridViewTextBoxColumn
@@ -457,7 +454,7 @@
             this.typeExamIDDataGridViewTextBoxColumn.HeaderText = "Loại kiểm tra";
             this.typeExamIDDataGridViewTextBoxColumn.Name = "typeExamIDDataGridViewTextBoxColumn";
             this.typeExamIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.typeExamIDDataGridViewTextBoxColumn.Width = 150;
+            this.typeExamIDDataGridViewTextBoxColumn.Width = 145;
             // 
             // iDDataGridViewTextBoxColumn1
             // 
@@ -488,25 +485,22 @@
             // 
             // ComboboxTypeExam
             // 
-            this.ComboboxTypeExam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ComboboxTypeExam.Cursor = System.Windows.Forms.Cursors.Default;
             this.ComboboxTypeExam.DisplayMember = "Name";
             this.ComboboxTypeExam.FormattingEnabled = true;
             this.ComboboxTypeExam.ItemHeight = 23;
-            this.ComboboxTypeExam.Location = new System.Drawing.Point(990, 80);
+            this.ComboboxTypeExam.Location = new System.Drawing.Point(942, 109);
             this.ComboboxTypeExam.Name = "ComboboxTypeExam";
             this.ComboboxTypeExam.Size = new System.Drawing.Size(176, 29);
             this.ComboboxTypeExam.TabIndex = 55;
             this.ComboboxTypeExam.UseSelectable = true;
             this.ComboboxTypeExam.ValueMember = "ID";
-            this.ComboboxTypeExam.SelectedIndexChanged += new System.EventHandler(this.ComboboxTypeExam_SelectedIndexChanged);
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(860, 89);
+            this.label2.Location = new System.Drawing.Point(812, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 20);
             this.label2.TabIndex = 56;
@@ -514,10 +508,9 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(935, 124);
+            this.label4.Location = new System.Drawing.Point(887, 153);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 20);
             this.label4.TabIndex = 57;
@@ -525,12 +518,11 @@
             // 
             // ComboboxSubject
             // 
-            this.ComboboxSubject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ComboboxSubject.Cursor = System.Windows.Forms.Cursors.Default;
             this.ComboboxSubject.DisplayMember = "Name";
             this.ComboboxSubject.FormattingEnabled = true;
             this.ComboboxSubject.ItemHeight = 23;
-            this.ComboboxSubject.Location = new System.Drawing.Point(990, 115);
+            this.ComboboxSubject.Location = new System.Drawing.Point(942, 144);
             this.ComboboxSubject.Name = "ComboboxSubject";
             this.ComboboxSubject.Size = new System.Drawing.Size(176, 29);
             this.ComboboxSubject.TabIndex = 58;
@@ -540,10 +532,9 @@
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(935, 153);
+            this.label6.Location = new System.Drawing.Point(887, 182);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 20);
             this.label6.TabIndex = 59;
@@ -551,11 +542,10 @@
             // 
             // Scoretxt
             // 
-            this.Scoretxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Scoretxt.BackColor = System.Drawing.Color.White;
             this.Scoretxt.Depth = 0;
             this.Scoretxt.Hint = "";
-            this.Scoretxt.Location = new System.Drawing.Point(990, 150);
+            this.Scoretxt.Location = new System.Drawing.Point(942, 179);
             this.Scoretxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.Scoretxt.Name = "Scoretxt";
             this.Scoretxt.PasswordChar = '\0';
@@ -567,11 +557,26 @@
             this.Scoretxt.UseSystemPasswordChar = false;
             this.Scoretxt.TextChanged += new System.EventHandler(this.Scoretxt_TextChanged);
             // 
+            // InsertScoreByExcel
+            // 
+            this.InsertScoreByExcel.Depth = 0;
+            this.InsertScoreByExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.InsertScoreByExcel.Location = new System.Drawing.Point(822, 288);
+            this.InsertScoreByExcel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.InsertScoreByExcel.Name = "InsertScoreByExcel";
+            this.InsertScoreByExcel.Primary = true;
+            this.InsertScoreByExcel.Size = new System.Drawing.Size(146, 34);
+            this.InsertScoreByExcel.TabIndex = 61;
+            this.InsertScoreByExcel.Text = "Nhập điểm từ Excel";
+            this.InsertScoreByExcel.UseVisualStyleBackColor = true;
+            this.InsertScoreByExcel.Click += new System.EventHandler(this.InsertScoreByExcel_Click);
+            // 
             // AddScore
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1178, 454);
+            this.ClientSize = new System.Drawing.Size(1128, 454);
+            this.Controls.Add(this.InsertScoreByExcel);
             this.Controls.Add(this.Scoretxt);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ComboboxSubject);
@@ -618,10 +623,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton BtnUpdate;
         private System.Windows.Forms.BindingSource studentDTOBindingSource;
         private MetroFramework.Controls.MetroGrid metroGrid2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeExamIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn scoreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sBSIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource detailScoreDTOBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
@@ -644,5 +645,10 @@
         private System.Windows.Forms.Label label6;
         private MaterialSkin.Controls.MaterialSingleLineTextField Scoretxt;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeExamIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn scoreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sBSIDDataGridViewTextBoxColumn;
+        private MaterialSkin.Controls.MaterialRaisedButton InsertScoreByExcel;
     }
 }

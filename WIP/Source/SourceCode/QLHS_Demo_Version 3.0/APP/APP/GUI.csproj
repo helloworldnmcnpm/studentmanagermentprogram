@@ -35,11 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BunifuDataViz 1.0.1">
-      <HintPath>C:\Bunifu_Dataviz_Advanced_1.0.1_Downloadly.ir\Bunifu Dataviz Advanced 1.0.1\BunifuDataViz 1.0.1.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\..\..\Bunifu_UI_v1.5.3.dll</HintPath>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
@@ -150,11 +147,17 @@
     <Compile Include="AddTypeExam.Designer.cs">
       <DependentUpon>AddTypeExam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class_Dashboard.cs">
+    <Compile Include="Class_Dashboard\Class_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class_Dashboard.Designer.cs">
+    <Compile Include="Class_Dashboard\Class_Dashboard.Designer.cs">
       <DependentUpon>Class_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class_Dashboard\ConfigInformationStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class_Dashboard\ConfigInformationStudent.Designer.cs">
+      <DependentUpon>ConfigInformationStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="ConfigRule.cs">
       <SubType>Form</SubType>
@@ -168,7 +171,6 @@
     <Compile Include="DataVisualizer.Designer.cs">
       <DependentUpon>DataVisualizer.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExportToExcel.cs" />
     <Compile Include="InsertStudentToAClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,11 +191,23 @@
     <Compile Include="AddSchoolYear.Designer.cs">
       <DependentUpon>AddSchoolYear.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class_Dashboard\ScoreBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class_Dashboard\ScoreBoard.Designer.cs">
+      <DependentUpon>ScoreBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class_Dashboard\StudentInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class_Dashboard\StudentInformation.Designer.cs">
+      <DependentUpon>StudentInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="Subject.cs">
       <SubType>Form</SubType>
@@ -228,8 +242,11 @@
     <EmbeddedResource Include="AddTypeExam.resx">
       <DependentUpon>AddTypeExam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Class_Dashboard.resx">
+    <EmbeddedResource Include="Class_Dashboard\Class_Dashboard.resx">
       <DependentUpon>Class_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class_Dashboard\ConfigInformationStudent.resx">
+      <DependentUpon>ConfigInformationStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConfigRule.resx">
       <DependentUpon>ConfigRule.cs</DependentUpon>
@@ -256,8 +273,14 @@
     <EmbeddedResource Include="AddSchoolYear.resx">
       <DependentUpon>AddSchoolYear.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Class_Dashboard\ScoreBoard.resx">
+      <DependentUpon>ScoreBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class_Dashboard\StudentInformation.resx">
+      <DependentUpon>StudentInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Subject.resx">
       <DependentUpon>Subject.cs</DependentUpon>

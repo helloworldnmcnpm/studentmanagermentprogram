@@ -92,7 +92,6 @@ namespace DAL
             bool Result = DataProvider.ExecuteNonQueryMethod(QueryString);
             return Result;
         }
-
         public static int CountStudent()
         {
             string QueryString = string.Format("Select Count (*) from HOCSINH");
@@ -128,6 +127,35 @@ namespace DAL
                 return ListStudentDTO;
             }
             return null;
+        }
+        public static Student_DTO LoadAStudent(int ID)
+        {
+            string QueryString = string.Format("Select * from HOCSINH where MaHocSinh='{0}'",ID);
+            DataTable dt = DataProvider.dataTableQuery(QueryString);
+            DataRow dr;
+            if (dt!=null&&dt.Rows.Count!=0)
+                dr = dt.Rows[0];
+            else
+            {
+                return null;
+            }
+            Student_DTO student_DTO = new Student_DTO();
+            student_DTO = new Student_DTO();
+            student_DTO.ID = Convert.ToInt32(dr["MaHocSinh"].ToString());
+            student_DTO.Name = dr["HoTen"].ToString();
+            student_DTO.Birthday = Convert.ToDateTime(dr["NgaySinh"].ToString());
+            student_DTO.Birthplace = dr["NoiSinh"].ToString();
+            student_DTO.Sex = dr["GioiTinh"].ToString();
+            student_DTO.Religion = dr["TonGiao"].ToString();
+            student_DTO.National = dr["DanToc"].ToString();
+            student_DTO.Address = dr["DiaChi"].ToString();
+            student_DTO.Phone = dr["DienThoai"].ToString();
+            student_DTO.Father = dr["HoTenCha"].ToString();
+            student_DTO.Mother = dr["HoTenMe"].ToString();
+            student_DTO.FJob = dr["NgheNghiepCha"].ToString();
+            student_DTO.MJob = dr["NgheNghiepMe"].ToString();
+            student_DTO.Status = dr["PhanLop"].ToString();
+            return student_DTO;
         }
     }
 }

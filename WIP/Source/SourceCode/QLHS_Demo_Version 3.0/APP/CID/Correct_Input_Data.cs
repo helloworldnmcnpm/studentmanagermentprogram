@@ -70,7 +70,7 @@ namespace CID
             {
                 Correct_Input_Data vir = new Correct_Input_Data();
                 vir.InputString = InputString;
-                return RemoveSpecialKey(DeleteDoubleSpace(UpcaseFirstLetterOfEachWord(DeletedNumber(vir.UnderAHundered))));
+                return Under7word(RemoveSpecialKey(DeleteDoubleSpace(UpcaseFirstLetterOfEachWord(DeletedNumber(vir.UnderAHundered)))));
             }
         }
         public string ValidAddress
@@ -122,6 +122,13 @@ namespace CID
             get
             {
                 return RemoveSpecialKey(DeleteDoubleSpace(UpcaseFirstLetterOfEachWord(UnderAHundered)));
+            }
+        }
+        public string UnderSevenWord
+        {
+            get
+            {
+                return Under7word(InputString);
             }
         }
     }

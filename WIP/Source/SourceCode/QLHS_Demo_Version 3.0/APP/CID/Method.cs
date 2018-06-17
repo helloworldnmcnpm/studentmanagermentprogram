@@ -103,5 +103,15 @@ namespace CID
         {
             return RemoveSpecialKey(UpcaseFirstLetterOfEachWord(DeleteDoubleSpace(s)));
         }
+        public static string Under7word(string s)
+        {
+            int count = 0;
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] == ' ') count++;
+                if (count == 7) return s = s.Remove(i, 1);
+            }
+            return s;
+        }
     }
 }

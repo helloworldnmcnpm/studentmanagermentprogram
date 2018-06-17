@@ -48,5 +48,10 @@ namespace DAL
             string QueryString = string.Format("Select HeSo from HINHTHUCKIEMTRA where MaHinhThucKiemTra=N'{0}'", NameType);
             return int.Parse(DataProvider.ExecuteScalaMethod(QueryString));
         }
+        public static string GetName(string ID)
+        {
+            string QueryString = string.Format("Select TenHinhThucKiemTra from HINHTHUCKIEMTRA where MaHinhThucKiemTra='{0}'", ID);
+            return DataProvider.ExecuteScalaMethod(QueryString);
+        }
     }
 }

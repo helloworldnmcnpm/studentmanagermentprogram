@@ -94,6 +94,13 @@ namespace APP
             TypeExam_DTO typeExam_DTO = new TypeExam_DTO();
             typeExam_DTO.ID = IDtxt.Text;
             typeExam_DTO.Name = Nametxt.Text;
+
+            if (typeExam_DTO.ID == "" || typeExam_DTO.Name == "")
+            {
+                BtnAdd.Enabled = false;
+                return;
+            }
+            if (Indextxt.Text == "") { BtnAdd.Enabled = false; return; }
             typeExam_DTO.Index = int.Parse(Indextxt.Text);
 
             if (TypeExam_BUL.Load() != null)
@@ -129,6 +136,12 @@ namespace APP
             TypeExam_DTO typeExam_DTO = new TypeExam_DTO();
             typeExam_DTO.ID = IDtxt.Text;
             typeExam_DTO.Name = Nametxt.Text;
+            if (typeExam_DTO.ID == "" || typeExam_DTO.Name == "")
+            {
+                BtnAdd.Enabled = false;
+                return;
+            }
+            if (Indextxt.Text == "") { BtnAdd.Enabled = false; return; }
             typeExam_DTO.Index = int.Parse(Indextxt.Text);
             if (TypeExam_BUL.Update(typeExam_DTO))
             {

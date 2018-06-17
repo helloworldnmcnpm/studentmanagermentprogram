@@ -73,9 +73,13 @@ namespace DAL
             }
             return null;
         }
-       /* public static bool InitialFinalScore(string ProcessID)
+
+        public static bool InitialFinalScore(int ProcessID)
         {
-            
-        }*/
+            string QueryString = string.Format("Select AVG(DiemTBM) from BANGDIEMMON where MaQuaTrinhHoc='{0}'", ProcessID);
+            double Result = double.Parse(DataProvider.ExecuteScalaMethod(QueryString));
+            QueryString = string.Format("Update QUATRINHHOC set DiemTBHK='{0}' where MaQuaTrinhHoc='{1}'", Result, ProcessID);
+            return DataProvider.ExecuteNonQueryMethod(QueryString);
+        }
     }
 }

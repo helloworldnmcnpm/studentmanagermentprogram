@@ -29,5 +29,9 @@ namespace BUL
         {
             return Term_DAL.LoadBySC(ID);
         }
+        public static string GetName(string ID)
+        {
+            return Term_DAL.GetName(ID);
+        }
     }
 }

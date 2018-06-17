@@ -41,5 +41,9 @@ namespace BUL
         {
             return Class_DAL.CountBySC(SchoolYearID);
         }
+        public static string GetName(string ClassID)
+        {
+            return Class_DAL.GetName(ClassID);
+        }
     }
 }

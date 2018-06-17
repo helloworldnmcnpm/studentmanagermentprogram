@@ -41,11 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class_DTO.cs" />
+    <Compile Include="DetailReportBySubject_DTO.cs" />
     <Compile Include="DetailScore_DTO.cs" />
     <Compile Include="Grade_DTO.cs" />
     <Compile Include="Login_DTO.cs" />
     <Compile Include="Process_DTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportBySubject_DTO.cs" />
+    <Compile Include="ReportByTerm_DTO.cs" />
     <Compile Include="Rule_DTO.cs" />
     <Compile Include="SchoolYear_DTO.cs" />
     <Compile Include="ScoreBySubject_DTO.cs" />

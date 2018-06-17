@@ -114,7 +114,7 @@ namespace APP
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            if (SchoolYear_BUL.Load() == null && Class_BUL.LoadBySC(ComboBoxListSchoolYear.SelectedValue.ToString()) == null && Term_BUL.LoadBySC(ComboBoxListSchoolYear.SelectedValue.ToString()) == null) return;
+            if (SchoolYear_BUL.Load() == null || Class_BUL.LoadBySC(ComboBoxListSchoolYear.SelectedValue.ToString()) == null || Term_BUL.LoadBySC(ComboBoxListSchoolYear.SelectedValue.ToString()) == null) return;
             if (Subject_BUL.Load() == null)
             { BtnAdd.Enabled = BtnDelete.Enabled = false;
                 return;
@@ -159,7 +159,7 @@ namespace APP
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if (SchoolYear_BUL.Load() == null && Class_BUL.LoadBySC(ComboBoxListSchoolYear.SelectedValue.ToString()) == null && Term_BUL.LoadBySC(ComboBoxListSchoolYear.SelectedValue.ToString()) == null) return;
+            if (SchoolYear_BUL.Load() == null || Class_BUL.LoadBySC(ComboBoxListSchoolYear.SelectedValue.ToString()) == null || Term_BUL.LoadBySC(ComboBoxListSchoolYear.SelectedValue.ToString()) == null) return;
             if (Subject_BUL.Load() == null)
             {
                 BtnAdd.Enabled = BtnDelete.Enabled = false;
@@ -230,7 +230,7 @@ namespace APP
 
         private void QuicklyCreate_Click(object sender, EventArgs e)
         {
-            if (SchoolYear_BUL.Load() == null && Class_BUL.LoadBySC(ComboBoxListSchoolYear.SelectedValue.ToString()) == null && Term_BUL.LoadBySC(ComboBoxListSchoolYear.SelectedValue.ToString()) == null) return;
+            if (SchoolYear_BUL.Load() == null || Class_BUL.LoadBySC(ComboBoxListSchoolYear.SelectedValue.ToString()) == null || Term_BUL.LoadBySC(ComboBoxListSchoolYear.SelectedValue.ToString()) == null) return;
             if (Subject_BUL.Load() == null)
             {
                 BtnAdd.Enabled = BtnDelete.Enabled = false;

@@ -31,12 +31,12 @@ namespace APP
             {
                 comboBox2.DataSource = null;
                 comboBox1.Enabled = comboBox2.Enabled = false;
-                BtnClass.Enabled = BtnStudent.Enabled = BtnEx.Enabled = BtnIme.Enabled = BtnNormal.Enabled = BtnWeak.Enabled = BtnRe.Enabled = BtnPassed.Enabled = false;
+                BtnClass.Enabled = BtnStudent.Enabled = BtnEx.Enabled = BtnIme.Enabled = BtnNormal.Enabled = BtnWeak.Enabled = false;
             }
             else
             {
                 comboBox1.Enabled = comboBox2.Enabled = true;
-                BtnClass.Enabled = BtnStudent.Enabled = BtnEx.Enabled = BtnIme.Enabled = BtnNormal.Enabled = BtnWeak.Enabled = BtnRe.Enabled = BtnPassed.Enabled = true;
+                BtnClass.Enabled = BtnStudent.Enabled = BtnEx.Enabled = BtnIme.Enabled = BtnNormal.Enabled = BtnWeak.Enabled = true;
 
                 comboBox1.DisplayMember = "Name";
                 comboBox1.ValueMember = "ID";
@@ -108,12 +108,12 @@ namespace APP
             {
                 comboBox2.DataSource = null;
                 comboBox2.Enabled = false;
-                BtnClass.Enabled = BtnStudent.Enabled = BtnEx.Enabled = BtnIme.Enabled = BtnNormal.Enabled = BtnWeak.Enabled = BtnRe.Enabled = BtnPassed.Enabled = false;
+                BtnClass.Enabled = BtnStudent.Enabled = BtnEx.Enabled = BtnIme.Enabled = BtnNormal.Enabled = BtnWeak.Enabled = false;
             }
             else
             {
                 comboBox2.Enabled = true;
-                BtnClass.Enabled = BtnStudent.Enabled = BtnEx.Enabled = BtnIme.Enabled = BtnNormal.Enabled = BtnWeak.Enabled = BtnRe.Enabled = BtnPassed.Enabled = true;
+                BtnClass.Enabled = BtnStudent.Enabled = BtnEx.Enabled = BtnIme.Enabled = BtnNormal.Enabled = BtnWeak.Enabled = true;
                 comboBox2.ValueMember = "ID";
                 comboBox2.DisplayMember = "Name";
                 comboBox2.DataSource = Term_BUL.LoadBySC(comboBox1.SelectedValue.ToString());
@@ -121,7 +121,7 @@ namespace APP
             LabelNumberOfClass.Text = Class_BUL.CountBySC(comboBox1.SelectedValue.ToString()).ToString();
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
 
         }

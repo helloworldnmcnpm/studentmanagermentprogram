@@ -25,5 +25,9 @@ namespace BUL
         {
             return Process_DAL.GetProcess(studentID, TermID, ClassID);
         }
+        public static bool InitialFinalScore(int ProcessID)
+        {
+            return Process_DAL.InitialFinalScore(ProcessID);
+        }
     }
 }

@@ -95,6 +95,7 @@ namespace APP
         }
         private void BtnSwitch_Click(object sender, EventArgs e)
         {
+            if (Class_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null || Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null) return;
             for (int i = 0; i < metroGrid1.SelectedRows.Count; i++)
             {
                 if (!Student_BUL.ChangeClass(int.Parse(metroGrid1.SelectedRows[i].Cells[1].Value.ToString()), ComboBoxTargetTerm.SelectedValue.ToString(), ComboBoxTargetClass.SelectedValue.ToString())){
@@ -160,6 +161,8 @@ namespace APP
         }
         private void BtnSwitchUp_Click(object sender, EventArgs e)
         {
+            if (Class_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null || Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null) return;
+
             for (int i = 0; i < metroGrid2.SelectedRows.Count; i++)
             {
                 if(!Student_BUL.ChangeClass(int.Parse(metroGrid2.SelectedRows[i].Cells[1].Value.ToString()), ComboBoxTerm.SelectedValue.ToString(), ComboBoxClass.SelectedValue.ToString()))

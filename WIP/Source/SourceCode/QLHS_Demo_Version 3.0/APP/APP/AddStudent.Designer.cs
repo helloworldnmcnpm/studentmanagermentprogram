@@ -79,6 +79,7 @@
             this.mJobDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Btndeletespace = new MaterialSkin.Controls.MaterialRaisedButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
@@ -132,7 +133,7 @@
             // 
             this.BtnDelete.Depth = 0;
             this.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDelete.Location = new System.Drawing.Point(584, 308);
+            this.BtnDelete.Location = new System.Drawing.Point(599, 308);
             this.BtnDelete.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Primary = true;
@@ -146,7 +147,7 @@
             // 
             this.BtnUpdate.Depth = 0;
             this.BtnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnUpdate.Location = new System.Drawing.Point(432, 308);
+            this.BtnUpdate.Location = new System.Drawing.Point(447, 308);
             this.BtnUpdate.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Primary = true;
@@ -571,6 +572,7 @@
             this.metroGrid1.Size = new System.Drawing.Size(748, 361);
             this.metroGrid1.TabIndex = 0;
             this.metroGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
+            this.metroGrid1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_RowEnter);
             // 
             // statusDataGridViewTextBoxColumn
             // 
@@ -690,6 +692,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Btndeletespace);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.Nametxt);
             this.panel1.Controls.Add(this.BtnAdd);
@@ -724,6 +727,20 @@
             this.panel1.Size = new System.Drawing.Size(748, 352);
             this.panel1.TabIndex = 71;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // Btndeletespace
+            // 
+            this.Btndeletespace.Depth = 0;
+            this.Btndeletespace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btndeletespace.Location = new System.Drawing.Point(311, 308);
+            this.Btndeletespace.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Btndeletespace.Name = "Btndeletespace";
+            this.Btndeletespace.Primary = true;
+            this.Btndeletespace.Size = new System.Drawing.Size(130, 34);
+            this.Btndeletespace.TabIndex = 56;
+            this.Btndeletespace.Text = "Xóa trống";
+            this.Btndeletespace.UseVisualStyleBackColor = true;
+            this.Btndeletespace.Click += new System.EventHandler(this.Btndeletespace_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -811,5 +828,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private MaterialSkin.Controls.MaterialRaisedButton Btndeletespace;
     }
 }

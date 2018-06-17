@@ -63,5 +63,10 @@ namespace DAL
             }
             return null;
         }
+        public static string GetName(string ID)
+        {
+            string QueryString = string.Format("Select TenHocKy from HOCKY where MaHocKy='{0}'", ID);
+            return DataProvider.ExecuteScalaMethod(QueryString);
+        }
     }
 }

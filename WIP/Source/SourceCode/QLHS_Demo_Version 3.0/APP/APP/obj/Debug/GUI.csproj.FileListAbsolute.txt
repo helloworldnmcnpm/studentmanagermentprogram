@@ -53,6 +53,9 @@ D:\Users\tranm\source\repos\APP\APP\bin\Debug\LiveCharts.WinForms.xml
 D:\Users\tranm\source\repos\APP\APP\bin\Debug\LiveCharts.Wpf.pdb
 D:\Users\tranm\source\repos\APP\APP\bin\Debug\LiveCharts.Wpf.xml
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.DataVisualizer.resources
-D:\Users\tranm\source\repos\APP\APP\bin\Debug\BunifuDataViz 1.0.1.dll
-D:\Users\tranm\source\repos\APP\APP\bin\Debug\Bunifu_UI_v1.5.3.dll
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Class_Dashboard.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.StudentInformation.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.ConfigInformationStudent.resources
+D:\Users\tranm\source\repos\APP\APP\bin\Debug\itextsharp.dll
+D:\Users\tranm\source\repos\APP\APP\bin\Debug\itextsharp.xml
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.ScoreBoard.resources
