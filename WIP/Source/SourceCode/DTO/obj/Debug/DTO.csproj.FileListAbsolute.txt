@@ -1,0 +1,25 @@
+D:\Users\tranm\source\repos\DTO\bin\Debug\DTO.dll
+D:\Users\tranm\source\repos\DTO\bin\Debug\DTO.pdb
+D:\Users\tranm\source\repos\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Users\tranm\source\repos\DTO\obj\Debug\DTO.dll
+D:\Users\tranm\source\repos\DTO\obj\Debug\DTO.pdb
+<<<<<<< HEAD
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\DTO\bin\Debug\DTO.dll
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\DTO\bin\Debug\DTO.pdb
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.dll
+C:\Users\ACER\Desktop\Github\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.pdb
+=======
+D:\Users\tranm\OneDrive\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\bin\Debug\DTO.dll
+D:\Users\tranm\OneDrive\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\bin\Debug\DTO.pdb
+D:\Users\tranm\OneDrive\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\Users\tranm\OneDrive\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Users\tranm\OneDrive\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.dll
+D:\Users\tranm\OneDrive\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.pdb
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\bin\Debug\DTO.dll
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\bin\Debug\DTO.pdb
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.dll
+D:\Users\tranm\Documents\GitHub\studentmanagermentprogram\WIP\Source\SourceCode\DTO\obj\Debug\DTO.pdb
+>>>>>>> bb0f25b652fc3bfb5b0fbf9974346f8ddd81da75
