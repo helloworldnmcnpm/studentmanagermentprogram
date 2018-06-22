@@ -124,15 +124,14 @@ create table BAOCAOTONGKETMON
 go
 create table CHITIETBAOCAOTONGKETMON
 (	 
-	MaChiTietBangDiemMon nvarchar(100) not null,
+	MaBaoCaoTongKetMon nvarchar(100) not null,
 	MaBaoCaoTongKetMon nvarchar(100)not null,
 	MaLop nvarchar(100)not null,
 	SoLuongDat int,
 	TyLeDat float,
-	primary key(MaChiTietBangDiemMon)
+	primary key(MaChiTietBaoCaoTongKetMon)
 )
 go
-
 create table QUYDINH
 (
 	TuoiToiDa int,
@@ -223,3 +222,13 @@ end
 go
 --Thêm dữ liệu vào bảng quy định
 insert into  QUYDINH(TuoiToiDa, TuoiToiThieu, SoHocSinhToiDa, DiemDat) values (20,15,40,5)
+go
+--Thêm bảng TAIKHOAN
+create table TAIKHOANDANGNHAP
+(
+	TenTaiKhoan nvarchar(100),
+	MatKhau nvarchar(100),
+	primary key(TenTaiKhoan)
+)
+go 
+insert into TAIKHOANDANGNHAP(TenTaiKhoan, MatKhau) values('Admin','admin')
