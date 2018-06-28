@@ -71,3 +71,9 @@ D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.NormalStudent.OrderByClass.res
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.WeakStudent.OrderByClass.resources
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.WeakStudent.Weak_Student.resources
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Search.SearchForm.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Tutorial.Tutorial_AddClass.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Tutorial.Tutorial_AddGrade.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Tutorial.Tutorial_AddSchoolYear.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.ImportFromExcel.Import_From_Excel.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Tutorial.Tutorial_AddScore.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Tutorial.Tutorial_AddScoreBySubject.resources

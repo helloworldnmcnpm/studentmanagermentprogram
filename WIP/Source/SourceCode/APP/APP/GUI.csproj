@@ -201,6 +201,18 @@
     <Compile Include="ImediateStudent\OrderByClass.Designer.cs">
       <DependentUpon>OrderByClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImportFromExcel\Import_From_Excel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportFromExcel\Import_From_Excel.Designer.cs">
+      <DependentUpon>Import_From_Excel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportFromExcel\Result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportFromExcel\Result.Designer.cs">
+      <DependentUpon>Result.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsertStudentToAClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +293,36 @@
     <Compile Include="SwitchClass.Designer.cs">
       <DependentUpon>SwitchClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tutorial\Tutorial_AddClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_AddClass.Designer.cs">
+      <DependentUpon>Tutorial_AddClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_AddGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_AddGrade.Designer.cs">
+      <DependentUpon>Tutorial_AddGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_AddSchoolYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_AddSchoolYear.Designer.cs">
+      <DependentUpon>Tutorial_AddSchoolYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_AddScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_AddScore.Designer.cs">
+      <DependentUpon>Tutorial_AddScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_AddScoreBySubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_AddScoreBySubject.Designer.cs">
+      <DependentUpon>Tutorial_AddScoreBySubject.cs</DependentUpon>
+    </Compile>
     <Compile Include="WeakStudent\OrderByClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +383,9 @@
     <EmbeddedResource Include="ImediateStudent\OrderByClass.resx">
       <DependentUpon>OrderByClass.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ImportFromExcel\Import_From_Excel.resx">
+      <DependentUpon>Import_From_Excel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InsertStudentToAClass.resx">
       <DependentUpon>InsertStudentToAClass.cs</DependentUpon>
     </EmbeddedResource>
@@ -389,6 +434,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SwitchClass.resx">
       <DependentUpon>SwitchClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\Tutorial_AddClass.resx">
+      <DependentUpon>Tutorial_AddClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\Tutorial_AddGrade.resx">
+      <DependentUpon>Tutorial_AddGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\Tutorial_AddSchoolYear.resx">
+      <DependentUpon>Tutorial_AddSchoolYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\Tutorial_AddScore.resx">
+      <DependentUpon>Tutorial_AddScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\Tutorial_AddScoreBySubject.resx">
+      <DependentUpon>Tutorial_AddScoreBySubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WeakStudent\OrderByClass.resx">
       <DependentUpon>OrderByClass.cs</DependentUpon>

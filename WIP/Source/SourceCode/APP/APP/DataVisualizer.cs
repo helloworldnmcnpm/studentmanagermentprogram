@@ -167,42 +167,45 @@ namespace APP
             List<Process_DTO> process_DTOs = new List<Process_DTO>();
             process_DTOs = Process_BUL.ListStudentByTerm(comboBox2.SelectedValue.ToString());
             List<Process_DTO> ExcellentStudent = new List<Process_DTO>();
-            for (int i = 0; i < process_DTOs.Count; i++)
+            if (process_DTOs != null)
             {
-                if (process_DTOs[i].TotalScore >= 8) ExcellentStudent.Add(process_DTOs[i]);
-            }
-            percent = ((double)ExcellentStudent.Count / (double)process_DTOs.Count)*100;
-            percent = Math.Round(percent, 2, MidpointRounding.AwayFromZero);
-            labelPercentEx.Text = ExcellentStudent.Count + "-" + percent+("%");
+                for (int i = 0; i < process_DTOs.Count; i++)
+                {
+                    if (process_DTOs[i].TotalScore >= 8) ExcellentStudent.Add(process_DTOs[i]);
+                }
+                percent = ((double)ExcellentStudent.Count / (double)process_DTOs.Count) * 100;
+                percent = Math.Round(percent, 2, MidpointRounding.AwayFromZero);
+                labelPercentEx.Text = ExcellentStudent.Count + "-" + percent + ("%");
 
-            List<Process_DTO> ImeStudent = new List<Process_DTO>();
-            for (int i = 0; i < process_DTOs.Count; i++)
-            {
-                if (process_DTOs[i].TotalScore >= 6.5 && process_DTOs[i].TotalScore < 8) ImeStudent.Add(process_DTOs[i]);
-            }
-            percent2 = ((double)ImeStudent.Count / (double)process_DTOs.Count) * 100;
-            percent2 = Math.Round(percent2, 2, MidpointRounding.AwayFromZero);
-            labelPercentIme.Text = ImeStudent.Count + "-" + percent2 + ("%");
+                List<Process_DTO> ImeStudent = new List<Process_DTO>();
+                for (int i = 0; i < process_DTOs.Count; i++)
+                {
+                    if (process_DTOs[i].TotalScore >= 6.5 && process_DTOs[i].TotalScore < 8) ImeStudent.Add(process_DTOs[i]);
+                }
+                percent2 = ((double)ImeStudent.Count / (double)process_DTOs.Count) * 100;
+                percent2 = Math.Round(percent2, 2, MidpointRounding.AwayFromZero);
+                labelPercentIme.Text = ImeStudent.Count + "-" + percent2 + ("%");
 
-            List<Process_DTO> NormalStudent = new List<Process_DTO>();
-            for (int i = 0; i < process_DTOs.Count; i++)
-            {
-                if (process_DTOs[i].TotalScore >= 5 && process_DTOs[i].TotalScore < 6.5) NormalStudent.Add(process_DTOs[i]); 
-            }
-            percent3 = ((double)NormalStudent.Count / (double)process_DTOs.Count) * 100;
-            percent3 = Math.Round(percent3, 2, MidpointRounding.AwayFromZero);
-            LabelNor.Text = NormalStudent.Count + "-" + percent3 + ("%");
-            List<Process_DTO> WeakStudent = new List<Process_DTO>();
-            for (int i = 0; i < process_DTOs.Count; i++)
-            {
-                if (process_DTOs[i].TotalScore <5) WeakStudent.Add(process_DTOs[i]);
-            }
-            percent4 = ((double)WeakStudent.Count / (double)process_DTOs.Count) * 100;
-            percent4 = Math.Round(percent4, 2, MidpointRounding.AwayFromZero);
-            LabelWeak.Text= WeakStudent.Count + "-" + percent4 + ("%");
+                List<Process_DTO> NormalStudent = new List<Process_DTO>();
+                for (int i = 0; i < process_DTOs.Count; i++)
+                {
+                    if (process_DTOs[i].TotalScore >= 5 && process_DTOs[i].TotalScore < 6.5) NormalStudent.Add(process_DTOs[i]);
+                }
+                percent3 = ((double)NormalStudent.Count / (double)process_DTOs.Count) * 100;
+                percent3 = Math.Round(percent3, 2, MidpointRounding.AwayFromZero);
+                LabelNor.Text = NormalStudent.Count + "-" + percent3 + ("%");
+                List<Process_DTO> WeakStudent = new List<Process_DTO>();
+                for (int i = 0; i < process_DTOs.Count; i++)
+                {
+                    if (process_DTOs[i].TotalScore < 5) WeakStudent.Add(process_DTOs[i]);
+                }
+                percent4 = ((double)WeakStudent.Count / (double)process_DTOs.Count) * 100;
+                percent4 = Math.Round(percent4, 2, MidpointRounding.AwayFromZero);
+                LabelWeak.Text = WeakStudent.Count + "-" + percent4 + ("%");
 
-            label5.Text = Convert.ToInt32(labelNumberOfStudent.Text) - WeakStudent.Count+"-" + 
-                Math.Round((double)(Convert.ToInt32(labelNumberOfStudent.Text)-WeakStudent.Count)/(double)Convert.ToInt32(labelNumberOfStudent.Text),2,MidpointRounding.AwayFromZero)*100+"%";
+                label5.Text = Convert.ToInt32(labelNumberOfStudent.Text) - WeakStudent.Count + "-" +
+                    Math.Round((double)(Convert.ToInt32(labelNumberOfStudent.Text) - WeakStudent.Count) / (double)Convert.ToInt32(labelNumberOfStudent.Text), 2, MidpointRounding.AwayFromZero) * 100 + "%";
+            }
         }
 
         private void BtnIme_Click(object sender, EventArgs e)

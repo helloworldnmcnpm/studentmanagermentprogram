@@ -23,9 +23,11 @@ namespace APP
 
         private void AddGrade_Load(object sender, EventArgs e)
         {
-            if(Grade_BUL.Load() == null){
+            if(Grade_BUL.Load() == null)
+            {
                 BtnUpdate.Enabled = BtnDelete.Enabled = false;
-            }else{
+            }else
+            {
                 BtnUpdate.Enabled = BtnDelete.Enabled = true;
                 metroGrid1.DataSource = Grade_BUL.Load();
             }
