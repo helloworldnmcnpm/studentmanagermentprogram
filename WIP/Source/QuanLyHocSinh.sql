@@ -232,3 +232,22 @@ create table TAIKHOANDANGNHAP
 )
 go 
 insert into TAIKHOANDANGNHAP(TenTaiKhoan, MatKhau) values('Admin','admin')
+go
+insert into NAMHOC values('1',2019,2020)
+go
+alter trigger trg_ins_up_TenHocKy_MaNamHoc_HOCKY on HOCKY
+for insert, update
+as
+begin
+	declare @MaHocKy nvarchar(100), @TenHocKy nvarchar(100), @MaNamHoc nvarchar(100)
+	select @MaHocKy=MaHocKy,@TenHocKy=TenHocKy,@MaNamHoc=MaNamHoc
+	from inserted
+	if(select count(*)
+	   from HOCKY
+	   where @TenHocKy=TenHocKy and @MaNamHoc=MaNamHoc)>1
+	   begin
+			print'TenHocKy va MaNamHoc phai doi mot khac nhau'
+			rollback tran
+	    end
+end
+go
