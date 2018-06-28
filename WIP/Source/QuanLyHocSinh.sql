@@ -124,15 +124,14 @@ create table BAOCAOTONGKETMON
 go
 create table CHITIETBAOCAOTONGKETMON
 (	 
-	MaChiTietBangDiemMon nvarchar(100) not null,
+	MaBaoCaoTongKetMon nvarchar(100) not null,
 	MaBaoCaoTongKetMon nvarchar(100)not null,
 	MaLop nvarchar(100)not null,
 	SoLuongDat int,
 	TyLeDat float,
-	primary key(MaChiTietBangDiemMon)
+	primary key(MaChiTietBaoCaoTongKetMon)
 )
 go
-
 create table QUYDINH
 (
 	TuoiToiDa int,
@@ -223,3 +222,32 @@ end
 go
 --Thêm dữ liệu vào bảng quy định
 insert into  QUYDINH(TuoiToiDa, TuoiToiThieu, SoHocSinhToiDa, DiemDat) values (20,15,40,5)
+go
+--Thêm bảng TAIKHOAN
+create table TAIKHOANDANGNHAP
+(
+	TenTaiKhoan nvarchar(100),
+	MatKhau nvarchar(100),
+	primary key(TenTaiKhoan)
+)
+go 
+insert into TAIKHOANDANGNHAP(TenTaiKhoan, MatKhau) values('Admin','admin')
+go
+insert into NAMHOC values('1',2019,2020)
+go
+alter trigger trg_ins_up_TenHocKy_MaNamHoc_HOCKY on HOCKY
+for insert, update
+as
+begin
+	declare @MaHocKy nvarchar(100), @TenHocKy nvarchar(100), @MaNamHoc nvarchar(100)
+	select @MaHocKy=MaHocKy,@TenHocKy=TenHocKy,@MaNamHoc=MaNamHoc
+	from inserted
+	if(select count(*)
+	   from HOCKY
+	   where @TenHocKy=TenHocKy and @MaNamHoc=MaNamHoc)>1
+	   begin
+			print'TenHocKy va MaNamHoc phai doi mot khac nhau'
+			rollback tran
+	    end
+end
+go
