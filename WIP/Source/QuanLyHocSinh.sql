@@ -235,7 +235,7 @@ insert into TAIKHOANDANGNHAP(TenTaiKhoan, MatKhau) values('Admin','admin')
 go
 insert into NAMHOC values('1',2019,2020)
 go
-alter trigger trg_ins_up_TenHocKy_MaNamHoc_HOCKY on HOCKY
+create trigger trg_ins_up_TenHocKy_MaNamHoc_HOCKY on HOCKY
 for insert, update
 as
 begin
