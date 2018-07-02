@@ -44,8 +44,6 @@
             this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.BtnSubject = new MaterialSkin.Controls.MaterialFlatButton();
-            this.Report = new MetroFramework.Controls.MetroTabPage();
-            this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
             this.Settings = new MetroFramework.Controls.MetroTabPage();
             this.materialFlatButton5 = new MaterialSkin.Controls.MaterialFlatButton();
             this.Activities = new System.Windows.Forms.FlowLayoutPanel();
@@ -55,7 +53,6 @@
             this.Tabcontrol.SuspendLayout();
             this.Profile.SuspendLayout();
             this.Studying.SuspendLayout();
-            this.Report.SuspendLayout();
             this.Settings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,13 +60,12 @@
             // 
             this.Tabcontrol.Controls.Add(this.Profile);
             this.Tabcontrol.Controls.Add(this.Studying);
-            this.Tabcontrol.Controls.Add(this.Report);
             this.Tabcontrol.Controls.Add(this.Settings);
             this.Tabcontrol.FontSize = MetroFramework.MetroTabControlSize.Tall;
             this.Tabcontrol.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
             this.Tabcontrol.Location = new System.Drawing.Point(0, 64);
             this.Tabcontrol.Name = "Tabcontrol";
-            this.Tabcontrol.SelectedIndex = 3;
+            this.Tabcontrol.SelectedIndex = 0;
             this.Tabcontrol.Size = new System.Drawing.Size(878, 100);
             this.Tabcontrol.Style = MetroFramework.MetroColorStyle.Blue;
             this.Tabcontrol.TabIndex = 2;
@@ -325,46 +321,15 @@
             this.BtnSubject.UseVisualStyleBackColor = true;
             this.BtnSubject.Click += new System.EventHandler(this.BtnSubject_Click);
             // 
-            // Report
-            // 
-            this.Report.Controls.Add(this.materialFlatButton4);
-            this.Report.HorizontalScrollbarBarColor = true;
-            this.Report.HorizontalScrollbarHighlightOnWheel = false;
-            this.Report.HorizontalScrollbarSize = 10;
-            this.Report.Location = new System.Drawing.Point(4, 35);
-            this.Report.Name = "Report";
-            this.Report.Size = new System.Drawing.Size(870, 61);
-            this.Report.TabIndex = 2;
-            this.Report.Text = "Báo cáo";
-            this.Report.VerticalScrollbarBarColor = true;
-            this.Report.VerticalScrollbarHighlightOnWheel = false;
-            this.Report.VerticalScrollbarSize = 10;
-            // 
-            // materialFlatButton4
-            // 
-            this.materialFlatButton4.AutoSize = true;
-            this.materialFlatButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton4.Depth = 0;
-            this.materialFlatButton4.Location = new System.Drawing.Point(4, 6);
-            this.materialFlatButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton4.Name = "materialFlatButton4";
-            this.materialFlatButton4.Primary = false;
-            this.materialFlatButton4.Size = new System.Drawing.Size(136, 36);
-            this.materialFlatButton4.TabIndex = 7;
-            this.materialFlatButton4.Text = "Báo cáo năm học";
-            this.materialFlatButton4.UseVisualStyleBackColor = true;
-            this.materialFlatButton4.Click += new System.EventHandler(this.materialFlatButton4_Click);
-            // 
             // Settings
             // 
             this.Settings.Controls.Add(this.materialFlatButton5);
             this.Settings.HorizontalScrollbarBarColor = true;
             this.Settings.HorizontalScrollbarHighlightOnWheel = false;
             this.Settings.HorizontalScrollbarSize = 10;
-            this.Settings.Location = new System.Drawing.Point(4, 44);
+            this.Settings.Location = new System.Drawing.Point(4, 35);
             this.Settings.Name = "Settings";
-            this.Settings.Size = new System.Drawing.Size(870, 52);
+            this.Settings.Size = new System.Drawing.Size(870, 61);
             this.Settings.TabIndex = 3;
             this.Settings.Text = "Cài đặt";
             this.Settings.VerticalScrollbarBarColor = true;
@@ -427,9 +392,9 @@
             this.BtnDataVisualizerMode.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnDataVisualizerMode.Name = "BtnDataVisualizerMode";
             this.BtnDataVisualizerMode.Primary = false;
-            this.BtnDataVisualizerMode.Size = new System.Drawing.Size(168, 36);
+            this.BtnDataVisualizerMode.Size = new System.Drawing.Size(70, 36);
             this.BtnDataVisualizerMode.TabIndex = 6;
-            this.BtnDataVisualizerMode.Text = "Data Visualizer Mode";
+            this.BtnDataVisualizerMode.Text = "Báo cáo";
             this.BtnDataVisualizerMode.UseVisualStyleBackColor = false;
             this.BtnDataVisualizerMode.Click += new System.EventHandler(this.BtnDataVisualizerMode_Click);
             // 
@@ -453,8 +418,6 @@
             this.Profile.PerformLayout();
             this.Studying.ResumeLayout(false);
             this.Studying.PerformLayout();
-            this.Report.ResumeLayout(false);
-            this.Report.PerformLayout();
             this.Settings.ResumeLayout(false);
             this.Settings.PerformLayout();
             this.ResumeLayout(false);
@@ -466,7 +429,6 @@
         private MetroFramework.Controls.MetroTabControl Tabcontrol;
         private MetroFramework.Controls.MetroTabPage Profile;
         private MetroFramework.Controls.MetroTabPage Studying;
-        private MetroFramework.Controls.MetroTabPage Report;
         private MetroFramework.Controls.MetroTabPage Settings;
         private MaterialSkin.Controls.MaterialFlatButton Student;
         private MaterialSkin.Controls.MaterialFlatButton Grade;
@@ -478,7 +440,6 @@
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
         private MaterialSkin.Controls.MaterialFlatButton BtnSubject;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton5;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private MaterialSkin.Controls.MaterialFlatButton ForceExit;

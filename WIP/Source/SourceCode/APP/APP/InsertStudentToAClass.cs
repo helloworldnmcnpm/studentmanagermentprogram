@@ -71,7 +71,7 @@ namespace APP
             ComboBoxListTerm.DataSource = Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString());
             ComboBoxListTerm.ValueMember = "ID";
             ComboBoxListTerm.DisplayMember = "Name";
-            if (Class_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null && Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString())==null)
+            if (Class_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null || Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString())==null)
             {
                 metroGrid2.DataSource = null;
                 metroGrid2.Enabled = BtnAdd.Enabled = false;
@@ -84,7 +84,7 @@ namespace APP
         }
         private void ComboBoxListTerm_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Class_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null && Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null)
+            if (Class_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null || Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null)
             {
                 metroGrid2.DataSource = null;
                 metroGrid2.Enabled = BtnAdd.Enabled = false;
@@ -92,12 +92,14 @@ namespace APP
             else
             {
                 BtnAdd.Enabled = metroGrid2.Enabled = true;
+                if (Process_BUL.LoadByClass(ComboBoxListClass.SelectedValue.ToString(), ComboBoxListTerm.SelectedValue.ToString()) == null) return;
                 metroGrid2.DataSource = Process_BUL.LoadByClass(ComboBoxListClass.SelectedValue.ToString(), ComboBoxListTerm.SelectedValue.ToString());
             }
         }
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             if (metroGrid1.DataSource == null) return;
+            if (Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null) return;
             List<Term_DTO> term_DTOs = Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString());
             Student_DTO student_DTO;
             for (int i = 0; i < metroGrid1.SelectedRows.Count; i++)
@@ -149,6 +151,35 @@ namespace APP
             Tutorial.Tutorial_InsertStudentToAClass tutorial_InsertStudentToAClass = new Tutorial.Tutorial_InsertStudentToAClass();
             tutorial_InsertStudentToAClass.ShowDialog();
             this.Refresh();
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            if (Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null) return;
+            if (Class_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null) return;
+            if (metroGrid2.Rows.Count <= 0) return;
+            Process_DTO process_DTO;
+            for (int i = 0; i < metroGrid2.SelectedRows.Count; i++)
+            {
+                process_DTO = new Process_DTO();
+                if (Process_BUL.GetProcess(Convert.ToInt32(metroGrid2.SelectedRows[i].Cells[1].Value.ToString()), ComboBoxListTerm.SelectedValue.ToString(), ComboBoxListClass.SelectedValue.ToString()) == null)
+                {
+                    return;
+                }
+                else
+                {
+                    process_DTO = Process_BUL.GetProcess(Convert.ToInt32(metroGrid2.SelectedRows[i].Cells[1].Value.ToString()), ComboBoxListTerm.SelectedValue.ToString(), ComboBoxListClass.SelectedValue.ToString());
+                    if (Process_BUL.DeleteProcess(process_DTO.ID) == true)
+                    {
+                        metroGrid2.DataSource = Process_BUL.LoadByClass(ComboBoxListClass.SelectedValue.ToString(), ComboBoxListTerm.SelectedValue.ToString());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thể xóa học sinh!");
+                        return;
+                    }
+                }
+            }
         }
     }
 }

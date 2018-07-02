@@ -43,7 +43,6 @@ namespace APP.ImportFromExcel
             }
             else
             {
-                this.Enabled = false;
                 metroGrid.Enabled = SchoolYearCombo.Enabled = TermCombo.Enabled = ClassCombo.Enabled = false;
             }
             

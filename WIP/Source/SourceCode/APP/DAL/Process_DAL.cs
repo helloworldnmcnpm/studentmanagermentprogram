@@ -14,7 +14,6 @@ namespace DAL
             string QueryString = string.Format("Insert into QUATRINHHOC(MaLop,MaHocSinh,MaHocKy,DiemTBHK) values('{0}','{1}','{2}',0)", ClassID, StudentID, TermID);
             return DataProvider.ExecuteNonQueryMethod(QueryString);
         }
-
         public static Process_DTO GetProcess(int studentID,string TermID, string ClassID)
         {
             string QueryString = string.Format("Select * from QUATRINHHOC where (MaHocSinh='{0}' and MaHocKy='{1}' and MaLop='{2}')", studentID, TermID,ClassID);
@@ -30,13 +29,11 @@ namespace DAL
             }
             return null;
         }
-
         public static int CountStudent(string ClassID,string TermID)
         {
             string QueryString = string.Format("Select Count(MaHocSinh) from QUATRINHHOC where MaLop='{0}' and MaHocKy='{1}'", ClassID,TermID);
             return Convert.ToInt32(DataProvider.ExecuteScalaMethod(QueryString));
         }
-
         /// <summary>
         /// INSERT STUDENT INTO A CLASS
         /// </summary>
@@ -73,7 +70,6 @@ namespace DAL
             }
             return null;
         }
-
         public static bool InitialFinalScore(int ProcessID)
         {
             string QueryString = string.Format("Select AVG(DiemTBM) from BANGDIEMMON where MaQuaTrinhHoc='{0}'", ProcessID);
@@ -81,13 +77,11 @@ namespace DAL
             QueryString = string.Format("Update QUATRINHHOC set DiemTBHK='{0}' where MaQuaTrinhHoc='{1}'", Result, ProcessID);
             return DataProvider.ExecuteNonQueryMethod(QueryString);
         }
-
         public static bool UpdateFinalScore(double Score,int processID)
         {
             string QueryString = string.Format("Update QUATRINHHOC set DiemTBHK='{0}' where MaQuaTrinhHoc='{1}'", Score, processID);
             return DataProvider.ExecuteNonQueryMethod(QueryString);
         }
-
         public static List<Process_DTO> ListStudentByTerm(string TermID)
         {
             string QueryString = string.Format("Select * from QUATRINHHOC where MaHocKy='{0}'", TermID);
@@ -153,6 +147,34 @@ namespace DAL
                 return process_DTOs;
             }
             return null;
+        }
+        public static List<Process_DTO> ListProcessByTermAndID(int StudentID,string TermID)
+        {
+
+            string QueryString = string.Format("Select * from QUATRINHHOC where (MaHocKy='{0}' and MaHocSinh='{1}') ", TermID,StudentID);
+            DataTable dt = DataProvider.dataTableQuery(QueryString);
+            List<Process_DTO> process_DTOs = new List<Process_DTO>();
+            if (dt.Rows.Count > 0)
+            {
+                Process_DTO process_DTO;
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    process_DTO = new Process_DTO();
+                    process_DTO.ID = Convert.ToInt32(dt.Rows[i]["MaQuaTrinhHoc"].ToString());
+                    process_DTO.StudentID = Convert.ToInt32(dt.Rows[i]["MaHocSinh"].ToString());
+                    process_DTO.TermID = dt.Rows[i]["MaHocKy"].ToString();
+                    process_DTO.ClassID = dt.Rows[i]["MaLop"].ToString();
+                    process_DTO.TotalScore = Convert.ToDouble(dt.Rows[i]["DiemTBHK"].ToString());
+                    process_DTOs.Add(process_DTO);
+                }
+                return process_DTOs;
+            }
+            return null;
+        }
+        public static bool DeleteProcess(int ID)
+        {
+            string QueryString = string.Format("Delete from QUATRINHHOC where MaQuaTrinhHoc ='{0}'", ID);
+            return DataProvider.ExecuteNonQueryMethod(QueryString);
         }
     }
 }

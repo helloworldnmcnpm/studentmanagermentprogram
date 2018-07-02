@@ -44,7 +44,7 @@ namespace APP
             ComboBoxTerm.DataSource = Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString());
             ComboBoxTerm.ValueMember = "ID";
             ComboBoxTerm.DisplayMember = "Name";
-            if (Class_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null && Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null)
+            if (Class_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null || Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null)
             {
                 metroGrid1.Enabled = BtnSwitch.Enabled = false;
                 metroGrid1.DataSource = null;
@@ -57,7 +57,7 @@ namespace APP
         }
         private void ComboBoxTerm_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Class_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null && Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null)
+            if (Class_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null || Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null)
             {
                 metroGrid1.Enabled = BtnSwitch.Enabled = false;
                 metroGrid1.DataSource = null;
@@ -65,7 +65,12 @@ namespace APP
             else
             {
                 metroGrid1.Enabled = BtnSwitch.Enabled = true;
+                if (Process_BUL.LoadByClass(ComboBoxClass.SelectedValue.ToString(), ComboBoxTerm.SelectedValue.ToString())!=null)
                 metroGrid1.DataSource = Process_BUL.LoadByClass(ComboBoxClass.SelectedValue.ToString(), ComboBoxTerm.SelectedValue.ToString());
+                else
+                {
+                    return;
+                }
             }
         }
         private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -126,7 +131,7 @@ namespace APP
             ComboBoxTargetTerm.DataSource = Term_BUL.LoadBySC(ComboboxTargetSchoolYear.SelectedValue.ToString());
             ComboBoxTargetTerm.ValueMember = "ID";
             ComboBoxTargetTerm.DisplayMember = "Name";
-            if (Class_BUL.LoadBySC(ComboboxTargetSchoolYear.SelectedValue.ToString()) == null && Term_BUL.LoadBySC(ComboboxTargetSchoolYear.SelectedValue.ToString()) == null)
+            if (Class_BUL.LoadBySC(ComboboxTargetSchoolYear.SelectedValue.ToString()) == null || Term_BUL.LoadBySC(ComboboxTargetSchoolYear.SelectedValue.ToString()) == null)
             {
                 metroGrid2.DataSource = null;
                 metroGrid2.Enabled = BtnSwitchUp.Enabled = false;
@@ -139,7 +144,7 @@ namespace APP
         }
         private void ComboBoxTargetTerm_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Class_BUL.LoadBySC(ComboboxTargetSchoolYear.SelectedValue.ToString()) == null && Term_BUL.LoadBySC(ComboboxTargetSchoolYear.SelectedValue.ToString()) == null)
+            if (Class_BUL.LoadBySC(ComboboxTargetSchoolYear.SelectedValue.ToString()) == null || Term_BUL.LoadBySC(ComboboxTargetSchoolYear.SelectedValue.ToString()) == null)
             {
                 metroGrid2.Enabled = BtnSwitchUp.Enabled = false;
                 metroGrid2.DataSource = null;
@@ -164,6 +169,9 @@ namespace APP
         }
         private void BtnSwitchUp_Click(object sender, EventArgs e)
         {
+
+
+
             if (ComboBoxSchoolYear.SelectedValue.ToString()!=ComboboxTargetSchoolYear.SelectedValue.ToString())
             {
                 MessageBox.Show("Không thể chuyển vì khác năm học!");

@@ -163,6 +163,7 @@
             this.BtnGuide.TabIndex = 5;
             this.BtnGuide.Text = "Hướng dẫn";
             this.BtnGuide.UseVisualStyleBackColor = true;
+            this.BtnGuide.Click += new System.EventHandler(this.BtnGuide_Click);
             // 
             // ConfigRule
             // 

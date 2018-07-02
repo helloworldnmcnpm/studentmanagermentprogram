@@ -45,5 +45,13 @@ namespace BUL
         {
             return Process_DAL.ListProcessByClass(ClassID);
         }
+        public static List<Process_DTO> ListProcessByTermAndID(int StudentID, string TermID)
+        {
+            return Process_DAL.ListProcessByTermAndID(StudentID, TermID);
+        }
+        public static bool DeleteProcess(int ID)
+        {
+            return Process_DAL.DeleteProcess(ID);
+        }
     }
 }

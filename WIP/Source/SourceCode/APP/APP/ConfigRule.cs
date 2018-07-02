@@ -93,5 +93,11 @@ namespace APP
                 Scoretxt.SelectionStart = Scoretxt.Text.Length;
             }
         }
+
+        private void BtnGuide_Click(object sender, EventArgs e)
+        {
+            Tutorial.Tutorial_Rule tutorial_Rule = new Tutorial.Tutorial_Rule();
+            tutorial_Rule.ShowDialog();
+        }
     }
 }

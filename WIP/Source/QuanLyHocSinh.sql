@@ -251,16 +251,7 @@ begin
 	    end
 end
 go
-create proc USP_ChuyenLop
- @MaHocKy nvarchar(100),@MaLop nvarchar(100),@MaHocSinh int
-as
-begin
-	update QUATRINHHOC
-	set MaLop=@MaLop
-	where  MaHocKy=@MaHocKy and MaHocSinh=@MaHocSinh
-end
 
-go
 --Tạo proc Lên lớp
 create proc USP_LenLop
  @MaHocKy nvarchar(100),@MaLop nvarchar(100),@MaHocSinh int

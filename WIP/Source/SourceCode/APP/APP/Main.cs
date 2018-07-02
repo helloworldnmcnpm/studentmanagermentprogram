@@ -275,12 +275,7 @@ namespace APP
             dataVisualizer.ShowDialog();
             this.WindowState = FormWindowState.Normal;
         }
-
-        private void materialFlatButton4_Click(object sender, EventArgs e)
-        {
-            ReportSchoolYear.ReportBySchoolYear reportBySchoolYear = new ReportSchoolYear.ReportBySchoolYear();
-            reportBySchoolYear.ShowDialog();
-        }
+        
 
         private void materialFlatButton7_Click(object sender, EventArgs e)
         {

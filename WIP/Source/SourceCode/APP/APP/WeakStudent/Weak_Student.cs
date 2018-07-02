@@ -49,6 +49,7 @@ namespace APP.WeakStudent
             dt.Columns.Add(new DataColumn("ClassID", typeof(string)));
             List<Process_DTO> process_DTOs = new List<Process_DTO>();
             List<Process_DTO> ListWeak = new List<Process_DTO>();
+            if (Process_BUL.ListStudentByTerm(TermID) == null) return;
             process_DTOs = Process_BUL.ListStudentByTerm(TermID);
             for (int i = 0; i < process_DTOs.Count; i++)
             {
