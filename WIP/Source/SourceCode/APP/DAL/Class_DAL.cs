@@ -92,5 +92,21 @@ namespace DAL
             string QueryString = string.Format("Select TenLop from LOP where MaLop='{0}'", ClassID);
             return DataProvider.ExecuteScalaMethod(QueryString);
         }
+        public static Class_DTO LoadByID(string classID)
+        {
+            string QueryString = string.Format("Select * from LOP where MaLop='{0}'", classID);
+            DataTable dt = DataProvider.dataTableQuery(QueryString);
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                Class_DTO class_DTO;
+                class_DTO = new Class_DTO();
+                class_DTO.ID = dt.Rows[0]["MaLop"].ToString();
+                class_DTO.Name = dt.Rows[0]["TenLop"].ToString();
+                class_DTO.SCID = dt.Rows[0]["MaNamHoc"].ToString();
+                class_DTO.GradeID = dt.Rows[0]["MaKhoi"].ToString();
+                class_DTO.Students = Convert.ToInt32(dt.Rows[0]["SiSo"].ToString());
+                return class_DTO;
+            }return null;
+        }
     }
 }

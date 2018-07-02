@@ -30,6 +30,7 @@
         {
             this.Tabcontrol = new MetroFramework.Controls.MetroTabControl();
             this.Profile = new MetroFramework.Controls.MetroTabPage();
+            this.materialFlatButton7 = new MaterialSkin.Controls.MaterialFlatButton();
             this.ChangeClass = new MaterialSkin.Controls.MaterialFlatButton();
             this.InsertStudent = new MaterialSkin.Controls.MaterialFlatButton();
             this.Student = new MaterialSkin.Controls.MaterialFlatButton();
@@ -46,7 +47,6 @@
             this.Report = new MetroFramework.Controls.MetroTabPage();
             this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
             this.Settings = new MetroFramework.Controls.MetroTabPage();
-            this.materialFlatButton6 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton5 = new MaterialSkin.Controls.MaterialFlatButton();
             this.Activities = new System.Windows.Forms.FlowLayoutPanel();
             this.ForceExit = new MaterialSkin.Controls.MaterialFlatButton();
@@ -69,8 +69,8 @@
             this.Tabcontrol.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
             this.Tabcontrol.Location = new System.Drawing.Point(0, 64);
             this.Tabcontrol.Name = "Tabcontrol";
-            this.Tabcontrol.SelectedIndex = 0;
-            this.Tabcontrol.Size = new System.Drawing.Size(803, 100);
+            this.Tabcontrol.SelectedIndex = 3;
+            this.Tabcontrol.Size = new System.Drawing.Size(878, 100);
             this.Tabcontrol.Style = MetroFramework.MetroColorStyle.Blue;
             this.Tabcontrol.TabIndex = 2;
             this.Tabcontrol.UseSelectable = true;
@@ -78,6 +78,7 @@
             // 
             // Profile
             // 
+            this.Profile.Controls.Add(this.materialFlatButton7);
             this.Profile.Controls.Add(this.ChangeClass);
             this.Profile.Controls.Add(this.InsertStudent);
             this.Profile.Controls.Add(this.Student);
@@ -91,12 +92,28 @@
             this.Profile.HorizontalScrollbarSize = 10;
             this.Profile.Location = new System.Drawing.Point(4, 44);
             this.Profile.Name = "Profile";
-            this.Profile.Size = new System.Drawing.Size(795, 52);
+            this.Profile.Size = new System.Drawing.Size(870, 52);
             this.Profile.TabIndex = 0;
             this.Profile.Text = "Quản lý hồ sơ";
             this.Profile.VerticalScrollbarBarColor = true;
             this.Profile.VerticalScrollbarHighlightOnWheel = false;
             this.Profile.VerticalScrollbarSize = 10;
+            // 
+            // materialFlatButton7
+            // 
+            this.materialFlatButton7.AutoSize = true;
+            this.materialFlatButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton7.Depth = 0;
+            this.materialFlatButton7.Location = new System.Drawing.Point(804, 6);
+            this.materialFlatButton7.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton7.Name = "materialFlatButton7";
+            this.materialFlatButton7.Primary = false;
+            this.materialFlatButton7.Size = new System.Drawing.Size(66, 36);
+            this.materialFlatButton7.TabIndex = 10;
+            this.materialFlatButton7.Text = "Lên lớp";
+            this.materialFlatButton7.UseVisualStyleBackColor = true;
+            this.materialFlatButton7.Click += new System.EventHandler(this.materialFlatButton7_Click);
             // 
             // ChangeClass
             // 
@@ -235,9 +252,9 @@
             this.Studying.HorizontalScrollbarBarColor = true;
             this.Studying.HorizontalScrollbarHighlightOnWheel = false;
             this.Studying.HorizontalScrollbarSize = 10;
-            this.Studying.Location = new System.Drawing.Point(4, 44);
+            this.Studying.Location = new System.Drawing.Point(4, 35);
             this.Studying.Name = "Studying";
-            this.Studying.Size = new System.Drawing.Size(795, 52);
+            this.Studying.Size = new System.Drawing.Size(870, 61);
             this.Studying.TabIndex = 1;
             this.Studying.Text = "Quản lý học tập";
             this.Studying.VerticalScrollbarBarColor = true;
@@ -316,7 +333,7 @@
             this.Report.HorizontalScrollbarSize = 10;
             this.Report.Location = new System.Drawing.Point(4, 35);
             this.Report.Name = "Report";
-            this.Report.Size = new System.Drawing.Size(795, 61);
+            this.Report.Size = new System.Drawing.Size(870, 61);
             this.Report.TabIndex = 2;
             this.Report.Text = "Báo cáo";
             this.Report.VerticalScrollbarBarColor = true;
@@ -333,41 +350,26 @@
             this.materialFlatButton4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton4.Name = "materialFlatButton4";
             this.materialFlatButton4.Primary = false;
-            this.materialFlatButton4.Size = new System.Drawing.Size(70, 36);
+            this.materialFlatButton4.Size = new System.Drawing.Size(136, 36);
             this.materialFlatButton4.TabIndex = 7;
-            this.materialFlatButton4.Text = "Báo cáo";
+            this.materialFlatButton4.Text = "Báo cáo năm học";
             this.materialFlatButton4.UseVisualStyleBackColor = true;
+            this.materialFlatButton4.Click += new System.EventHandler(this.materialFlatButton4_Click);
             // 
             // Settings
             // 
-            this.Settings.Controls.Add(this.materialFlatButton6);
             this.Settings.Controls.Add(this.materialFlatButton5);
             this.Settings.HorizontalScrollbarBarColor = true;
             this.Settings.HorizontalScrollbarHighlightOnWheel = false;
             this.Settings.HorizontalScrollbarSize = 10;
-            this.Settings.Location = new System.Drawing.Point(4, 35);
+            this.Settings.Location = new System.Drawing.Point(4, 44);
             this.Settings.Name = "Settings";
-            this.Settings.Size = new System.Drawing.Size(795, 61);
+            this.Settings.Size = new System.Drawing.Size(870, 52);
             this.Settings.TabIndex = 3;
             this.Settings.Text = "Cài đặt";
             this.Settings.VerticalScrollbarBarColor = true;
             this.Settings.VerticalScrollbarHighlightOnWheel = false;
             this.Settings.VerticalScrollbarSize = 10;
-            // 
-            // materialFlatButton6
-            // 
-            this.materialFlatButton6.AutoSize = true;
-            this.materialFlatButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton6.Depth = 0;
-            this.materialFlatButton6.Location = new System.Drawing.Point(76, 6);
-            this.materialFlatButton6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton6.Name = "materialFlatButton6";
-            this.materialFlatButton6.Primary = false;
-            this.materialFlatButton6.Size = new System.Drawing.Size(84, 36);
-            this.materialFlatButton6.TabIndex = 8;
-            this.materialFlatButton6.Text = "Tài khoản";
-            this.materialFlatButton6.UseVisualStyleBackColor = true;
             // 
             // materialFlatButton5
             // 
@@ -379,9 +381,9 @@
             this.materialFlatButton5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton5.Name = "materialFlatButton5";
             this.materialFlatButton5.Primary = false;
-            this.materialFlatButton5.Size = new System.Drawing.Size(64, 36);
+            this.materialFlatButton5.Size = new System.Drawing.Size(189, 36);
             this.materialFlatButton5.TabIndex = 7;
-            this.materialFlatButton5.Text = "Cài đặt";
+            this.materialFlatButton5.Text = "Đổi mật khẩu đăng nhập";
             this.materialFlatButton5.UseVisualStyleBackColor = true;
             this.materialFlatButton5.Click += new System.EventHandler(this.materialFlatButton5_Click);
             // 
@@ -403,7 +405,7 @@
             this.ForceExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ForceExit.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ForceExit.Depth = 0;
-            this.ForceExit.Location = new System.Drawing.Point(810, 80);
+            this.ForceExit.Location = new System.Drawing.Point(918, 121);
             this.ForceExit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ForceExit.MouseState = MaterialSkin.MouseState.HOVER;
             this.ForceExit.Name = "ForceExit";
@@ -477,7 +479,6 @@
         private MaterialSkin.Controls.MaterialFlatButton BtnSubject;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton6;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton5;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private MaterialSkin.Controls.MaterialFlatButton ForceExit;
@@ -485,6 +486,7 @@
         private MaterialSkin.Controls.MaterialFlatButton InsertStudent;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private MaterialSkin.Controls.MaterialFlatButton BtnDataVisualizerMode;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton7;
     }
 }
 

@@ -79,7 +79,6 @@ namespace APP
             {
                 BtnSwitch.Enabled = true;
             }
-
         }
         private void metroGrid1_MultiSelectChanged(object sender, EventArgs e)
         {
@@ -95,6 +94,11 @@ namespace APP
         }
         private void BtnSwitch_Click(object sender, EventArgs e)
         {
+            if (ComboBoxSchoolYear.SelectedValue.ToString() != ComboboxTargetSchoolYear.SelectedValue.ToString())
+            {
+                MessageBox.Show("Không thể chuyển vì khác năm học!");
+                return;
+            }
             if (Class_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null || Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null) return;
             for (int i = 0; i < metroGrid1.SelectedRows.Count; i++)
             {
@@ -106,7 +110,6 @@ namespace APP
             metroGrid1.DataSource = Process_BUL.LoadByClass(ComboBoxClass.SelectedValue.ToString(), ComboBoxTerm.SelectedValue.ToString());
             metroGrid2.DataSource = Process_BUL.LoadByClass(ComboBoxTargetClass.SelectedValue.ToString(), ComboBoxTargetTerm.SelectedValue.ToString());
         }
-
         /// <summary>
         /// TARGET
         /// </summary>
@@ -161,6 +164,11 @@ namespace APP
         }
         private void BtnSwitchUp_Click(object sender, EventArgs e)
         {
+            if (ComboBoxSchoolYear.SelectedValue.ToString()!=ComboboxTargetSchoolYear.SelectedValue.ToString())
+            {
+                MessageBox.Show("Không thể chuyển vì khác năm học!");
+                return;
+            }
             if (Class_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null || Term_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null) return;
 
             for (int i = 0; i < metroGrid2.SelectedRows.Count; i++)
@@ -173,6 +181,12 @@ namespace APP
             }
             metroGrid1.DataSource = Process_BUL.LoadByClass(ComboBoxClass.SelectedValue.ToString(), ComboBoxTerm.SelectedValue.ToString());
             metroGrid2.DataSource = Process_BUL.LoadByClass(ComboBoxTargetClass.SelectedValue.ToString(), ComboBoxTargetTerm.SelectedValue.ToString());
+        }
+        private void BtnGuide_Click(object sender, EventArgs e)
+        {
+            Tutorial.Tutorial_SwitchClass tutorial_SwitchClass = new Tutorial.Tutorial_SwitchClass();
+            tutorial_SwitchClass.ShowDialog();
+            this.Refresh();
         }
     }
 }

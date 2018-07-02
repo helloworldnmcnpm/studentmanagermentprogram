@@ -121,12 +121,38 @@ namespace APP
         /// <param name="e"></param>
         private void BtnAdd_Click(object sender, EventArgs e)
         {
+            {
+                if (Phonetxt.Text.Length != 10 && Phonetxt.Text.Length != 11)
+                {
+                    MessageBox.Show("Số điện thoại phải bằng 10 hoặc 11 số!");
+                    return;
+                }
+            }
+
             if (Nametxt.Text == "" || Addresstxt.Text == "" || Phonetxt.Text == "")
             {
-                Nametxt_TextChanged(sender, e);
-                Addresstxt_TextChanged(sender, e);
-                Phonetxt_TextChanged(sender, e);
-                return;
+                
+                if (Nametxt.Text == "")
+                {
+                    MessageBox.Show("Tên không được để trống!");
+                    Nametxt_TextChanged(sender, e);
+                    Nametxt.SelectionStart = Nametxt.Text.Length;
+                    return;
+                }
+                if (Addresstxt.Text == "")
+                {
+                    MessageBox.Show("Địa chỉ không được để trống!");
+                    Addresstxt_TextChanged(sender, e);
+                    Addresstxt.SelectionStart = Addresstxt.Text.Length;
+                    return;
+                }
+                if (Phonetxt.Text == "")
+                {
+                    MessageBox.Show("Số điện thoại không được để trống!");
+                    Phonetxt_TextChanged(sender, e);
+                    Phonetxt.SelectionStart = Phonetxt.Text.Length;
+                    return;
+                }
             }
             Student_DTO student_DTO = new Student_DTO();
             student_DTO.Name = Nametxt.Text;
@@ -251,7 +277,6 @@ namespace APP
         }
         private void Phonetxt_TextChanged(object sender, EventArgs e)
         {
-            
             if (Phonetxt.Text=="")
             {
                 BtnAdd.Enabled = BtnUpdate.Enabled = false;
@@ -427,6 +452,13 @@ namespace APP
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void BtnGuide_Click(object sender, EventArgs e)
+        {
+            Tutorial.Tutorial_AddStudent tutorial_AddStudent = new Tutorial.Tutorial_AddStudent();
+            tutorial_AddStudent.ShowDialog();
+            this.Refresh();
         }
     }
 }

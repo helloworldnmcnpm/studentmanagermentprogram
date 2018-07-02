@@ -117,4 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>HƯỚNG DẪN THÊM BẢNG ĐIỂM MÔN
+
+THÊM BẢNG ĐIỂM MÔN
+-CÁCH 1:
+Bước 1: Chọn năm học và lớp để load danh sách học sinh.
+Bước 2: Chọn học sinh cần tạo bảng điểm môn.
+Bước 3: Viết mã bảng điểm môn. (Đặc trưng riêng của mỗi môn, mỗi học sinh, trong 1 học kỳ xác định).
+Bước 4: Chọn môn và học kỳ.
+Bước 5: Nhấn thêm để thêm bảng điểm môn.
+-CÁCH 2:
+Bước 1: Nhấn vào phím "Thêm nhanh bảng điểm môn", phần mềm sẽ tự động tạo 1 danh sách bảng điểm môn cho 1 học sinh.
+
+XÓA BẢNG ĐIỂM MÔN (BẢNG ĐIỂM NÀY CHƯA NHẬP BẤT KỲ ĐIỂM NÀO)
+Bước 1: Chọn bảng điểm cần xóa.
+Bước 2: Nhấn vào phím xóa để xóa bảng điểm.</value>
+  </data>
 </root>

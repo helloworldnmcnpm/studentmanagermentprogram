@@ -164,9 +164,11 @@ namespace APP
                 string SubjectID = ComboboxSubject.SelectedValue.ToString();
                 string ScoreBySubjectID = ScoreBySubject_BUL.GetID(ProcessID, SubjectID);
                 metroGrid2.DataSource = DetailScore_BUL.LoadBySBSID(ScoreBySubjectID);
+                UpdateScore(int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString()), ComboBoxListClass.SelectedValue.ToString(), ComboBoxListTerm.SelectedValue.ToString());
+
+                UpdateAllScoreBySubject(Process_BUL.GetProcess(int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString()), ComboBoxListTerm.SelectedValue.ToString(), ComboBoxListClass.SelectedValue.ToString()));
             }
         }
-
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             if (Scoretxt.Text == "")
@@ -202,11 +204,14 @@ namespace APP
                 {
                     //UPDATEPROCESS
                     Process_BUL.InitialFinalScore(ProcessID);
+                    UpdateScore(int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString()), ComboBoxListClass.SelectedValue.ToString(),ComboBoxListTerm.SelectedValue.ToString());
+                    UpdateAllScoreBySubject(Process_BUL.GetProcess(int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString()), ComboBoxListTerm.SelectedValue.ToString(), ComboBoxListClass.SelectedValue.ToString()));
                 }
                 else
                 {
                     MessageBox.Show("Cập nhật bảng điểm môn <Điểm TBM> thất bại!", "Thông báo!");
                 }
+
             }
 
         }
@@ -243,6 +248,9 @@ namespace APP
                         {
                             //UPDATEPROCESS
                             Process_BUL.InitialFinalScore(ProcessID);
+                            UpdateScore(int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString()), ComboBoxListClass.SelectedValue.ToString(), ComboBoxListTerm.SelectedValue.ToString());
+
+                            UpdateAllScoreBySubject(Process_BUL.GetProcess(int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString()), ComboBoxListTerm.SelectedValue.ToString(), ComboBoxListClass.SelectedValue.ToString()));
                         }
                         else
                         {
@@ -261,6 +269,9 @@ namespace APP
                         {
                             //UPDATEPROCESS
                             Process_BUL.InitialFinalScore(ProcessID);
+                            UpdateScore(int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString()), ComboBoxListClass.SelectedValue.ToString(), ComboBoxListTerm.SelectedValue.ToString());
+
+                            UpdateAllScoreBySubject(Process_BUL.GetProcess(int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString()), ComboBoxListTerm.SelectedValue.ToString(), ComboBoxListClass.SelectedValue.ToString()));
                         }
                         else
                         {
@@ -284,6 +295,9 @@ namespace APP
                 if (DetailScore_BUL.UpdateScoreByStudent(Convert.ToInt32(metroGrid2.SelectedRows[0].Cells[1].Value.ToString()), Convert.ToDouble(Scoretxt.Text)))
                 {
                     metroGrid2.DataSource = DetailScore_BUL.LoadBySBSID(ScoreBySubjectID);
+                    UpdateScore(int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString()), ComboBoxListClass.SelectedValue.ToString(), ComboBoxListTerm.SelectedValue.ToString());
+
+                    UpdateAllScoreBySubject(Process_BUL.GetProcess(int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString()), ComboBoxListTerm.SelectedValue.ToString(), ComboBoxListClass.SelectedValue.ToString()));
                 }
                 else
                 {
@@ -303,6 +317,9 @@ namespace APP
                 {
                     //UPDATEPROCESS
                     Process_BUL.InitialFinalScore(ProcessID);
+                    UpdateScore(int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString()), ComboBoxListClass.SelectedValue.ToString(), ComboBoxListTerm.SelectedValue.ToString());
+
+                    UpdateAllScoreBySubject(Process_BUL.GetProcess(int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString()), ComboBoxListTerm.SelectedValue.ToString(), ComboBoxListClass.SelectedValue.ToString()));
                 }
                 else
                 {
@@ -311,45 +328,98 @@ namespace APP
             }
 
         }
-
         private void InsertScoreByExcel_Click(object sender, EventArgs e)
         {
-            /*
-            string ssqltable = "QUANLYHOCSINH";
-            //string myexceldataquery =...;
-            try
+            ImportFromExcel.Import_From_Excel import_From_Excel = new ImportFromExcel.Import_From_Excel();
+            import_From_Excel.ShowDialog();
+            UpdateAllScoreBySubject(Process_BUL.GetProcess(int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString()), ComboBoxListTerm.SelectedValue.ToString(), ComboBoxListClass.SelectedValue.ToString()));
+        }
+        private void UpdateScore(int StudentID, string ClassID, string TermID)
+        {
+            if (Process_BUL.GetProcess(StudentID, ClassID, TermID) != null)
             {
-                //create our connection strings
-                string sexcelconnectionstring = @"provider=microsoft.jet.oledb.4.0;data source=" + excelfilepath +
-                ";extended properties=" + "\"excel 8.0;hdr=yes;\"";
-                string ssqlconnectionstring = "server=mydatabaseservername;user
-                id = dbuserid; password = dbuserpassword; database = databasename; connection reset = false";
-                //execute a query to erase any previous data from our destination table
-        string sclearsql = "delete from " + ssqltable;
-                sqlconnection sqlconn = new sqlconnection(ssqlconnectionstring);
-                sqlcommand sqlcmd = new sqlcommand(sclearsql, sqlconn);
-                sqlconn.open();
-                sqlcmd.executenonquery();
-                sqlconn.close();
-                //series of commands to bulk copy data from the excel file into our sql table
-                oledbconnection oledbconn = new oledbconnection(sexcelconnectionstring);
-                oledbcommand oledbcmd = new oledbcommand(myexceldataquery, oledbconn);
-                oledbconn.open();
-                oledbdatareader dr = oledbcmd.executereader();
-                sqlbulkcopy bulkcopy = new sqlbulkcopy(ssqlconnectionstring);
-                bulkcopy.destinationtablename = ssqltable;
-                while (dr.read())
+                Process_DTO Process_Of_Student = Process_BUL.GetProcess(StudentID, ClassID, TermID);
+                List<ScoreBySubject_DTO> ListScoreBySubject = ScoreBySubject_BUL.LoadByProcessID(Process_Of_Student.ID);
+                //Lấy từng bảng điểm
+                for (int i = 0; i < ListScoreBySubject.Count; i++)
                 {
-                    bulkcopy.writetoserver(dr);
+                    //lấy từng chi tiết bảng điểm.
+                    {
+                        List<DetailScore_DTO> ListDetail = DetailScore_BUL.LoadBySBSID(ListScoreBySubject[i].ID);
+                        //Lấy từng loại kiểm tra.
+                        List<TypeExam_DTO> typeExam_DTOs = TypeExam_BUL.Load();
+                        //Lặp loại kiểm tra để tính điểm.
+                        if (!Process_BUL.UpdateFinalScore(Calculate(ListDetail, typeExam_DTOs),Process_Of_Student.ID))
+                        {
+                            MessageBox.Show("Cập nhật điểm học kỳ thất bại!");
+                        }
+                    }
                 }
-
-                oledbconn.close();
             }
-            catch (exception ex)
+            else return;
+        }
+        private double Calculate(List<DetailScore_DTO> ListDetail, List<TypeExam_DTO> typeExam_DTOs)
+        {
+            double totalScore = 0, TotalIndex = 0;
+            for (int i = 0; i < typeExam_DTOs.Count; i++)
             {
-                //handle exception
+                int index = typeExam_DTOs[i].Index,count=0;
+                double AveScore = 0;
+                for (int j = 0; j < ListDetail.Count; j++)
+                {
+                    if (ListDetail[j].TypeExamID == typeExam_DTOs[i].ID)
+                    {
+                        AveScore += ListDetail[j].Score;
+                        count++;
+                    }
+                }
+                if (count == 0) count = 1;
+                count = count * index;
+                totalScore += AveScore*index;
+                TotalIndex += count;
             }
-            */
+            totalScore = Math.Round((double)totalScore / (double)TotalIndex,2,MidpointRounding.AwayFromZero);
+            return totalScore;
+        }
+        private void BtnGuide_Click(object sender, EventArgs e)
+        {
+            Tutorial.Tutorial_AddScore tutorial_AddScore = new Tutorial.Tutorial_AddScore();
+            tutorial_AddScore.ShowDialog();
+            this.Refresh();
+        }
+
+        private void UpdateAllScoreBySubject(Process_DTO process_DTO)
+        {
+            //Load danh sách bảng điểm môn
+            if (ScoreBySubject_BUL.LoadByProcessID(process_DTO.ID) == null) return;
+            else
+            {
+                //Có danh sách. Load các chi tiết bảng điểm môn phù hợp với từng bảng điểm môn.
+                List<ScoreBySubject_DTO> scoreBySubject_DTOs = ScoreBySubject_BUL.LoadByProcessID(process_DTO.ID);
+                for (int i = 0; i < scoreBySubject_DTOs.Count; i++)
+                {
+                    //Nếu chi tiết bảng điểm môn không có. Bảng điểm môn này sẽ bằng 0.
+                    if (DetailScore_BUL.LoadBySBSID(scoreBySubject_DTOs[i].ID) == null)
+                    {
+                        ScoreBySubject_BUL.UpdateScore(scoreBySubject_DTOs[i].ID, 0);
+                    }
+                    else
+                    {
+                        //Load được danh sách chi tiết bảng điểm tương ứng với bảng điểm môn.
+                        List<DetailScore_DTO> detailScore_DTOs = DetailScore_BUL.LoadBySBSID(scoreBySubject_DTOs[i].ID);
+                        //Load loại kiểm tra.
+                        List<TypeExam_DTO> typeExam_DTOs = TypeExam_BUL.Load();
+                        //Tính điểm trung bình theo loại kiểm tra và chi tiết bảng điểm môn
+                        double score = Math.Round(Calculate(detailScore_DTOs, typeExam_DTOs),2,MidpointRounding.AwayFromZero);
+                        ScoreBySubject_BUL.UpdateScore(scoreBySubject_DTOs[i].ID,score);
+                    }
+                }
+            }
+        }
+
+        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

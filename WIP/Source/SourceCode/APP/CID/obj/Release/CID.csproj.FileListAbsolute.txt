@@ -1,0 +1,6 @@
+D:\Users\tranm\source\repos\APP\CID\bin\Release\CID.dll
+D:\Users\tranm\source\repos\APP\CID\bin\Release\CID.pdb
+D:\Users\tranm\source\repos\APP\CID\obj\Release\CID.csprojAssemblyReference.cache
+D:\Users\tranm\source\repos\APP\CID\obj\Release\CID.csproj.CoreCompileInputs.cache
+D:\Users\tranm\source\repos\APP\CID\obj\Release\CID.dll
+D:\Users\tranm\source\repos\APP\CID\obj\Release\CID.pdb

@@ -148,6 +148,7 @@
             this.BtnGuide.TabIndex = 7;
             this.BtnGuide.Text = "Hướng dẫn";
             this.BtnGuide.UseVisualStyleBackColor = true;
+            this.BtnGuide.Click += new System.EventHandler(this.BtnGuide_Click);
             // 
             // BtnDelete
             // 

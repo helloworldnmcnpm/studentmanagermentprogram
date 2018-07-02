@@ -257,6 +257,18 @@
     <Compile Include="ClassDashboard\ScoreBoard.Designer.cs">
       <DependentUpon>ScoreBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportSchoolYear\ReportBySchoolYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportSchoolYear\ReportBySchoolYear.Designer.cs">
+      <DependentUpon>ReportBySchoolYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreBySubject\ScoreBySubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScoreBySubject\ScoreBySubject.Designer.cs">
+      <DependentUpon>ScoreBySubject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Search\SearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,6 +334,60 @@
     </Compile>
     <Compile Include="Tutorial\Tutorial_AddScoreBySubject.Designer.cs">
       <DependentUpon>Tutorial_AddScoreBySubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_AddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_AddStudent.Designer.cs">
+      <DependentUpon>Tutorial_AddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_AddTerm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_AddTerm.Designer.cs">
+      <DependentUpon>Tutorial_AddTerm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_AddTypeExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_AddTypeExam.Designer.cs">
+      <DependentUpon>Tutorial_AddTypeExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_InsertStudentToAClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_InsertStudentToAClass.Designer.cs">
+      <DependentUpon>Tutorial_InsertStudentToAClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_Rule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_Rule.Designer.cs">
+      <DependentUpon>Tutorial_Rule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_Subject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_Subject.Designer.cs">
+      <DependentUpon>Tutorial_Subject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_SwitchClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_SwitchClass.Designer.cs">
+      <DependentUpon>Tutorial_SwitchClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_UpClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial\Tutorial_UpClass.Designer.cs">
+      <DependentUpon>Tutorial_UpClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpClass.Designer.cs">
+      <DependentUpon>UpClass.cs</DependentUpon>
     </Compile>
     <Compile Include="WeakStudent\OrderByClass.cs">
       <SubType>Form</SubType>
@@ -417,6 +483,12 @@
     <EmbeddedResource Include="ClassDashboard\ScoreBoard.resx">
       <DependentUpon>ScoreBoard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportSchoolYear\ReportBySchoolYear.resx">
+      <DependentUpon>ReportBySchoolYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScoreBySubject\ScoreBySubject.resx">
+      <DependentUpon>ScoreBySubject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Search\SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -449,6 +521,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tutorial\Tutorial_AddScoreBySubject.resx">
       <DependentUpon>Tutorial_AddScoreBySubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\Tutorial_AddStudent.resx">
+      <DependentUpon>Tutorial_AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\Tutorial_AddTerm.resx">
+      <DependentUpon>Tutorial_AddTerm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\Tutorial_AddTypeExam.resx">
+      <DependentUpon>Tutorial_AddTypeExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\Tutorial_InsertStudentToAClass.resx">
+      <DependentUpon>Tutorial_InsertStudentToAClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\Tutorial_Rule.resx">
+      <DependentUpon>Tutorial_Rule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\Tutorial_Subject.resx">
+      <DependentUpon>Tutorial_Subject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\Tutorial_SwitchClass.resx">
+      <DependentUpon>Tutorial_SwitchClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial\Tutorial_UpClass.resx">
+      <DependentUpon>Tutorial_UpClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpClass.resx">
+      <DependentUpon>UpClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WeakStudent\OrderByClass.resx">
       <DependentUpon>OrderByClass.cs</DependentUpon>
@@ -542,6 +641,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\calculation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Delete_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Checkmark_24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

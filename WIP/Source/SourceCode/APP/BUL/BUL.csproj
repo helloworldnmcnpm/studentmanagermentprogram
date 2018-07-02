@@ -46,6 +46,7 @@
     <Compile Include="Login_BUL.cs" />
     <Compile Include="Process_BUL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportByTerm_BUL.cs" />
     <Compile Include="Rule_BUL.cs" />
     <Compile Include="SchoolYear_BUL.cs" />
     <Compile Include="ScoreBySubject_BUL.cs" />

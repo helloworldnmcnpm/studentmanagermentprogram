@@ -77,3 +77,14 @@ D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Tutorial.Tutorial_AddSchoolYea
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.ImportFromExcel.Import_From_Excel.resources
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Tutorial.Tutorial_AddScore.resources
 D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Tutorial.Tutorial_AddScoreBySubject.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.ScoreBySubject.ScoreBySubject.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Tutorial.Tutorial_AddStudent.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Tutorial.Tutorial_AddTerm.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Tutorial.Tutorial_AddTypeExam.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Tutorial.Tutorial_InsertStudentToAClass.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Tutorial.Tutorial_Rule.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Tutorial.Tutorial_Subject.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Tutorial.Tutorial_SwitchClass.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.ReportSchoolYear.ReportBySchoolYear.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.UpClass.resources
+D:\Users\tranm\source\repos\APP\APP\obj\Debug\APP.Tutorial.Tutorial_UpClass.resources

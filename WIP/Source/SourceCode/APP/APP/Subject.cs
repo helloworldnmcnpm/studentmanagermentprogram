@@ -169,5 +169,12 @@ namespace APP
         {
             Nametxt.Text = Nametxt.Text.Trim();
         }
+
+        private void BtnGuide_Click(object sender, EventArgs e)
+        {
+            Tutorial.Tutorial_Subject tutorial_Subject = new Tutorial.Tutorial_Subject();
+            tutorial_Subject.ShowDialog();
+            this.Refresh();
+        }
     }
 }

@@ -82,6 +82,12 @@ namespace DAL
             return DataProvider.ExecuteNonQueryMethod(QueryString);
         }
 
+        public static bool UpdateFinalScore(double Score,int processID)
+        {
+            string QueryString = string.Format("Update QUATRINHHOC set DiemTBHK='{0}' where MaQuaTrinhHoc='{1}'", Score, processID);
+            return DataProvider.ExecuteNonQueryMethod(QueryString);
+        }
+
         public static List<Process_DTO> ListStudentByTerm(string TermID)
         {
             string QueryString = string.Format("Select * from QUATRINHHOC where MaHocKy='{0}'", TermID);
@@ -94,6 +100,50 @@ namespace DAL
                 {
                     process_DTO = new Process_DTO();
                     process_DTO.ID =Convert.ToInt32(dt.Rows[i]["MaQuaTrinhHoc"].ToString());
+                    process_DTO.StudentID = Convert.ToInt32(dt.Rows[i]["MaHocSinh"].ToString());
+                    process_DTO.TermID = dt.Rows[i]["MaHocKy"].ToString();
+                    process_DTO.ClassID = dt.Rows[i]["MaLop"].ToString();
+                    process_DTO.TotalScore = Convert.ToDouble(dt.Rows[i]["DiemTBHK"].ToString());
+                    process_DTOs.Add(process_DTO);
+                }
+                return process_DTOs;
+            }
+            return null;
+        }
+        public static List<Process_DTO> ListProcessByTermAndClass(string TermID, string ClassID)
+        {
+            string QueryString = string.Format("Select * from QUATRINHHOC where (MaHocKy='{0}' and MaLop='{1}' )", TermID,ClassID);
+            DataTable dt = DataProvider.dataTableQuery(QueryString);
+            List<Process_DTO> process_DTOs = new List<Process_DTO>();
+            if (dt.Rows.Count > 0)
+            {
+                Process_DTO process_DTO;
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    process_DTO = new Process_DTO();
+                    process_DTO.ID = Convert.ToInt32(dt.Rows[i]["MaQuaTrinhHoc"].ToString());
+                    process_DTO.StudentID = Convert.ToInt32(dt.Rows[i]["MaHocSinh"].ToString());
+                    process_DTO.TermID = dt.Rows[i]["MaHocKy"].ToString();
+                    process_DTO.ClassID = dt.Rows[i]["MaLop"].ToString();
+                    process_DTO.TotalScore = Convert.ToDouble(dt.Rows[i]["DiemTBHK"].ToString());
+                    process_DTOs.Add(process_DTO);
+                }
+                return process_DTOs;
+            }
+            return null;
+        }
+        public static List<Process_DTO> ListProcessByClass(string ClassID)
+        {
+            string QueryString = string.Format("Select * from QUATRINHHOC where MaLop='{0}' ", ClassID);
+            DataTable dt = DataProvider.dataTableQuery(QueryString);
+            List<Process_DTO> process_DTOs = new List<Process_DTO>();
+            if (dt.Rows.Count > 0)
+            {
+                Process_DTO process_DTO;
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    process_DTO = new Process_DTO();
+                    process_DTO.ID = Convert.ToInt32(dt.Rows[i]["MaQuaTrinhHoc"].ToString());
                     process_DTO.StudentID = Convert.ToInt32(dt.Rows[i]["MaHocSinh"].ToString());
                     process_DTO.TermID = dt.Rows[i]["MaHocKy"].ToString();
                     process_DTO.ClassID = dt.Rows[i]["MaLop"].ToString();

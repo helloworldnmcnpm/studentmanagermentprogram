@@ -143,5 +143,12 @@ namespace APP
         {
             if (Process_BUL.LoadByClass(ComboBoxListClass.SelectedValue.ToString(), ComboBoxListTerm.SelectedValue.ToString()) == null) return;
         }
+
+        private void BtnGuide_Click(object sender, EventArgs e)
+        {
+            Tutorial.Tutorial_InsertStudentToAClass tutorial_InsertStudentToAClass = new Tutorial.Tutorial_InsertStudentToAClass();
+            tutorial_InsertStudentToAClass.ShowDialog();
+            this.Refresh();
+        }
     }
 }

@@ -180,5 +180,12 @@ namespace APP
             Nametxt.Text = metroGrid1.SelectedRows[0].Cells[1].Value.ToString();
             Indextxt.Text = metroGrid1.SelectedRows[0].Cells[2].Value.ToString();
         }
+
+        private void BtnGuide_Click(object sender, EventArgs e)
+        {
+            Tutorial.Tutorial_AddTypeExam tutorial_AddTypeExam = new Tutorial.Tutorial_AddTypeExam();
+            tutorial_AddTypeExam.ShowDialog();
+            this.Refresh();
+        }
     }
 }

@@ -1,0 +1,9 @@
+D:\Users\tranm\source\repos\APP\DAL\bin\Release\DAL.dll
+D:\Users\tranm\source\repos\APP\DAL\bin\Release\DAL.pdb
+D:\Users\tranm\source\repos\APP\DAL\bin\Release\DTO.dll
+D:\Users\tranm\source\repos\APP\DAL\bin\Release\DTO.pdb
+D:\Users\tranm\source\repos\APP\DAL\obj\Release\DAL.csprojAssemblyReference.cache
+D:\Users\tranm\source\repos\APP\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+D:\Users\tranm\source\repos\APP\DAL\obj\Release\DAL.csproj.CopyComplete
+D:\Users\tranm\source\repos\APP\DAL\obj\Release\DAL.dll
+D:\Users\tranm\source\repos\APP\DAL\obj\Release\DAL.pdb

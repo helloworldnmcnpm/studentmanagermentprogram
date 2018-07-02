@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,10 +40,7 @@ namespace APP
                 comboBox1.DisplayMember = "Name";
                 comboBox1.ValueMember = "ID";
                 comboBox1.DataSource = SchoolYear_BUL.Load();
-            }
-
-            
-            
+            }  
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -131,6 +127,7 @@ namespace APP
                 BtnClass.Enabled = BtnStudent.Enabled = BtnEx.Enabled = BtnIme.Enabled = metroButton1.Enabled = metroButton2.Enabled = true;
                 comboBox2.ValueMember = "ID";
                 comboBox2.DisplayMember = "Name";
+                if (Term_BUL.LoadBySC(comboBox1.SelectedValue.ToString()) == null) return;
                 comboBox2.DataSource = Term_BUL.LoadBySC(comboBox1.SelectedValue.ToString());
             }
             LabelNumberOfClass.Text = Class_BUL.CountBySC(comboBox1.SelectedValue.ToString()).ToString();
@@ -165,6 +162,12 @@ namespace APP
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<Process_DTO> process_DTOs = new List<Process_DTO>();
+            if (comboBox2.DataSource==null)
+            { 
+                labelNumberOfStudent.Text= LabelNumberOfClass.Text = "0";
+                labelPercentEx.Text = labelPercentIme.Text = label5.Text = LabelWeak.Text = LabelNor.Text = "0-0%";
+                return;
+            }
             process_DTOs = Process_BUL.ListStudentByTerm(comboBox2.SelectedValue.ToString());
             List<Process_DTO> ExcellentStudent = new List<Process_DTO>();
             if (process_DTOs != null)
@@ -275,6 +278,12 @@ namespace APP
             Search.SearchForm searchForm = new Search.SearchForm();
             searchForm.NameLike = SearchStudent.Text;
             searchForm.ShowDialog();
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            ScoreBySubject.ScoreBySubject scoreBySubject = new ScoreBySubject.ScoreBySubject();
+            scoreBySubject.ShowDialog();
         }
     }
 }

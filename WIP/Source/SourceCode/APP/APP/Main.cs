@@ -36,6 +36,7 @@ namespace APP
         AddScoreBySubject addScoreBySubject;
         AddTypeExam addTypeExam;
         AddScore addScore;
+        UpClass upClass;
         private void Main_Load(object sender, EventArgs e)
         {
 
@@ -273,6 +274,30 @@ namespace APP
             this.WindowState = FormWindowState.Minimized;
             dataVisualizer.ShowDialog();
             this.WindowState = FormWindowState.Normal;
+        }
+
+        private void materialFlatButton4_Click(object sender, EventArgs e)
+        {
+            ReportSchoolYear.ReportBySchoolYear reportBySchoolYear = new ReportSchoolYear.ReportBySchoolYear();
+            reportBySchoolYear.ShowDialog();
+        }
+
+        private void materialFlatButton7_Click(object sender, EventArgs e)
+        {
+
+            if (!Activities.Controls.Contains(upClass))
+            {
+                upClass = new UpClass();
+                upClass.TopLevel = false;
+                Activities.Controls.Add(upClass);
+                upClass.Show();
+                upClass.BringToFront();
+            }
+            else
+            {
+                upClass.Show();
+                upClass.BringToFront();
+            }
         }
     }
 }

@@ -33,5 +33,17 @@ namespace BUL
         {
             return Process_DAL.ListStudentByTerm(TermID);
         }
+        public static bool UpdateFinalScore(double score,int ProcessID)
+        {
+            return Process_DAL.UpdateFinalScore(score, ProcessID);
+        }
+        public static List<Process_DTO> ListProcessByTermAndClass(string TermID, string ClassID)
+        {
+            return Process_DAL.ListProcessByTermAndClass(TermID, ClassID);
+        }
+        public static List<Process_DTO> ListProcessByClass(string ClassID)
+        {
+            return Process_DAL.ListProcessByClass(ClassID);
+        }
     }
 }

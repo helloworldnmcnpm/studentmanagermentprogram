@@ -51,6 +51,7 @@
     <Compile Include="Process_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportBySubject_DAL.cs" />
+    <Compile Include="ReportByTerm_DAL.cs" />
     <Compile Include="Rule_DAL.cs" />
     <Compile Include="SchoolYear_DAL.cs" />
     <Compile Include="ScoreBySubject_DAL.cs" />

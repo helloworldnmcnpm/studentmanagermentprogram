@@ -48,7 +48,9 @@ namespace APP
 
         private void BtnGuide_Click(object sender, EventArgs e)
         {
-
+            Tutorial.Tutorial_AddScoreBySubject tutorial_AddScoreBySubject = new Tutorial.Tutorial_AddScoreBySubject();
+            tutorial_AddScoreBySubject.ShowDialog();
+            this.Refresh();
         }
 
         private void ComboBoxListSchoolYear_SelectedIndexChanged(object sender, EventArgs e)

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tutorial_AddScoreBySubject));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
@@ -36,15 +37,15 @@
             this.richTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(23, 63);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1177, 661);
+            this.richTextBox1.Size = new System.Drawing.Size(922, 357);
             this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "HƯỚNG DẪN THÊM BẢNG ĐIỂM MÔN\n";
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // Tutorial_AddScoreBySubject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1223, 747);
+            this.ClientSize = new System.Drawing.Size(969, 443);
             this.Controls.Add(this.richTextBox1);
             this.Name = "Tutorial_AddScoreBySubject";
             this.Text = "Hướng dẫn thêm bảng điểm môn";

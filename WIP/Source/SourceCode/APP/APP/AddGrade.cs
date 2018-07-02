@@ -132,5 +132,12 @@ namespace APP
         {
             Nametxt.Text = Nametxt.Text.Trim();
         }
+
+        private void BtnGuide_Click(object sender, EventArgs e)
+        {
+            Tutorial.Tutorial_AddGrade tutorial_AddGrade = new Tutorial.Tutorial_AddGrade();
+            tutorial_AddGrade.ShowDialog();
+            this.Refresh();
+        }
     }
 }

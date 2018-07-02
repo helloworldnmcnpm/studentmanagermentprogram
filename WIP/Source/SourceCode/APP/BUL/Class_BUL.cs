@@ -45,5 +45,9 @@ namespace BUL
         {
             return Class_DAL.GetName(ClassID);
         }
+        public static Class_DTO LoadByID(string classID)
+        {
+            return Class_DAL.LoadByID(classID);
+        }
     }
 }

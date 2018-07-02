@@ -197,6 +197,7 @@
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid1.Size = new System.Drawing.Size(548, 333);
             this.metroGrid1.TabIndex = 45;
+            this.metroGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
             this.metroGrid1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_RowEnter);
             // 
             // iDDataGridViewTextBoxColumn
@@ -362,6 +363,7 @@
             this.BtnGuide.TabIndex = 53;
             this.BtnGuide.Text = "Hướng dẫn";
             this.BtnGuide.UseVisualStyleBackColor = true;
+            this.BtnGuide.Click += new System.EventHandler(this.BtnGuide_Click);
             // 
             // BtnDelete
             // 

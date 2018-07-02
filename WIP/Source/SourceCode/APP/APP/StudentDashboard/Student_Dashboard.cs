@@ -43,6 +43,7 @@ namespace APP.StudentDashboard
             dt.Columns.Add(new DataColumn("Nghề nghiệp mẹ", typeof(string)));
             dt.Columns.Add(new DataColumn("ClassID", typeof(string)));
             DataRow dataRow;
+            if (process_DTOs == null) return;
             for (int i = 0; i < process_DTOs.Count; i++)
             {
                 dataRow = dt.NewRow();

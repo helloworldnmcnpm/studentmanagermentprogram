@@ -111,5 +111,13 @@ namespace APP
         {
             this.BringToFront();
         }
+
+        private void ButtonGuide_Click(object sender, EventArgs e)
+        {
+            Tutorial.Tutorial_AddSchoolYear tutorial_AddSchoolYear = new Tutorial.Tutorial_AddSchoolYear();
+            tutorial_AddSchoolYear.ShowDialog();
+
+            this.Refresh();
+        }
     }
 }

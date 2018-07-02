@@ -234,6 +234,7 @@ namespace APP
             this.ButtonGuide.TabIndex = 5;
             this.ButtonGuide.Text = "Hướng dẫn";
             this.ButtonGuide.UseVisualStyleBackColor = true;
+            this.ButtonGuide.Click += new System.EventHandler(this.ButtonGuide_Click);
             // 
             // AddSchoolYear
             // 

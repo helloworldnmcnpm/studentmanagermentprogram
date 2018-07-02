@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class ReportByTerm_DTO
+    public class ReportByTerm_DTO
     {
-        string TermID { get; set; }
-        string ClassID { get; set; }
-        int NumberOfPassed { get; set; }
-        double PercentOfPassed { get; set; }
+        public string TermID { get; set; }
+        public string ClassID { get; set; }
+        public int NumberOfPassed { get; set; }
+        public double PercentOfPassed { get; set; }
     }
 }

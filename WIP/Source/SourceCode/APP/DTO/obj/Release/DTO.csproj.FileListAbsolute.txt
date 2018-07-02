@@ -1,0 +1,6 @@
+D:\Users\tranm\source\repos\APP\DTO\bin\Release\DTO.dll
+D:\Users\tranm\source\repos\APP\DTO\bin\Release\DTO.pdb
+D:\Users\tranm\source\repos\APP\DTO\obj\Release\DTO.csprojAssemblyReference.cache
+D:\Users\tranm\source\repos\APP\DTO\obj\Release\DTO.csproj.CoreCompileInputs.cache
+D:\Users\tranm\source\repos\APP\DTO\obj\Release\DTO.dll
+D:\Users\tranm\source\repos\APP\DTO\obj\Release\DTO.pdb
