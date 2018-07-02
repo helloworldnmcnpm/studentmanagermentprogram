@@ -121,6 +121,42 @@ namespace APP
         /// <param name="e"></param>
         private void BtnAdd_Click(object sender, EventArgs e)
         {
+            int count = 0;
+            for (int i = 0; i < Nametxt.Text.Length; i++)
+            {
+                if (Nametxt.Text[i] == ' ') count++;
+            }
+            if (count==0)
+            {
+                MessageBox.Show("Tên phải có ít nhất 2 từ!");
+                return;
+            }
+            if (Fathernametxt.Text != "")
+            {
+                count = 0;
+                for (int i = 0; i < Fathernametxt.Text.Length; i++)
+                {
+                    if (Fathernametxt.Text[i] == ' ') count++;
+                }
+                if (count == 0)
+                {
+                    MessageBox.Show("Tên phải có ít nhất 2 từ!");
+                    return;
+                }
+            }
+            if (Mothernametxt.Text != "")
+            {
+                count = 0;
+                for (int i = 0; i < Mothernametxt.Text.Length; i++)
+                {
+                    if (Mothernametxt.Text[i] == ' ') count++;
+                }
+                if (count == 0)
+                {
+                    MessageBox.Show("Tên phải có ít nhất 2 từ!");
+                    return;
+                }
+            }
             {
                 if (Phonetxt.Text.Length != 10 && Phonetxt.Text.Length != 11)
                 {

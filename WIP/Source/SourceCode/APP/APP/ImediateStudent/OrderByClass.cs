@@ -54,6 +54,7 @@ namespace APP.ImediateStudent
                 }
             List<Process_DTO> process_DTOs = new List<Process_DTO>();
             List<Process_DTO> ListImediate = new List<Process_DTO>();
+            if (Process_BUL.ListStudentByTerm(TermID) == null) return;
             process_DTOs = Process_BUL.ListStudentByTerm(TermID);
             for (int i = 0; i < process_DTOs.Count; i++)
             {

@@ -25,7 +25,6 @@ namespace APP
         ClassDashBoard class_Dashboard;
         private void DataVisualizer_Load(object sender, EventArgs e)
         {
-            labelNumberOfStudent.Text = Student_BUL.CountStudent().ToString();
             if (SchoolYear_BUL.Load()==null)
             {
                 comboBox2.DataSource = null;
@@ -168,6 +167,17 @@ namespace APP
                 labelPercentEx.Text = labelPercentIme.Text = label5.Text = LabelWeak.Text = LabelNor.Text = "0-0%";
                 return;
             }
+
+            if (Term_BUL.LoadBySC(comboBox1.SelectedValue.ToString()) == null) return;
+            List<Term_DTO> term_DTOs = new List<Term_DTO>();
+            term_DTOs = Term_BUL.LoadBySC(comboBox1.SelectedValue.ToString());
+            if (Process_BUL.ListStudentByTerm(comboBox2.SelectedValue.ToString())==null)
+            {
+                labelNumberOfStudent.Text = "0";
+                return;
+            }
+            labelNumberOfStudent.Text = Process_BUL.ListStudentByTerm(comboBox2.SelectedValue.ToString()).Count.ToString();
+
             process_DTOs = Process_BUL.ListStudentByTerm(comboBox2.SelectedValue.ToString());
             List<Process_DTO> ExcellentStudent = new List<Process_DTO>();
             if (process_DTOs != null)

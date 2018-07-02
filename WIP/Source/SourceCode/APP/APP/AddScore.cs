@@ -332,7 +332,9 @@ namespace APP
         {
             ImportFromExcel.Import_From_Excel import_From_Excel = new ImportFromExcel.Import_From_Excel();
             import_From_Excel.ShowDialog();
-            UpdateAllScoreBySubject(Process_BUL.GetProcess(int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString()), ComboBoxListTerm.SelectedValue.ToString(), ComboBoxListClass.SelectedValue.ToString()));
+            if (Process_BUL.GetProcess(int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString()), ComboBoxListTerm.SelectedValue.ToString(), ComboBoxListClass.SelectedValue.ToString()) != null)
+                UpdateAllScoreBySubject(Process_BUL.GetProcess(int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString()), ComboBoxListTerm.SelectedValue.ToString(), ComboBoxListClass.SelectedValue.ToString()));
+            else return;
         }
         private void UpdateScore(int StudentID, string ClassID, string TermID)
         {

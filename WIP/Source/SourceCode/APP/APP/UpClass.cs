@@ -61,27 +61,34 @@ namespace APP
 
         private void ComboBoxSchoolYear_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<SchoolYear_DTO> listNext= SchoolYear_BUL.Load();
-            for (int i = 0; i < listNext.Count; i++)
+            if (SchoolYear_BUL.Load() != null)
             {
-                if (listNext[i].Begin <= SchoolYear_BUL.LoadASY(ComboBoxSchoolYear.SelectedValue.ToString()).Begin)
+                List<SchoolYear_DTO> listNext = SchoolYear_BUL.Load();
+                for (int i = 0; i < listNext.Count; i++)
                 {
-                    listNext.RemoveAt(i);
-                    i = 0;
+                    if (listNext[i].Begin <= SchoolYear_BUL.LoadASY(ComboBoxSchoolYear.SelectedValue.ToString()).Begin)
+                    {
+                        listNext.RemoveAt(i);
+                        i = 0;
+                    }
                 }
+                if (listNext.Count != 0)
+                    ComboboxTargetSchoolYear.DataSource = listNext;
+                else ComboboxTargetSchoolYear.DataSource = null;
             }
-            if (listNext.Count != 0)
-                ComboboxTargetSchoolYear.DataSource = listNext;
-            else ComboboxTargetSchoolYear.DataSource = null;
+            else return;
             dt.Clear();
             //load danh sách lớp học thuộc năm học đó
-            if (Class_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null) return;
+            if (Class_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString()) == null) {
+               MessageBox.Show("Chưa thêm lớp cho năm học này!");
+               return;
+            }
             class_DTOs = Class_BUL.LoadBySC(ComboBoxSchoolYear.SelectedValue.ToString());
             //load toàn bộ quá trình học theo mã lớp đã load
             for (int i = 0; i < class_DTOs.Count; i++)
             {
                 List<Process_DTO> ListProcessByClass = new List<Process_DTO>();
-                if (Process_BUL.ListProcessByClass(class_DTOs[i].ID) == null) return;
+                if (Process_BUL.ListProcessByClass(class_DTOs[i].ID) == null) continue;
                 ListProcessByClass = Process_BUL.ListProcessByClass(class_DTOs[i].ID);
                 for (int j = 0; j < ListProcessByClass.Count; j++)
                 {
@@ -96,7 +103,9 @@ namespace APP
                     dr["Mã học sinh"] = process_DTOs[0].StudentID;
                     int StudentID = process_DTOs[0].StudentID,count=1;
                     double Score = process_DTOs[0].TotalScore;
+                    if (Class_BUL.GetName(process_DTOs[0].ClassID) == null) return;
                     string Class = Class_BUL.GetName(process_DTOs[0].ClassID)+" ";
+                    if (Student_BUL.LoadAStudent(StudentID) == null) return;
                     dr["Tên học sinh"] = Student_BUL.LoadAStudent(StudentID).Name;
                     //Thực hiện
                     {
@@ -107,6 +116,7 @@ namespace APP
                             {
                                 Score += process_DTOs[j].TotalScore;
                                 count++;
+                                if (Class_BUL.GetName(process_DTOs[j].ClassID) == null) return;
                                 Class += Class_BUL.GetName(process_DTOs[j].ClassID) + " ";
                                 process_DTOs.RemoveAt(j);
                                 j = 0;
@@ -135,7 +145,12 @@ namespace APP
 
         private void BtnSwitchUp_Click(object sender, EventArgs e)
         {
+            if (ComboboxTargetSchoolYear.DataSource == null) return;
             if (metroGrid2.Rows.Count <= 0) return;
+            if (Term_BUL.LoadBySC(ComboboxTargetSchoolYear.SelectedValue.ToString()) == null) return;
+            if (ComboBoxTargetClass.DataSource == null) return;
+            if (Class_BUL.LoadBySC(ComboboxTargetSchoolYear.SelectedValue.ToString()) == null) return;
+            
             List<Term_DTO> term_DTOs = Term_BUL.LoadBySC(ComboboxTargetSchoolYear.SelectedValue.ToString());
             for (int i = 0; i < metroGrid2.SelectedRows.Count; i++)
             {
@@ -143,17 +158,24 @@ namespace APP
                 {
                     if (Process_BUL.GetProcess(Convert.ToInt32(metroGrid2.SelectedRows[i].Cells["Mã học sinh"].Value.ToString()), term_DTOs[j].ID, ComboBoxTargetClass.SelectedValue.ToString()) == null)
                     {
-                        if (Process_BUL.InitialProcess(ComboBoxTargetClass.SelectedValue.ToString(), Convert.ToInt32(metroGrid2.SelectedRows[i].Cells["Mã học sinh"].Value.ToString()), term_DTOs[j].ID))
+                        if (Process_BUL.ListProcessByTermAndID(Convert.ToInt32(metroGrid2.SelectedRows[i].Cells["Mã học sinh"].Value.ToString()), term_DTOs[j].ID)!=null)
                         {
-                            Class_BUL.UpdateNumberStudent(metroGrid1.RowCount + 1, ComboBoxTargetClass.SelectedValue.ToString());
-                            metroGrid1.DataSource = Process_BUL.LoadByClass(ComboBoxTargetClass.SelectedValue.ToString(), term_DTOs[j].ID);
-                        }
-                        else
-                        {
+
                             MessageBox.Show("Không thể thêm quá trình học!", "Thông báo!");
                             break;
-                        }
-                    }else
+                        }else
+                            if (Process_BUL.InitialProcess(ComboBoxTargetClass.SelectedValue.ToString(), Convert.ToInt32(metroGrid2.SelectedRows[i].Cells["Mã học sinh"].Value.ToString()), term_DTOs[j].ID))
+                            {
+                                Class_BUL.UpdateNumberStudent(metroGrid1.RowCount + 1, ComboBoxTargetClass.SelectedValue.ToString());
+                                metroGrid1.DataSource = Process_BUL.LoadByClass(ComboBoxTargetClass.SelectedValue.ToString(), term_DTOs[j].ID);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Không thể thêm quá trình học!", "Thông báo!");
+                                break;
+                            }
+                    }
+                    else
                     {
                         MessageBox.Show("Học sinh này đã được thực hiện từ trước!");
                         return;
@@ -165,6 +187,7 @@ namespace APP
 
         private void ComboBoxTargetClass_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ComboBoxTargetClass.DataSource == null) return;
             List<Term_DTO> term_DTO = new List<Term_DTO>();
             if (Term_BUL.LoadBySC(ComboboxTargetSchoolYear.SelectedValue.ToString()) == null) return;
             else
